@@ -32,6 +32,17 @@ Because reaching Level 3 consistently isn't just a pedagogical goal anymore—it
   <div class="timeline-item">
     <div class="timeline-marker"></div>
     <div class="timeline-content">
+      <h4>2026 Spring</h4>
+      <ul>
+        <li>TA for Grad AI</li>
+        <li>Lead TA for Differential Equations</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-marker"></div>
+    <div class="timeline-content">
       <h4>2025 Fall</h4>
       <ul>
         <li>TA for Markov Chains</li>
