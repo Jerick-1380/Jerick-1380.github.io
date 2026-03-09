@@ -46,7 +46,7 @@ ninja.data = [{
           },
         },{id: "nav-teaching",
           title: "teaching",
-          description: "Course materials, schedules, and resources for classes taught.",
+          description: "My teaching experience, materials, and philosophy as a TA at Carnegie Mellon University.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/teaching/";
@@ -521,13 +521,6 @@ ninja.data = [{
           window.open("mailto:%6A%75%6E%6B%61%69%73@%61%6E%64%72%65%77.%63%6D%75.%65%64%75", "_blank");
         },
       },{
-        id: 'social-inspire',
-        title: 'Inspire HEP',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://inspirehep.net/authors/1010907", "_blank");
-        },
-      },{
         id: 'social-rss',
         title: 'RSS Feed',
         section: 'Socials',
@@ -542,11 +535,25 @@ ninja.data = [{
           window.open("https://scholar.google.com/citations?user=6wj2mTQAAAAJ", "_blank");
         },
       },{
-        id: 'social-custom_social',
-        title: 'Custom_social',
+        id: 'social-github',
+        title: 'GitHub',
         section: 'Socials',
         handler: () => {
-          window.open("https://www.alberteinstein.com/", "_blank");
+          window.open("https://github.com/Jerick-1380", "_blank");
+        },
+      },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/jerick-shi-293773216", "_blank");
+        },
+      },{
+        id: 'social-youtube',
+        title: 'YouTube',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://youtube.com/@@DummyR18", "_blank");
         },
       },{
       id: 'light-theme',
