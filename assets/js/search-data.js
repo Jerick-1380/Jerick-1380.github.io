@@ -257,7 +257,7 @@ ninja.data = [{
         title: 'CV',
         section: 'Socials',
         handler: () => {
-          window.open("/assets/pdf/example_pdf.pdf", "_blank");
+          window.open("/assets/rendercv/rendercv_output/Jerick_Shi_CV.pdf", "_blank");
         },
       },{
         id: 'social-email',
@@ -265,13 +265,6 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("mailto:%6A%75%6E%6B%61%69%73@%61%6E%64%72%65%77.%63%6D%75.%65%64%75", "_blank");
-        },
-      },{
-        id: 'social-rss',
-        title: 'RSS Feed',
-        section: 'Socials',
-        handler: () => {
-          window.open("/feed.xml", "_blank");
         },
       },{
         id: 'social-scholar',
