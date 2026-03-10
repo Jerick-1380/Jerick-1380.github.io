@@ -55,3 +55,34 @@ cv:
           - "Created an internal chatbot using ChatGLM2, significantly improving data retrieval efficiency"
           - "Researched Nvidia's CUDA technology for insights to promote cash flow analysis"
           - "Authored insightful monthly reports for an internal AI journal within the company"
+
+    Skills:
+      - label: Languages
+        details: English (native), Chinese (native), Spanish (intermediate)
+      - label: Programming
+        details: Python (NumPy, Pandas, SciPy), C/C++, Java, Javascript, R, HTML/CSS
+
+    Competitions and Awards:
+      - name: Optiver Market Making Game
+        date: 2025-03
+        details: 4th place out of 20 teams
+      - name: IMC Prosperity Trading Competition
+        date: 2024-04
+        details: Top 250 out of 13,000+ teams
+      - name: Mathematical Contest in Modeling
+        date: 2024-02
+        details: Top 35% out of 18,000+ teams
+      - name: Carnegie Mellon University Quantathon
+        date: 2023-02
+        details: Top 8 out of 40 teams
+      - name: 83rd Putnam Competition
+        date: 2022-12
+        details: Top 25% out of 3,415 participants
+
+    Extracurricular Activities:
+      - label: CMU Tricking Club
+        details: Vice President
+      - label: CMU K-Pop Dance Club
+        details: Film Co-chair
+      - label: CMU Quant Club
+        details: Member
