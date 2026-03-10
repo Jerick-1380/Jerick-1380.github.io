@@ -69,21 +69,26 @@ cv:
           - HTML/CSS
 
     Awards:
-      - title: Optiver Market Making Game
+      - name: Optiver Market Making Game
         date: 2025-03
-        summary: 4th place out of 20 teams
-      - title: IMC Prosperity Trading Competition
+        highlights:
+          - 4th place out of 20 teams
+      - name: IMC Prosperity Trading Competition
         date: 2024-04
-        summary: Top 250 out of 13,000+ teams
-      - title: Mathematical Contest in Modeling
+        highlights:
+          - Top 250 out of 13,000+ teams
+      - name: Mathematical Contest in Modeling
         date: 2024-02
-        summary: Top 35% out of 18,000+ teams
-      - title: Carnegie Mellon University Quantathon
+        highlights:
+          - Top 35% out of 18,000+ teams
+      - name: Carnegie Mellon University Quantathon
         date: 2023-02
-        summary: Top 8 out of 40 teams
-      - title: 83rd Putnam Competition
+        highlights:
+          - Top 8 out of 40 teams
+      - name: 83rd Putnam Competition
         date: 2022-12
-        summary: Top 25% out of 3,415 participants
+        highlights:
+          - Top 25% out of 3,415 participants
 
     Activities:
       - label: CMU Tricking Club
