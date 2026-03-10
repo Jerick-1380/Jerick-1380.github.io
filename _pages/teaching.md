@@ -1,8 +1,7 @@
 ---
 layout: page
 permalink: /teaching/
-title: teaching
-description: My teaching experience, materials, and philosophy as a TA at Carnegie Mellon University.
+title: ""
 nav: true
 nav_order: 6
 calendar: true
@@ -378,10 +377,6 @@ Because reaching Level 3 consistently isn't just a pedagogical goal anymore—it
 
 ---
 
-## Teaching Experience
-
-Below are courses where I've served as a Teaching Assistant, including recitation materials, handouts, and video recordings.
-
 {% include courses.liquid %}
 
 ---
@@ -424,7 +419,6 @@ These videos showcase my teaching style and approach to explaining complex conce
 
       <p>Jerick deserves so much recognition for his work as a TA in differential equations. I know a lot of people feel similarly because immediately after the exam someone posted a Piazza post thanking him which many other students responded to also thanking him.</p>
     </div>
-    <div class="testimonial-source">— Student, Differential Equations</div>
   </div>
 
   <div class="testimonial-grid">
@@ -432,42 +426,36 @@ These videos showcase my teaching style and approach to explaining complex conce
       <div class="testimonial-text">
         <p>"Helped me improve from D average to an A. Went over and beyond to help. Deserves Nobel prize."</p>
       </div>
-      <div class="testimonial-source">— Student, Differential Equations</div>
     </div>
 
     <div class="testimonial">
       <div class="testimonial-text">
         <p>"Best TA I have ever had, went out of his way over and over to help the students succeed and taught more than what was expected."</p>
       </div>
-      <div class="testimonial-source">— Student, Differential Equations</div>
     </div>
 
     <div class="testimonial">
       <div class="testimonial-text">
         <p>"Jerick's recitations were helpful as an overview of lecture and he was helpful in giving additional study resources and preparing for exams."</p>
       </div>
-      <div class="testimonial-source">— Student, Differential Equations</div>
     </div>
 
     <div class="testimonial">
       <div class="testimonial-text">
         <p>"This TA was always going above and beyond to not only help us clear up the necessary concepts for homeworks but to also prepare for the exam and its concepts! I really benefited from all their recitations."</p>
       </div>
-      <div class="testimonial-source">— Student, Differential Equations</div>
     </div>
 
     <div class="testimonial">
       <div class="testimonial-text">
         <p>"I liked his style of re-explaining the week's concepts in a much simpler way."</p>
       </div>
-      <div class="testimonial-source">— Student, Differential Equations</div>
     </div>
 
     <div class="testimonial">
       <div class="testimonial-text">
         <p>"Offered office hours often and quickly responded to Piazza and email with good insights."</p>
       </div>
-      <div class="testimonial-source">— Student, Differential Equations</div>
     </div>
   </div>
 </div>
