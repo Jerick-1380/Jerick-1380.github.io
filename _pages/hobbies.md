@@ -9,7 +9,7 @@ nav_order: 7
 
 ## Tricking
 
-Tricking is an aesthetic blend of gymnastics, martial arts, and breakdancing. It combines flips, kicks, and twists into fluid sequences that emphasize creativity and style.
+Tricking is an aesthetic blend of gymnastics, martial arts, and breakdancing.
 
 <div class="row mt-3">
   <div class="col-sm-6 mt-3">
@@ -22,8 +22,8 @@ Tricking is an aesthetic blend of gymnastics, martial arts, and breakdancing. It
 
 <div class="row mt-3">
   <div class="col-sm-12 col-md-6 mt-3 offset-md-3">
-    <div class="embed-responsive embed-responsive-9by16">
-      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Zqw_2Y2xrB8" allowfullscreen></iframe>
+    <div class="embed-responsive" style="position: relative; padding-bottom: 177.78%; height: 0; overflow: hidden;">
+      <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/Zqw_2Y2xrB8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
 </div>
@@ -72,12 +72,17 @@ I enjoy capturing moments through photography. You can view my full portfolio on
 
 <div class="photography-carousel mt-3">
   <div class="carousel-wrapper">
-    <div class="carousel-container">
-      {% include figure.liquid path="assets/img/hobbies/photography/54930688209_801dd7969f_b.jpg" class="carousel-image" %}
-      {% include figure.liquid path="assets/img/hobbies/photography/54941950886_c363c91da1_b.jpg" class="carousel-image" %}
-      {% include figure.liquid path="assets/img/hobbies/photography/54942154818_2abf77f85b_b.jpg" class="carousel-image" %}
-      {% include figure.liquid path="assets/img/hobbies/photography/54946647801_093ea9ffc7_b.jpg" class="carousel-image" %}
+    <button class="carousel-btn carousel-btn-prev" onclick="changePhoto(-1)">&#10094;</button>
+    <div class="carousel-image-container">
+      <img id="carousel-image" src="/assets/img/hobbies/photography/54930688209_801dd7969f_b.jpg" alt="Photography" class="img-fluid rounded z-depth-1">
     </div>
+    <button class="carousel-btn carousel-btn-next" onclick="changePhoto(1)">&#10095;</button>
+  </div>
+  <div class="carousel-indicators">
+    <span class="indicator active" onclick="setPhoto(0)"></span>
+    <span class="indicator" onclick="setPhoto(1)"></span>
+    <span class="indicator" onclick="setPhoto(2)"></span>
+    <span class="indicator" onclick="setPhoto(3)"></span>
   </div>
 </div>
 
@@ -87,72 +92,135 @@ I enjoy capturing moments through photography. You can view my full portfolio on
   </a>
 </div>
 
+<script>
+const photos = [
+  '/assets/img/hobbies/photography/54930688209_801dd7969f_b.jpg',
+  '/assets/img/hobbies/photography/54941950886_c363c91da1_b.jpg',
+  '/assets/img/hobbies/photography/54942154818_2abf77f85b_b.jpg',
+  '/assets/img/hobbies/photography/54946647801_093ea9ffc7_b.jpg'
+];
+
+let currentPhotoIndex = 0;
+
+function changePhoto(direction) {
+  currentPhotoIndex += direction;
+
+  if (currentPhotoIndex >= photos.length) {
+    currentPhotoIndex = 0;
+  } else if (currentPhotoIndex < 0) {
+    currentPhotoIndex = photos.length - 1;
+  }
+
+  updatePhoto();
+}
+
+function setPhoto(index) {
+  currentPhotoIndex = index;
+  updatePhoto();
+}
+
+function updatePhoto() {
+  document.getElementById('carousel-image').src = photos[currentPhotoIndex];
+
+  // Update indicators
+  const indicators = document.querySelectorAll('.indicator');
+  indicators.forEach((indicator, index) => {
+    if (index === currentPhotoIndex) {
+      indicator.classList.add('active');
+    } else {
+      indicator.classList.remove('active');
+    }
+  });
+}
+</script>
+
 <style>
 .photography-carousel {
   width: 100%;
-  overflow: hidden;
   margin: 2rem 0;
 }
 
 .carousel-wrapper {
   position: relative;
-  width: 100%;
-}
-
-.carousel-container {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 1rem;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding: 1rem 0;
-  -webkit-overflow-scrolling: touch;
 }
 
-.carousel-container::-webkit-scrollbar {
-  height: 8px;
+.carousel-image-container {
+  flex: 1;
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
 }
 
-.carousel-container::-webkit-scrollbar-track {
-  background: var(--global-divider-color);
-  border-radius: 4px;
+.carousel-image-container img {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.carousel-container::-webkit-scrollbar-thumb {
+.carousel-btn {
   background: var(--global-theme-color);
-  border-radius: 4px;
+  color: var(--global-bg-color);
+  border: none;
+  padding: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
 }
 
-.carousel-container::-webkit-scrollbar-thumb:hover {
+.carousel-btn:hover {
+  background: var(--global-hover-color);
+  transform: scale(1.1);
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--global-divider-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  background: var(--global-theme-color);
+  transform: scale(1.2);
+}
+
+.indicator:hover {
   background: var(--global-hover-color);
 }
 
-.carousel-image {
-  flex: 0 0 auto;
-  width: 400px;
-  max-width: 80vw;
-}
-
-.carousel-image img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.carousel-image img:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-}
-
 @media (max-width: 768px) {
-  .carousel-image {
-    width: 300px;
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    padding: 0.5rem;
   }
 
-  .carousel-image img {
-    height: 225px;
+  .carousel-image-container img {
+    max-height: 400px;
   }
 }
 </style>
