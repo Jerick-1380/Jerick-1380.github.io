@@ -25,7 +25,7 @@ ninja.data = [{
           },
         },{id: "nav-projects",
           title: "projects",
-          description: "A growing collection of your cool projects.",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
@@ -146,51 +146,36 @@ ninja.data = [{
           section: "News",},{id: "news-paper-cheap-talk-empty-promise-frontier-llms-easily-break-public-promises-for-self-interest-accepted-to-iclr-ai-for-mechanism-design-and-strategic-decision-making-workshop",
           title: 'Paper “Cheap Talk, Empty Promise: Frontier LLMs easily break public promises for self-interest”...',
           description: "",
-          section: "News",},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
+          section: "News",},{id: "projects-senior-thesis-why-multi-agent-conversations-cannot-fix-llm-forecasting",
+          title: 'Senior Thesis: Why Multi-Agent Conversations Cannot Fix LLM Forecasting',
+          description: "Evidence from Convergence Analysis",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/1_project/";
-            },},{id: "projects-project-2",
-          title: 'project 2',
-          description: "a project with a background image and giscus comments",
+              window.location.href = "/projects/1_senior_thesis/";
+            },},{id: "projects-predictive-power-of-llms-in-financial-markets",
+          title: 'Predictive Power of LLMs in Financial Markets',
+          description: "First Place, Meeting of the Minds Math Division",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/2_project/";
-            },},{id: "projects-project-3-with-very-long-name",
-          title: 'project 3 with very long name',
-          description: "a project that redirects to another website",
+              window.location.href = "/projects/2_meeting_minds/";
+            },},{id: "projects-mathematical-contest-in-modeling-honorable-mention",
+          title: 'Mathematical Contest in Modeling: Honorable Mention',
+          description: "Modeling lamprey population dynamics with adaptive sex-determination mechanisms",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/3_project/";
-            },},{id: "projects-project-4",
-          title: 'project 4',
-          description: "another without an image",
+              window.location.href = "/projects/3_mcm/";
+            },},{id: "projects-operations-research-ii-optimizing-movie-scheduling-solutions",
+          title: 'Operations Research II: Optimizing Movie Scheduling Solutions',
+          description: "Linear programming approach to theater scheduling",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/4_project/";
-            },},{id: "projects-project-5",
-          title: 'project 5',
-          description: "a project with a background image",
+              window.location.href = "/projects/4_operations_research/";
+            },},{id: "projects-intermediate-deep-learning-predicting-closing-price-for-kaggle-competition",
+          title: 'Intermediate Deep Learning: Predicting Closing Price for Kaggle Competition',
+          description: "Optiver Trading at the Close competition",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/5_project/";
-            },},{id: "projects-project-6",
-          title: 'project 6',
-          description: "a project with no image",
+              window.location.href = "/projects/5_deep_learning/";
+            },},{id: "projects-intro-to-ml-sentiment-analysis-and-stock-prices",
+          title: 'Intro to ML: Sentiment Analysis and Stock Prices',
+          description: "Using techniques from 10-315 for sentiment analysis with applications to stock market prediction",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/6_project/";
-            },},{id: "projects-project-7",
-          title: 'project 7',
-          description: "with background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/7_project/";
-            },},{id: "projects-project-8",
-          title: 'project 8',
-          description: "an other project with a background image and giscus comments",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/8_project/";
-            },},{id: "projects-project-9",
-          title: 'project 9',
-          description: "another project with an image 🎉",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/9_project/";
+              window.location.href = "/projects/6_intro_ml/";
             },},{
         id: 'social-cv',
         title: 'CV',
