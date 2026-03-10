@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle:
 
 profile:
   align: right
@@ -23,4 +23,14 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hey Guys, I’m Jerick! I I'm pursuing a 5th year's master in CS at Carnegie Mellon University. During my undergrad, I obtained an additional major in mathematics, a minor in computational finance, as well as both university and college honors. My current research focuses on Multi-Agent LLM Systems and AI Safety! 
+Hey! I'm Jerick, a 5th year master's student in Computer Science at Carnegie Mellon University.
+
+My research focuses on Multi-Agent LLM Systems and AI Safety. I'm currently working on my master's thesis on deceptive behaviors in multi-agent LLM systems, co-advised by [Vincent Conitzer](https://www.cs.cmu.edu/~conitzer/) from CMU and [Zhijing Jin](https://zhijing-jin.com/fantasy/) from the University of Toronto. I'm also working remotely as an external collaborator for the [Jinesis Lab](https://zhijing-jin.com/home/).
+
+I'm passionate about teaching and have been a TA for 7 different courses at CMU, ranging from differential equations to graduate AI. You can learn more about my teaching philosophy and experience on my [teaching page](/teaching/).
+
+During my undergrad at CMU, I completed majors in both Computer Science and Mathematics, along with a minor in Computational Finance, graduating with University and College Honors.
+
+I'm joining the [Voleon Group](https://voleon.com/) as a Software Engineer in July 2026. I'm also currently open to lecturer positions over the summer relating to CS, ML, AI, or quantitative finance.
+
+Outside of research and teaching, I enjoy tricking, breakdancing, freediving, and K-Pop dance.
