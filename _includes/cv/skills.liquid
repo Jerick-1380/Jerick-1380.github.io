@@ -1,5 +1,7 @@
 {% comment %}
   Unified skills entry renderer for both formats
+  - JSONResume: name, keywords (array), level
+  - RenderCV: label, details (string)
 {% endcomment %}
 
 <div class="card-text font-weight-light">
@@ -8,8 +10,9 @@
       {% if entry.icon %}
         <i class="{{ entry.icon }}"></i>
       {% endif %}
+      {% assign skill_name = entry.name | default: entry.label %}
       <strong>
-        {{- entry.name -}}
+        {{- skill_name -}}
         {%- if entry.level %} ({{ entry.level }}){% endif %}:</strong
       >
       {% if entry.keywords %}
@@ -20,6 +23,8 @@
             {{ keyword }},
           {% endif %}
         {% endfor %}
+      {% elsif entry.details %}
+        {{ entry.details }}
       {% endif %}
     </div>
   {% endfor %}
