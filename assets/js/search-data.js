@@ -44,9 +44,9 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "nav-teaching",
-          title: "teaching",
-          description: "My teaching experience, materials, and philosophy as a TA at Carnegie Mellon University.",
+        },{id: "nav-",
+          title: "",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/teaching/";
