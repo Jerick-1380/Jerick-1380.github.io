@@ -10,7 +10,7 @@ cv:
       username: jerick-shi-293773216
 
   sections:
-    Education:
+    education:
       - institution: Carnegie Mellon University
         location: Pittsburgh, PA
         area: Computer Science
@@ -32,7 +32,7 @@ cv:
           - "Additional Major in Computational and Applied Mathematics, Minor in Computational Finance"
           - "University and College Honors"
 
-    Experience:
+    experience:
       - company: Carnegie Mellon University
         position: Teaching Assistant
         location: Pittsburgh, PA
@@ -53,13 +53,13 @@ cv:
           - "Researched Nvidia's CUDA technology for insights to promote cash flow analysis"
           - "Authored insightful monthly reports for an internal AI journal within the company"
 
-    Skills:
+    skills:
       - label: "Languages"
         details: "English (native), Chinese (native), Spanish (intermediate)"
       - label: "Programming"
         details: "Python (NumPy, Pandas, SciPy), C/C++, Java, Javascript, R, HTML/CSS"
 
-    Competitions and Awards:
+    competitions_and_awards:
       - name: "Optiver Market Making Game"
         date: "2025-03"
         highlights:
@@ -81,7 +81,7 @@ cv:
         highlights:
           - "Top 25% out of 3,415 participants"
 
-    Extracurricular Activities:
+    extracurricular_activities:
       - label: "CMU Tricking Club"
         details: "Vice President"
       - label: "CMU K-Pop Dance Club"
