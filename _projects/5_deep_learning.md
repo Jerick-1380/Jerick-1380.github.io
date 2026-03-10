@@ -2,7 +2,7 @@
 layout: page
 title: "Intermediate Deep Learning: Predicting Closing Price for Kaggle Competition"
 description: Optiver Trading at the Close competition
-img: assets/img/projects/deep_learning.jpeg
+img: assets/img/projects/deep_learning.png
 importance: 5
 category: work
 ---
@@ -13,6 +13,10 @@ In this paper, our goal is to predict closing stock prices for different stocks 
 
 Furthermore, we shall be attempting to fit different deep learning models that we have learnt throughout the course in 10-617 to determine whether they achieve higher performances than linear regression models or regular machine learning algorithms. In the end, we discover that machine learning algorithms outperformed linear regression models, whereas linear regression models still performed better than all deep learning models.
 
-**Date:** December 2023
+---
 
-<a href="/assets/pdf/Predicting_Closing_Price_Movements_for_Kaggle_Competition.pdf" class="btn btn-sm z-depth-0" role="button" target="_blank">Paper (PDF)</a>
+<div style="margin-top: 2rem;">
+  <a href="/assets/pdf/Predicting_Closing_Price_Movements_for_Kaggle_Competition.pdf" class="material-download" target="_blank" style="display: inline-block; background: var(--global-theme-color); color: var(--global-bg-color) !important; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600;">
+    Download Paper (PDF) →
+  </a>
+</div>

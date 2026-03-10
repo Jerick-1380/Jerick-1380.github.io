@@ -2,7 +2,7 @@
 layout: page
 title: Predictive Power of LLMs in Financial Markets
 description: First Place, Meeting of the Minds Math Division
-img: assets/img/projects/meeting_minds.jpeg
+img: assets/img/projects/meeting_minds.png
 importance: 2
 category: work
 ---
@@ -14,7 +14,14 @@ Our goal is to determine whether the GPT model provides more useful information 
 We conclude that the Beige Book does contain information regarding correlations amongst different assets, yet the GPT model has too much look-ahead bias and that traditional models still triumph.
 
 **Award:** First place in Meeting of the Minds Math Division
-**Date:** May 2024
 
-<a href="https://arxiv.org/abs/2411.16569" class="btn btn-sm z-depth-0" role="button" target="_blank">Paper (arXiv)</a>
-<a href="/assets/pdf/MOM_Poster.pdf" class="btn btn-sm z-depth-0" role="button" target="_blank">Poster (PDF)</a>
+---
+
+<div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+  <a href="https://arxiv.org/abs/2411.16569" class="material-download" target="_blank" style="display: inline-block; background: var(--global-theme-color); color: var(--global-bg-color) !important; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600;">
+    View Paper on arXiv →
+  </a>
+  <a href="/assets/pdf/MOM_Poster.pdf" class="material-download" target="_blank" style="display: inline-block; background: var(--global-theme-color); color: var(--global-bg-color) !important; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600;">
+    Download Poster (PDF) →
+  </a>
+</div>

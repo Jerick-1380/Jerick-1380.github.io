@@ -2,7 +2,7 @@
 layout: page
 title: "Intro to ML: Sentiment Analysis and Stock Prices"
 description: Using techniques from 10-315 for sentiment analysis with applications to stock market prediction
-img: assets/img/projects/ml.svg
+img: assets/img/projects/ml.png
 importance: 6
 category: work
 ---
@@ -13,6 +13,10 @@ Since these are taken from the stock market news, we are also able to apply our 
 
 In the end, we determined that individually, a Support Vector Machine works best for such a classification task, which achieved an accuracy of 77%. Furthermore, a combination of all the models does not seem to have a huge difference for directly analyzing sentiment, and neither model does well in predicting stock prices. This is because a lot of factors influence the change in stock prices other than the news itself.
 
-**Date:** May 2023
+---
 
-<a href="https://github.com/Jerick-1380/10315-Final-Project" class="btn btn-sm z-depth-0" role="button" target="_blank">GitHub Repository</a>
+<div style="margin-top: 2rem;">
+  <a href="https://github.com/Jerick-1380/10315-Final-Project" class="material-download" target="_blank" style="display: inline-block; background: var(--global-theme-color); color: var(--global-bg-color) !important; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600;">
+    View on GitHub →
+  </a>
+</div>

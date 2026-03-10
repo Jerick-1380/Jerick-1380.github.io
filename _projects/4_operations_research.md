@@ -13,7 +13,13 @@ To address this issue, our paper proposes reframing the movie scheduling challen
 
 Using our model, we observe several patterns regarding effects of different parameters and answer the question of why movie theatres rent movies more often than buying them.
 
-**Date:** December 2023
+---
 
-<a href="/assets/pdf/or_paper.pdf" class="btn btn-sm z-depth-0" role="button" target="_blank">Paper (PDF)</a>
-<a href="/assets/pdf/or_slides.pdf" class="btn btn-sm z-depth-0" role="button" target="_blank">Slides (PDF)</a>
+<div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+  <a href="/assets/pdf/or_paper.pdf" class="material-download" target="_blank" style="display: inline-block; background: var(--global-theme-color); color: var(--global-bg-color) !important; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600;">
+    Download Paper (PDF) →
+  </a>
+  <a href="/assets/pdf/or_slides.pdf" class="material-download" target="_blank" style="display: inline-block; background: var(--global-theme-color); color: var(--global-bg-color) !important; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600;">
+    Download Slides (PDF) →
+  </a>
+</div>

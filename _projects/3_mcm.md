@@ -2,7 +2,7 @@
 layout: page
 title: "Mathematical Contest in Modeling: Honorable Mention"
 description: Modeling lamprey population dynamics with adaptive sex-determination mechanisms
-img:
+img: assets/img/projects/modeling.png
 importance: 3
 category: work
 ---
@@ -18,6 +18,11 @@ Lastly, employing our model, we contrast the population dynamics of species with
 On a higher level, we conclude that lampreys' capacity to alter sex not only enables swift adaptation to local conditions, leading to increased food availability, but also creates ecological space, enhancing the potential for symbiotic relationships and stability among coexisting species.
 
 **Award:** Honorable Mention
-**Date:** February 2024
 
-<a href="/assets/pdf/MCM2024.pdf" class="btn btn-sm z-depth-0" role="button" target="_blank">Paper (PDF)</a>
+---
+
+<div style="margin-top: 2rem;">
+  <a href="/assets/pdf/MCM2024.pdf" class="material-download" target="_blank" style="display: inline-block; background: var(--global-theme-color); color: var(--global-bg-color) !important; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600;">
+    Download Paper (PDF) →
+  </a>
+</div>
