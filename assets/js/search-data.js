@@ -44,6 +44,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/teaching/";
           },
+        },{id: "nav-hobbies",
+          title: "hobbies",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/hobbies/";
+          },
         },{id: "post-rethinking-education-my-vision-for-an-ai-enhanced-classroom",
         
           title: "Rethinking Education: My Vision for an AI-Enhanced Classroom",
