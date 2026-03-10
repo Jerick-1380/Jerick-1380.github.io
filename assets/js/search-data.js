@@ -198,16 +198,14 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
+            },},{id: "news-paper-market-dependent-communication-in-multi-agent-alpha-generation-accepted-to-neurips-genai-in-finance-workshop",
+          title: 'Paper “Market-Dependent Communication in Multi-Agent Alpha Generation” accepted to NeurIPS GenAI in Finance...',
           description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
+          section: "News",},{id: "news-paper-behavioral-and-strategic-deception-in-large-language-models-a-taxonomy-and-benchmark-analysis-accepted-to-iclr-agents-in-the-wild-safety-security-and-beyond-workshop",
+          title: 'Paper “Behavioral and Strategic Deception in Large Language Models: A Taxonomy and Benchmark...',
           description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+          section: "News",},{id: "news-paper-cheap-talk-empty-promise-frontier-llms-easily-break-public-promises-for-self-interest-accepted-to-iclr-ai-for-mechanism-design-and-strategic-decision-making-workshop",
+          title: 'Paper “Cheap Talk, Empty Promise: Frontier LLMs easily break public promises for self-interest”...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
