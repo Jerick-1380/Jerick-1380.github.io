@@ -9,6 +9,10 @@ display_categories:
 horizontal: false
 ---
 
+<div class="header-bar">
+  <h1>projects</h1>
+</div>
+
 <!-- pages/projects.md -->
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}

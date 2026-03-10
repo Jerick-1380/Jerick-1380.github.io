@@ -7,6 +7,10 @@ nav_order: 6
 calendar: true
 ---
 
+<div class="header-bar">
+  <h1>teaching</h1>
+</div>
+
 ## Teaching Philosophy
 
 I recognize that effective teaching operates at distinct levels of sophistication, and after watching AI transform how students interact with mathematics, I'm convinced we need to fundamentally rethink what we're trying to accomplish.

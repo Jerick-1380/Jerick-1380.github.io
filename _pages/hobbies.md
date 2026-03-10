@@ -7,6 +7,10 @@ nav: true
 nav_order: 7
 ---
 
+<div class="header-bar">
+  <h1>hobbies</h1>
+</div>
+
 ## Tricking
 
 <div class="row mt-3">
