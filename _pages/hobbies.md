@@ -9,8 +9,6 @@ nav_order: 7
 
 ## Tricking
 
-Tricking is an aesthetic blend of gymnastics, martial arts, and breakdancing.
-
 <div class="row mt-3">
   <div class="col-sm-6 mt-3">
     {% include figure.liquid path="assets/img/hobbies/tricking/EAAA06DE-2CEC-4102-93FA-353A78C399D5.JPG" class="img-fluid rounded z-depth-1" %}
@@ -66,11 +64,11 @@ I'm a certified AIDA 4 Master Freediver, trained in advanced freediving techniqu
 
 ---
 
+<div style="margin-top: 4rem;"></div>
+
 ## Photography
 
-I enjoy capturing moments through photography. You can view my full portfolio on Flickr.
-
-<div class="photography-carousel mt-3">
+<div class="photography-carousel mt-5">
   <div class="carousel-wrapper">
     <button class="carousel-btn carousel-btn-prev" onclick="changePhoto(-1)">&#10094;</button>
     <div class="carousel-image-container">
@@ -137,7 +135,11 @@ function updatePhoto() {
 <style>
 .photography-carousel {
   width: 100%;
-  margin: 2rem 0;
+  margin: 3rem 0;
+  padding: 2rem 0;
+  clear: both;
+  position: relative;
+  z-index: 1;
 }
 
 .carousel-wrapper {
@@ -146,6 +148,7 @@ function updatePhoto() {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  margin-bottom: 2rem;
 }
 
 .carousel-image-container {
@@ -179,6 +182,8 @@ function updatePhoto() {
   justify-content: center;
   transition: all 0.3s ease;
   flex-shrink: 0;
+  position: relative;
+  z-index: 2;
 }
 
 .carousel-btn:hover {
@@ -190,7 +195,9 @@ function updatePhoto() {
   display: flex;
   justify-content: center;
   gap: 0.5rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
+  position: relative;
+  z-index: 2;
 }
 
 .indicator {
