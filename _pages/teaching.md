@@ -212,6 +212,172 @@ Because reaching Level 3 consistently isn't just a pedagogical goal anymore—it
 
 ---
 
+## Featured Teaching Materials
+
+<div class="materials-showcase">
+  <div class="material-card">
+    <div class="material-header">
+      <div class="material-icon">📚</div>
+      <div class="material-title">
+        <h4>Intro to Math Finance: Complete Problem Session Guide</h4>
+        <span class="material-course">21-270 • Spring 2025</span>
+      </div>
+    </div>
+    <div class="material-description">
+      <p>A comprehensive 56-page document covering everything you need to know about intro to mathematical finance. Created for the first-ever problem sessions, where I taught 1.5-hour review sessions every Wednesday night, going over content and practice problems.</p>
+      <div class="material-stats">
+        <span class="badge">56 pages</span>
+        <span class="badge">404 KB</span>
+        <span class="badge">First-time course material</span>
+      </div>
+    </div>
+    <a href="/assets/pdf/21_270_Problem_Session_Compiled.pdf" class="material-download" target="_blank">
+      Download PDF →
+    </a>
+  </div>
+
+  <div class="material-card">
+    <div class="material-header">
+      <div class="material-icon">🤖</div>
+      <div class="material-title">
+        <h4>Machine Learning Homework & Mini-Project</h4>
+        <span class="material-course">10-315 • Fall 2024</span>
+      </div>
+    </div>
+    <div class="material-description">
+      <p>Brand new homework assignment built from scratch, including all problems, code implementation, and custom autograder. Introduced a creative Kaggle mini-project component for students to apply ML concepts hands-on.</p>
+      <div class="material-stats">
+        <span class="badge">Original problems</span>
+        <span class="badge">Custom autograder</span>
+        <span class="badge">Kaggle integration</span>
+      </div>
+    </div>
+    <a href="/assets/pdf/F24_10_315_HW.pdf" class="material-download" target="_blank">
+      Download PDF →
+    </a>
+  </div>
+
+  <div class="material-card">
+    <div class="material-header">
+      <div class="material-icon">∂</div>
+      <div class="material-title">
+        <h4>Differential Equations: Practice Final with Solutions</h4>
+        <span class="material-course">21-260 • Spring 2023</span>
+      </div>
+    </div>
+    <div class="material-description">
+      <p>When no practice exam was provided, I created this comprehensive practice final by selecting key problems from the textbook and writing complete solutions. Helped students prepare effectively for their final exam.</p>
+      <div class="material-stats">
+        <span class="badge">Full solutions</span>
+        <span class="badge">Textbook problems</span>
+        <span class="badge">Exam preparation</span>
+      </div>
+    </div>
+    <a href="/assets/pdf/Final_Exam_Practice_Solutions.pdf" class="material-download" target="_blank">
+      Download PDF →
+    </a>
+  </div>
+</div>
+
+<style>
+.materials-showcase {
+  display: grid;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.material-card {
+  background: var(--global-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 8px;
+  padding: 2rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.material-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.material-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.material-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.material-title h4 {
+  margin: 0 0 0.3rem 0;
+  color: var(--global-text-color);
+  font-size: 1.3rem;
+}
+
+.material-course {
+  color: var(--global-theme-color);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.material-description {
+  margin: 1rem 0 1.5rem 0;
+}
+
+.material-description p {
+  margin: 0 0 1rem 0;
+  line-height: 1.6;
+  color: var(--global-text-color);
+}
+
+.material-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.badge {
+  display: inline-block;
+  background: var(--global-theme-color);
+  color: var(--global-bg-color);
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.material-download {
+  display: inline-block;
+  background: var(--global-theme-color);
+  color: var(--global-bg-color) !important;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.material-download:hover {
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .material-header {
+    flex-direction: column;
+  }
+
+  .material-icon {
+    font-size: 2rem;
+  }
+}
+</style>
+
+---
+
 ## Teaching Experience
 
 Below are courses where I've served as a Teaching Assistant, including recitation materials, handouts, and video recordings.
@@ -244,3 +410,116 @@ These videos showcase my teaching style and approach to explaining complex conce
     </div>
   </div>
 </div>
+
+---
+
+## Student Testimonials
+
+<div class="testimonials">
+  <div class="testimonial featured">
+    <div class="testimonial-text">
+      <p><strong>Jerick was the best TA I have ever had.</strong> He is the only reason why I learned anything from this class. Our recitations were at 8am and I never once missed one because he was so good— it says something about how good of a TA you are when you have people consistently show up to 8ams including people who aren't even supposed to be in your recitation.</p>
+
+      <p>Additionally, Jerick went above and beyond outside of recitations. He answered the majority of Piazza posts (about 70%) throughout the semester even though they were supposed to be split equally amongst TAs. He also wrote an unofficial practice exam for the final when the professor did not. Finally, for homework 10 we had only done 2 practice problems in class both with major mistakes in them, and everyone was very confused, so Jerick took it upon himself to create a document that step-by-step shows us how to solve PDEs in order to help everyone finish the homework and understand the material for the final.</p>
+
+      <p>Jerick deserves so much recognition for his work as a TA in differential equations. I know a lot of people feel similarly because immediately after the exam someone posted a Piazza post thanking him which many other students responded to also thanking him.</p>
+    </div>
+    <div class="testimonial-source">— Student, Differential Equations</div>
+  </div>
+
+  <div class="testimonial-grid">
+    <div class="testimonial">
+      <div class="testimonial-text">
+        <p>"Helped me improve from D average to an A. Went over and beyond to help. Deserves Nobel prize."</p>
+      </div>
+      <div class="testimonial-source">— Student, Differential Equations</div>
+    </div>
+
+    <div class="testimonial">
+      <div class="testimonial-text">
+        <p>"Best TA I have ever had, went out of his way over and over to help the students succeed and taught more than what was expected."</p>
+      </div>
+      <div class="testimonial-source">— Student, Differential Equations</div>
+    </div>
+
+    <div class="testimonial">
+      <div class="testimonial-text">
+        <p>"Jerick's recitations were helpful as an overview of lecture and he was helpful in giving additional study resources and preparing for exams."</p>
+      </div>
+      <div class="testimonial-source">— Student, Differential Equations</div>
+    </div>
+
+    <div class="testimonial">
+      <div class="testimonial-text">
+        <p>"This TA was always going above and beyond to not only help us clear up the necessary concepts for homeworks but to also prepare for the exam and its concepts! I really benefited from all their recitations."</p>
+      </div>
+      <div class="testimonial-source">— Student, Differential Equations</div>
+    </div>
+
+    <div class="testimonial">
+      <div class="testimonial-text">
+        <p>"I liked his style of re-explaining the week's concepts in a much simpler way."</p>
+      </div>
+      <div class="testimonial-source">— Student, Differential Equations</div>
+    </div>
+
+    <div class="testimonial">
+      <div class="testimonial-text">
+        <p>"Offered office hours often and quickly responded to Piazza and email with good insights."</p>
+      </div>
+      <div class="testimonial-source">— Student, Differential Equations</div>
+    </div>
+  </div>
+</div>
+
+<style>
+.testimonials {
+  margin: 2rem 0;
+}
+
+.testimonial {
+  background: var(--global-bg-color);
+  border-left: 4px solid var(--global-theme-color);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.testimonial.featured {
+  background: var(--global-code-bg-color);
+  border-left-width: 6px;
+  padding: 2rem;
+}
+
+.testimonial-text p {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.testimonial.featured .testimonial-text p {
+  font-size: 1.05em;
+}
+
+.testimonial-source {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: var(--global-theme-color);
+  font-style: normal;
+  font-size: 0.9em;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
