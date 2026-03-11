@@ -7,6 +7,7 @@ nav_order: 5
 cv_pdf: /assets/rendercv/rendercv_output/Jerick_Shi_CV.pdf
 cv_format: rendercv # options: rendercv, jsonresume
 description:
+display_title: false
 toc:
   sidebar: left
 ---

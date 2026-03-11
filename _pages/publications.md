@@ -5,10 +5,11 @@ title: publications
 description:
 nav: true
 nav_order: 2
+display_title: false
 ---
 
 <div class="header-bar">
-  <h1>publications</h1>
+  <h1>Publications</h1>
 </div>
 
 <div class="publications">

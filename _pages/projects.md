@@ -7,10 +7,11 @@ nav: true
 nav_order: 3
 display_categories:
 horizontal: false
+display_title: false
 ---
 
 <div class="header-bar">
-  <h1>projects</h1>
+  <h1>Projects</h1>
 </div>
 
 <!-- pages/projects.md -->

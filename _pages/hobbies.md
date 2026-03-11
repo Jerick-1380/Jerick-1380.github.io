@@ -5,10 +5,11 @@ title: hobbies
 description:
 nav: true
 nav_order: 7
+display_title: false
 ---
 
 <div class="header-bar">
-  <h1>hobbies</h1>
+  <h1>Hobbies</h1>
 </div>
 
 ## Tricking

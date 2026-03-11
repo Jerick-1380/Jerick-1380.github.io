@@ -5,10 +5,11 @@ title: teaching
 nav: true
 nav_order: 6
 calendar: true
+display_title: false
 ---
 
 <div class="header-bar">
-  <h1>teaching</h1>
+  <h1>Teaching</h1>
 </div>
 
 ## Teaching Philosophy
