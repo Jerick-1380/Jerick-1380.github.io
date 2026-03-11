@@ -59,7 +59,7 @@ I'm a certified AIDA 4 Master Freediver, trained in advanced freediving techniqu
     {% include figure.liquid path="assets/img/hobbies/freediving/IMG_3529.jpg" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm-6 mt-3 freediving-col">
-    <div class="certificate-trim">
+    <div style="overflow: hidden; width: 100%; height: 100%; margin-left: -5px; padding-right: 5px;">
       {% include figure.liquid path="assets/img/hobbies/freediving/certificate.png" class="img-fluid rounded z-depth-1" %}
     </div>
   </div>
@@ -262,17 +262,6 @@ function updatePhoto() {
   height: 500px;
   width: 100%;
   object-fit: cover;
-}
-
-.certificate-trim {
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-}
-
-.certificate-trim img {
-  margin-left: -5px;
-  width: calc(100% + 5px) !important;
 }
 
 @media (max-width: 768px) {
