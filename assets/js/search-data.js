@@ -188,7 +188,7 @@ ninja.data = [{
         title: 'CV',
         section: 'Socials',
         handler: () => {
-          window.open("/assets/rendercv/rendercv_output/Jerick_Shi_CV.pdf", "_blank");
+          window.open("/assets/pdf/Shi_Jerick_CV.pdf", "_blank");
         },
       },{
         id: 'social-email',
