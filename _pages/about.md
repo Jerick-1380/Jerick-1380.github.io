@@ -1,6 +1,6 @@
 ---
 layout: about
-title: Jerick Shi
+title: about
 permalink: /
 subtitle:
 
@@ -22,6 +22,10 @@ latest_posts:
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
+
+<div class="header-bar">
+  <h1>Jerick Shi</h1>
+</div>
 
 Hi! I'm Jerick, a 5th year master's student in Computer Science at Carnegie Mellon University.
 
