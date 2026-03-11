@@ -36,11 +36,15 @@ display_title: false
 ## Breakdancing
 
 <div class="row mt-1 breakdancing-photos">
-  <div class="col-sm-6 mt-3 breakdancing-col">
-    {% include figure.liquid path="assets/img/hobbies/breakdancing/54897485878_2cf653b99c_k.JPG" class="img-fluid rounded z-depth-1" %}
+  <div class="col-sm-6 mt-3">
+    <div class="breakdancing-img-wrapper">
+      {% include figure.liquid path="assets/img/hobbies/breakdancing/54897485878_2cf653b99c_k.JPG" class="img-fluid rounded z-depth-1" %}
+    </div>
   </div>
-  <div class="col-sm-6 mt-3 breakdancing-col">
-    {% include figure.liquid path="assets/img/hobbies/breakdancing/IMG_5585.JPG" class="img-fluid rounded z-depth-1" %}
+  <div class="col-sm-6 mt-3">
+    <div class="breakdancing-img-wrapper">
+      {% include figure.liquid path="assets/img/hobbies/breakdancing/IMG_5585.JPG" class="img-fluid rounded z-depth-1" %}
+    </div>
   </div>
 </div>
 
@@ -62,8 +66,12 @@ I'm a certified AIDA 4 Master Freediver, trained in advanced freediving techniqu
   <div class="col-sm-6 mt-3 freediving-col">
     {% include figure.liquid path="assets/img/hobbies/freediving/IMG_3529.jpg" class="img-fluid rounded z-depth-1" %}
   </div>
-  <div class="col-sm-6 mt-3 freediving-col certificate-wrapper">
-    {% include figure.liquid path="assets/img/hobbies/freediving/certificate.png" class="img-fluid rounded z-depth-1" %}
+  <div class="col-sm-6 mt-3 freediving-col">
+    <div style="overflow: hidden; position: relative; height: 100%;">
+      <div style="margin-left: -5px; width: calc(100% + 5px);">
+        {% include figure.liquid path="assets/img/hobbies/freediving/certificate.png" class="img-fluid rounded z-depth-1" %}
+      </div>
+    </div>
   </div>
 </div>
 
@@ -266,19 +274,6 @@ function updatePhoto() {
   object-fit: cover;
 }
 
-.certificate-wrapper {
-  overflow: hidden;
-  position: relative;
-}
-
-.certificate-wrapper figure,
-.certificate-wrapper picture,
-.certificate-wrapper img {
-  margin-left: -5px !important;
-  width: calc(100% + 5px) !important;
-  max-width: calc(100% + 5px) !important;
-}
-
 @media (max-width: 768px) {
   .freediving-col img {
     height: 300px;
@@ -314,26 +309,31 @@ function updatePhoto() {
 }
 
 /* Breakdancing photos - same height */
-.breakdancing-photos {
+.breakdancing-img-wrapper {
+  height: 500px;
   display: flex;
-  align-items: stretch;
+  align-items: center;
+  justify-content: center;
+  background: var(--global-bg-color);
+  overflow: hidden;
+  border-radius: 8px;
 }
 
-.breakdancing-col {
-  display: flex !important;
-  flex-direction: column;
-}
-
-.breakdancing-col figure {
+.breakdancing-img-wrapper figure {
+  width: 100%;
   height: 100%;
   margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.breakdancing-col img {
-  height: 500px;
-  width: 100%;
+.breakdancing-img-wrapper img {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
   object-fit: contain;
-  background: var(--global-bg-color);
 }
 
 @media (max-width: 768px) {
@@ -345,7 +345,7 @@ function updatePhoto() {
     height: 400px !important;
   }
 
-  .breakdancing-col img {
+  .breakdancing-img-wrapper {
     height: 350px;
   }
 }
