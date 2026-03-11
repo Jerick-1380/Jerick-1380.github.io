@@ -8,7 +8,7 @@ middle_name:
 last_name: Shi
 contact_note:
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Hey Guys! I'm Jerick! Test!
+  Jerick Shi - CS Master's student at CMU researching Multi-Agent LLM Systems and AI Safety. Building Quant Engine for aspiring quant professionals.
 footer_text:
 keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
