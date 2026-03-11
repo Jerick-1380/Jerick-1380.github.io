@@ -31,9 +31,11 @@ display_title: false
   </div>
 </div>
 
+<div style="margin-top: 5rem;"></div>
+
 ## Breakdancing
 
-<div class="row mt-3 breakdancing-photos">
+<div class="row mt-1 breakdancing-photos">
   <div class="col-sm-6 mt-3 breakdancing-col">
     {% include figure.liquid path="assets/img/hobbies/breakdancing/54897485878_2cf653b99c_k.JPG" class="img-fluid rounded z-depth-1" %}
   </div>
@@ -49,6 +51,8 @@ display_title: false
     </div>
   </div>
 </div>
+
+<div style="margin-top: 5rem;"></div>
 
 ## Freediving
 
@@ -264,11 +268,15 @@ function updatePhoto() {
 
 .certificate-wrapper {
   overflow: hidden;
+  position: relative;
 }
 
-.certificate-wrapper figure {
-  margin-left: -5px;
-  width: calc(100% + 5px);
+.certificate-wrapper figure,
+.certificate-wrapper picture,
+.certificate-wrapper img {
+  margin-left: -5px !important;
+  width: calc(100% + 5px) !important;
+  max-width: calc(100% + 5px) !important;
 }
 
 @media (max-width: 768px) {
