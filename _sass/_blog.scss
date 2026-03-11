@@ -10,6 +10,16 @@
   h1 {
     color: var(--global-theme-color);
     font-size: 5rem;
+
+    a {
+      color: var(--global-text-color);
+      font-size: 2rem;
+      margin-left: 1rem;
+
+      &:hover {
+        color: var(--global-hover-color);
+      }
+    }
   }
 }
 
