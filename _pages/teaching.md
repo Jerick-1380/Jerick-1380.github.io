@@ -28,8 +28,6 @@ I recognize that effective teaching operates at distinct levels of sophisticatio
 
 Because reaching Level 3 consistently isn't just a pedagogical goal anymore—it's essential preparation for a world where humans and AI collaborate on mathematical problems.
 
----
-
 ## Teaching Timeline
 
 <div class="timeline">

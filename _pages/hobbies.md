@@ -31,8 +31,6 @@ display_title: false
   </div>
 </div>
 
----
-
 ## Breakdancing
 
 <div class="row mt-3">
@@ -52,8 +50,6 @@ display_title: false
   </div>
 </div>
 
----
-
 ## Freediving
 
 I'm a certified AIDA 4 Master Freediver, trained in advanced freediving techniques and safety protocols.
@@ -66,8 +62,6 @@ I'm a certified AIDA 4 Master Freediver, trained in advanced freediving techniqu
     {% include figure.liquid path="assets/img/hobbies/freediving/certificate.png" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
-
----
 
 <div style="margin-top: 4rem;"></div>
 
