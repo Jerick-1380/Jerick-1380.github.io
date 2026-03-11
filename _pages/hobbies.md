@@ -14,17 +14,20 @@ display_title: false
 
 ## Tricking
 
-<div class="row mt-3 align-items-center">
-  <div class="col-md-4 mt-3">
+<div class="row mt-3">
+  <div class="col-sm-6 mt-3">
     {% include figure.liquid path="assets/img/hobbies/tricking/EAAA06DE-2CEC-4102-93FA-353A78C399D5.JPG" class="img-fluid rounded z-depth-1" %}
   </div>
-  <div class="col-md-4 mt-3">
-    <div class="embed-responsive" style="position: relative; padding-bottom: 177.78%; height: 0; overflow: hidden;">
+  <div class="col-sm-6 mt-3">
+    {% include figure.liquid path="assets/img/hobbies/tricking/IMG_7198.PNG" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+
+<div class="row mt-3">
+  <div class="col-sm-12 col-md-6 mt-3 offset-md-3">
+    <div style="position: relative; padding-bottom: 177.78%; height: 0; overflow: hidden;">
       <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/Zqw_2Y2xrB8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-  </div>
-  <div class="col-md-4 mt-3">
-    {% include figure.liquid path="assets/img/hobbies/tricking/IMG_7198.PNG" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 
@@ -52,12 +55,12 @@ display_title: false
 I'm a certified AIDA 4 Master Freediver, trained in advanced freediving techniques and safety protocols.
 
 <div class="row mt-3 freediving-images">
-  <div class="col-sm-6 mt-3">
-    {% include figure.liquid path="assets/img/hobbies/freediving/IMG_3529.jpg" class="img-fluid rounded z-depth-1 freediving-photo" %}
+  <div class="col-sm-6 mt-3 freediving-col">
+    {% include figure.liquid path="assets/img/hobbies/freediving/IMG_3529.jpg" class="img-fluid rounded z-depth-1" %}
   </div>
-  <div class="col-sm-6 mt-3">
-    <div class="certificate-container">
-      {% include figure.liquid path="assets/img/hobbies/freediving/certificate.png" class="img-fluid rounded z-depth-1 freediving-certificate" %}
+  <div class="col-sm-6 mt-3 freediving-col">
+    <div class="certificate-trim">
+      {% include figure.liquid path="assets/img/hobbies/freediving/certificate.png" class="img-fluid rounded z-depth-1" %}
     </div>
   </div>
 </div>
@@ -241,28 +244,36 @@ function updatePhoto() {
 
 /* Freediving images styling */
 .freediving-images {
-  align-items: stretch;
-}
-
-.freediving-images .col-sm-6 {
   display: flex;
   align-items: stretch;
 }
 
-.freediving-photo img,
-.freediving-certificate img {
+.freediving-col {
+  display: flex !important;
+  flex-direction: column;
+}
+
+.freediving-col figure {
   height: 100%;
+  margin: 0;
+}
+
+.freediving-col img {
+  height: 500px;
+  width: 100%;
   object-fit: cover;
 }
 
-.certificate-container {
-  width: 100%;
-  height: 100%;
+.certificate-trim {
   overflow: hidden;
-}
-
-.certificate-container img {
   margin-left: -5px;
   width: calc(100% + 5px);
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .freediving-col img {
+    height: 300px;
+  }
 }
 </style>
