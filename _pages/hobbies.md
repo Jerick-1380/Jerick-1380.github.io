@@ -15,16 +15,16 @@ display_title: false
 ## Tricking
 
 <div class="row mt-3">
-  <div class="col-sm-6 mt-3">
-    {% include figure.liquid path="assets/img/hobbies/tricking/EAAA06DE-2CEC-4102-93FA-353A78C399D5.JPG" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-6 mt-3">
+  <div class="col-sm-12 col-md-8 mt-3 offset-md-2">
     {% include figure.liquid path="assets/img/hobbies/tricking/IMG_7198.PNG" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 
 <div class="row mt-3">
-  <div class="col-sm-12 col-md-6 mt-3 offset-md-3">
+  <div class="col-sm-6 mt-3">
+    {% include figure.liquid path="assets/img/hobbies/tricking/EAAA06DE-2CEC-4102-93FA-353A78C399D5.JPG" class="img-fluid rounded z-depth-1" %}
+  </div>
+  <div class="col-sm-6 mt-3">
     <div style="position: relative; padding-bottom: 177.78%; height: 0; overflow: hidden;">
       <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/Zqw_2Y2xrB8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
@@ -266,9 +266,13 @@ function updatePhoto() {
 
 .certificate-trim {
   overflow: hidden;
-  margin-left: -5px;
-  width: calc(100% + 5px);
+  width: 100%;
   height: 100%;
+}
+
+.certificate-trim img {
+  margin-left: -5px;
+  width: calc(100% + 5px) !important;
 }
 
 @media (max-width: 768px) {
