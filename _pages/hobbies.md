@@ -58,10 +58,8 @@ I'm a certified AIDA 4 Master Freediver, trained in advanced freediving techniqu
   <div class="col-sm-6 mt-3 freediving-col">
     {% include figure.liquid path="assets/img/hobbies/freediving/IMG_3529.jpg" class="img-fluid rounded z-depth-1" %}
   </div>
-  <div class="col-sm-6 mt-3 freediving-col">
-    <div style="overflow: hidden; width: 100%; height: 100%; margin-left: -5px; padding-right: 5px;">
-      {% include figure.liquid path="assets/img/hobbies/freediving/certificate.png" class="img-fluid rounded z-depth-1" %}
-    </div>
+  <div class="col-sm-6 mt-3 freediving-col certificate-wrapper">
+    {% include figure.liquid path="assets/img/hobbies/freediving/certificate.png" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 
@@ -264,6 +262,15 @@ function updatePhoto() {
   object-fit: cover;
 }
 
+.certificate-wrapper {
+  overflow: hidden;
+}
+
+.certificate-wrapper figure {
+  margin-left: -5px;
+  width: calc(100% + 5px);
+}
+
 @media (max-width: 768px) {
   .freediving-col img {
     height: 300px;
@@ -289,11 +296,13 @@ function updatePhoto() {
 .tricking-col img {
   height: 600px;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  background: var(--global-bg-color);
 }
 
 .tricking-col > div {
-  height: 600px;
+  height: 600px !important;
+  padding-bottom: 0 !important;
 }
 
 /* Breakdancing photos - same height */
@@ -315,13 +324,17 @@ function updatePhoto() {
 .breakdancing-col img {
   height: 500px;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  background: var(--global-bg-color);
 }
 
 @media (max-width: 768px) {
-  .tricking-col img,
-  .tricking-col > div {
+  .tricking-col img {
     height: 400px;
+  }
+
+  .tricking-col > div {
+    height: 400px !important;
   }
 
   .breakdancing-col img {
