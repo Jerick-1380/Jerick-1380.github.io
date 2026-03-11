@@ -14,7 +14,7 @@ toc:
 
 <div class="header-bar">
   <h1>CV
-    <a href="{{ page.cv_pdf | relative_url }}" target="_blank" rel="noopener noreferrer" class="float-right">
+    <a href="/assets/pdf/Shi_Jerick_CV.pdf" target="_blank" rel="noopener noreferrer" class="float-right">
       <i class="fa-solid fa-file-pdf"></i>
     </a>
   </h1>
