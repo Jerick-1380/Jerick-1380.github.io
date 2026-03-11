@@ -16,15 +16,15 @@ display_title: false
 
 <div class="row mt-3">
   <div class="col-sm-12 col-md-8 mt-3 offset-md-2">
-    {% include figure.liquid path="assets/img/hobbies/tricking/IMG_7198.PNG" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid path="assets/img/hobbies/tricking/EAAA06DE-2CEC-4102-93FA-353A78C399D5.JPG" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 
-<div class="row mt-3">
-  <div class="col-sm-6 mt-3">
-    {% include figure.liquid path="assets/img/hobbies/tricking/EAAA06DE-2CEC-4102-93FA-353A78C399D5.JPG" class="img-fluid rounded z-depth-1" %}
+<div class="row mt-3 tricking-bottom">
+  <div class="col-sm-6 mt-3 tricking-col">
+    {% include figure.liquid path="assets/img/hobbies/tricking/IMG_7198.PNG" class="img-fluid rounded z-depth-1" %}
   </div>
-  <div class="col-sm-6 mt-3">
+  <div class="col-sm-6 mt-3 tricking-col">
     <div style="position: relative; padding-bottom: 177.78%; height: 0; overflow: hidden;">
       <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/Zqw_2Y2xrB8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
@@ -33,11 +33,11 @@ display_title: false
 
 ## Breakdancing
 
-<div class="row mt-3">
-  <div class="col-sm-6 mt-3">
+<div class="row mt-3 breakdancing-photos">
+  <div class="col-sm-6 mt-3 breakdancing-col">
     {% include figure.liquid path="assets/img/hobbies/breakdancing/54897485878_2cf653b99c_k.JPG" class="img-fluid rounded z-depth-1" %}
   </div>
-  <div class="col-sm-6 mt-3">
+  <div class="col-sm-6 mt-3 breakdancing-col">
     {% include figure.liquid path="assets/img/hobbies/breakdancing/IMG_5585.JPG" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
@@ -267,6 +267,65 @@ function updatePhoto() {
 @media (max-width: 768px) {
   .freediving-col img {
     height: 300px;
+  }
+}
+
+/* Tricking bottom row - same height for photo and video */
+.tricking-bottom {
+  display: flex;
+  align-items: stretch;
+}
+
+.tricking-col {
+  display: flex !important;
+  flex-direction: column;
+}
+
+.tricking-col figure {
+  height: 100%;
+  margin: 0;
+}
+
+.tricking-col img {
+  height: 600px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.tricking-col > div {
+  height: 600px;
+}
+
+/* Breakdancing photos - same height */
+.breakdancing-photos {
+  display: flex;
+  align-items: stretch;
+}
+
+.breakdancing-col {
+  display: flex !important;
+  flex-direction: column;
+}
+
+.breakdancing-col figure {
+  height: 100%;
+  margin: 0;
+}
+
+.breakdancing-col img {
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .tricking-col img,
+  .tricking-col > div {
+    height: 400px;
+  }
+
+  .breakdancing-col img {
+    height: 350px;
   }
 }
 </style>
