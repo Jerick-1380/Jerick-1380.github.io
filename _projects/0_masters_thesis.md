@@ -2,7 +2,7 @@
 layout: page
 title: "Master's Thesis: The Structure of Deception in Multi-Agent LLM Systems"
 description: How LLM Agents Lie, Break Promises, and Exploit Trust
-img: assets/img/projects/thesis.png
+img: assets/img/projects/thesis_thumbnail.png
 importance: 0
 category: work
 ---
