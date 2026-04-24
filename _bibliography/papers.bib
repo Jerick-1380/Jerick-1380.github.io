@@ -1,6 +1,22 @@
 ---
 ---
 
+@mastersthesis{shi2026thesis,
+  author       = {Jerick Shi},
+  title        = {The Structure of Deception: How LLM Agents Lie, Break Promises, and Exploit Trust in Multi-Agent Settings},
+  school       = {Carnegie Mellon University},
+  year         = {2026},
+  month        = {May},
+  type         = {Master's thesis},
+  number       = {CMU-CS-26-105},
+  url          = {/assets/pdf/masters_thesis.pdf},
+  html         = {https://youtu.be/Z3Q9AkriPxg},
+  abstract     = {Large language models are increasingly deployed as autonomous agents that communicate, commit, and coordinate in multi-agent systems. Deception in such settings, including promise-breaking, selective information sharing, and exploitation of other agents' interpretive frameworks, introduces deployment risks that isolated-model evaluation cannot detect. Existing evaluations of multi-agent LLM deception are fragmented across subfields that do not share benchmarks or vocabulary, and the resulting measurements rarely compose into a coherent characterization of how frontier models behave. This thesis develops a unified framework for measuring LLM deception in multi-agent settings and populates it with empirical evaluations across three interaction structures. A taxonomy organized along goal-directedness, object, and mechanism dimensions unifies the fragmented literature and reveals systematic benchmark coverage gaps. Three empirical chapters evaluate frontier LLMs in progressively less structured settings: one-shot games with mandated announcements, repeated games with endogenous announcements and heterogeneous model compositions, and a resource-gathering simulation with narrative goals and no announcement protocol. Across these settings, aggregate lying rates obscure qualitatively distinct deceptive profiles. Deception in repeated games with prescribed protocols is predominantly premeditated and takes the form of planned false commitments; under narrative goals and free-form communication, the character of deception varies with goal composition, and the premeditation that occurs takes the form of strategic silence that message-level classification cannot observe. Three candidate monitoring approaches drawn from the existing literature each fail against a specific failure mode. The central claim is that LLM deception in multi-agent settings is not a single phenomenon but a family of structurally distinct failure modes, each shaped by different features of the interaction. Current benchmarks and monitoring approaches systematically underrepresent this variety.},
+  keywords     = {Large Language Models, Multi-Agent Systems, Cooperative AI, LLM Deception},
+  note         = {Thesis Committee: Vincent Conitzer (Chair), Aditi Raghunathan. Advisors: Vincent Conitzer, Zhijing Jin},
+  preview      = {thesis.png}
+}
+
 @article{DBLP:journals/corr/abs-2511-13614,
   author       = {Jerick Shi and
                   Burton Hollifield},
@@ -19,19 +35,27 @@
 }
 
 @article{deception26,
-  title={Cheap Talk, Empty Promise: Frontier LLMs easily break public promises for self-interest (In Preparation)},
+  title={Cheap Talk, Empty Promise: Frontier LLMs easily break public promises for self-interest},
   author={Jerick Shi and Terry Jingcheng Zhang and Zhijing Jin and Vincent Conitzer},
+  journal={arXiv preprint},
   year={2026},
-  note={In preparation for arXiv submission},
+  url={https://arxiv.org/abs/2604.04782},
+  doi={10.48550/arXiv.2604.04782},
+  eprinttype={arXiv},
+  eprint={2604.04782},
   abstract={Large language models are increasingly deployed as autonomous agents in multi-agent settings where they communicate intentions and take consequential actions with limited human oversight. A critical safety question is whether agents that publicly commit to actions break those commitments when they can privately deviate, and what the consequences are for both themselves and the collective. We study deception as a deviation from a publicly announced action in one-shot normal-form games, classifying each deviation by its effect on individual payoff and collective welfare into four categories: strategic, selfish, altruistic, and sabotaging. By exhaustively enumerating announcement profiles across six canonical games and nine frontier models, we identify all opportunities for each deviation type and measure how often agents exploit them. Across all settings, agents deviate from commitments in approximately 56.6\% of scenarios, but the character of deception varies substantially across models even at similar overall rates. Most critically, for the majority of the models, commitment-breaking occurs without metacognitive awareness as measured by LLM-judged reasoning traces, with agents optimizing payoffs without recognizing that they are breaking commitments.},
   preview={cheap_talk.png}
 }
 
 @article{survey26,
-  title={Behavioral and Strategic Deception in Large Language Models: A Taxonomy and Benchmark Analysis (In Preparation)},
+  title={From Hallucination to Scheming: A Unified Taxonomy and Benchmark Analysis for LLM Deception},
   author={Jerick Shi and Terry Jingcheng Zhang and Zhijing Jin and Vincent Conitzer},
+  journal={arXiv preprint},
   year={2026},
-  note={In preparation for arXiv submission},
+  url={https://arxiv.org/abs/2604.04788},
+  doi={10.48550/arXiv.2604.04788},
+  eprinttype={arXiv},
+  eprint={2604.04788},
   abstract={Large language models produce outputs that systematically mislead users, from hallucinated facts and fabricated citations to sycophantic agreement and strategic deception of evaluators. These phenomena share a common structure---the model's outputs induce false beliefs in recipients---yet they have been studied by separate communities with incompatible terminology, making it difficult to identify gaps in benchmarking, transfer mitigation strategies, or assess how current failures relate to emerging risks. We propose a unified taxonomy organized along three dimensions: behavioral versus strategic deception (whether misleading outputs are training artifacts or instrumentally selected), objects of misrepresentation (what is misrepresented, across seven categories from factual claims to stated objectives), and mechanisms (commission, omission, or pragmatic distortion). Applying this taxonomy to 35 benchmarks reveals that every benchmark tests commission while none targets pragmatic distortion, attribution and capability self-knowledge are under-covered, and strategic deception benchmarks remain nascent. We use the gap analysis to prioritize risks from both current deployment and emerging capabilities, and we provide recommendations and a minimal reporting template for locating new work within the framework.},
   preview={taxonomy.png}
 }

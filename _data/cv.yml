@@ -19,7 +19,7 @@ cv:
         end_date: 2026
         courses: "Trustworthy AI, Generative AI, Randomized Algorithms, AI as a Co-founder"
         highlights:
-          - "Master's Thesis (tentative): Deceptive Behaviors in Muli-Agent LLM Systems"
+          - "Master's Thesis: The Structure of Deception: How LLM Agents Lie, Break Promises, and Exploit Trust in Multi-Agent Settings"
           - "Research Areas: Multi-Agent LLM Systems, AI Safety"
 
       - institution: Carnegie Mellon University
