@@ -153,7 +153,12 @@ ninja.data = [{
           section: "News",},{id: "news-paper-cheap-talk-empty-promise-frontier-llms-easily-break-public-promises-for-self-interest-accepted-to-iclr-ai-for-mechanism-design-and-strategic-decision-making-workshop",
           title: 'Paper “Cheap Talk, Empty Promise: Frontier LLMs easily break public promises for self-interest”...',
           description: "",
-          section: "News",},{id: "projects-senior-thesis-why-multi-agent-conversations-cannot-fix-llm-forecasting",
+          section: "News",},{id: "projects-master-39-s-thesis-the-structure-of-deception-in-multi-agent-llm-systems",
+          title: 'Master&amp;#39;s Thesis: The Structure of Deception in Multi-Agent LLM Systems',
+          description: "How LLM Agents Lie, Break Promises, and Exploit Trust",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/0_masters_thesis/";
+            },},{id: "projects-senior-thesis-why-multi-agent-conversations-cannot-fix-llm-forecasting",
           title: 'Senior Thesis: Why Multi-Agent Conversations Cannot Fix LLM Forecasting',
           description: "Evidence from Convergence Analysis",
           section: "Projects",handler: () => {
