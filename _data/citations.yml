@@ -1,12 +1,12 @@
 metadata:
-  last_updated: '2026-04-29'
+  last_updated: '2026-05-15'
 papers:
   6wj2mTQAAAAJ:9yKSN-GCB0IC:
     citations: 0
     title: 'Cheap Talk, Empty Promise: Frontier LLMs easily break public promises for self-interest'
     year: '2026'
   6wj2mTQAAAAJ:d1gkVwhDpl0C:
-    citations: 0
+    citations: 1
     title: 'From Hallucination to Scheming: A Unified Taxonomy and Benchmark Analysis for LLM Deception'
     year: '2026'
   6wj2mTQAAAAJ:u-x6o8ySG0sC:
