@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-06-08'
+  last_updated: '2026-06-22'
 papers:
   6wj2mTQAAAAJ:2osOgNQ5qMEC:
     citations: 0
@@ -10,9 +10,13 @@ papers:
     title: 'Cheap Talk, Empty Promise: Frontier LLMs easily break public promises for self-interest'
     year: '2026'
   6wj2mTQAAAAJ:d1gkVwhDpl0C:
-    citations: 2
+    citations: 3
     title: 'From Hallucination to Scheming: A Unified Taxonomy and Benchmark Analysis for LLM Deception'
     year: '2026'
+  6wj2mTQAAAAJ:qjMakFHDy7sC:
+    citations: 0
+    title: 'When Agents Lie: Premeditation, Persistence, and Exploitation in Repeated Games'
+    year: Unknown Year
   6wj2mTQAAAAJ:u-x6o8ySG0sC:
     citations: 0
     title: Market-Dependent Communication in Multi-Agent Alpha Generation
