@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Intro to ML: Sentiment Analysis and Stock Prices — Jerick Shi</title>
+  <meta name="description" content="Using techniques from 10-315 for sentiment analysis with applications to stock market prediction">
+  <link rel="icon" href="/assets/img/brain.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+  <div id="progress"></div>
+  <canvas id="starfield"></canvas>
+  <div class="bg-glow"></div>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="/"><b>jerick</b>@shi:~$<span class="cursor">▊</span></a>
+      <button class="nav-burger" aria-label="Menu">☰</button>
+      <div class="nav-links">
+        <a href="/">About</a>
+        <a href="/publications/">Research</a>
+        <a href="/projects/">Projects</a>
+        <a href="/teaching/">Teaching</a>
+        <a href="/blog/">Blog</a>
+        <a href="/hobbies/">Hobbies</a>
+        <a href="/cv/">CV</a>
+        <button class="cmdk-btn" aria-label="Open command palette">⌘K</button>
+      </div>
+    </div>
+  </nav>
+
+  <article class="article">
+    <header>
+      <div class="eyebrow"><span class="idx">//</span> project · intro to machine learning</div>
+      <h1>Intro to ML: Sentiment Analysis and Stock Prices</h1>
+      <p class="muted">Sentiment analysis of market news with applications to stock prediction</p>
+      <div><span class="chip">nlp</span><span class="chip">classification</span></div>
+    </header>
+    <div class="article-body">
+<p>For this final project, our team decided to create a machine learning model for sentiment analysis, which basically reads a sentence and determines whether it consists of a positive or a negative tone. The dataset we will be using is called <a href="https://www.kaggle.com/datasets/yash612/stockmarket-sentiment-dataset">Stock-Market Sentiment Dataset</a>, which consists of 2 columns, the text and whether it's positive or negative.</p>
+<p>Since these are taken from the stock market news, we are also able to apply our model to other news websites and predict their sentiment. Using this, we shall also analyze whether there is a strong correlation between the sentiment of the news as well as the change in price of a stock, which uses this <a href="https://www.kaggle.com/datasets/BidecInnovations/stock-price-and-news-realted-to-it?select=AppleNewsStock.csv">dataset</a>.</p>
+<p>In the end, we determined that individually, a Support Vector Machine works best for such a classification task, which achieved an accuracy of 77%. Furthermore, a combination of all the models does not seem to have a huge difference for directly analyzing sentiment, and neither model does well in predicting stock prices. This is because a lot of factors influence the change in stock prices other than the news itself.</p>
+    </div>
+    <div style="margin-top:2rem;"><a class="btn btn-primary" href="https://github.com/Jerick-1380/10315-Final-Project" target="_blank" rel="noopener">View on GitHub</a></div>
+    <hr class="divider-glow">
+    <p><a href="/projects/">← All projects</a></p>
+  </article>
+
+  <footer>
+    <div class="wrap foot-grid">
+      <div class="foot-links">
+        <a href="mailto:junkais@andrew.cmu.edu">Email</a>
+        <a href="https://github.com/Jerick-1380" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/jerick-shi-293773216" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=6wj2mTQAAAAJ" target="_blank" rel="noopener">Scholar</a>
+        <a href="https://www.youtube.com/@DummyR18" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://flickr.com/photos/203834484@N07/" target="_blank" rel="noopener">Flickr</a>
+        <a href="/books/">Bookshelf</a>
+      </div>
+      <div class="foot-note">© 2026 JERICK SHI · PRESS ⌘K TO NAVIGATE</div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

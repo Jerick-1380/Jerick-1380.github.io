@@ -1,4 +1,2 @@
 User-agent: *
 Disallow:
-
-Sitemap: https://Jerick-1380.github.io/sitemap.xml
