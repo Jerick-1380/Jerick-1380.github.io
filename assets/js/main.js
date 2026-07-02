@@ -367,6 +367,8 @@
     { label: "CV", href: "/cv/", k: "go" },
     { label: "Download CV (PDF)", href: "/assets/pdf/Shi_Jerick_CV.pdf", k: "pdf" },
     { label: "Master's Thesis (PDF)", href: "/assets/pdf/masters_thesis.pdf", k: "pdf" },
+    { label: "When Agents Lie — Best Paper, ICML '26 WS (PDF)", href: "https://openreview.net/pdf?id=v8nYIkYjY0", k: "pdf" },
+    { label: "Strategic Silence in Multi-Agent LLMs (PDF)", href: "https://openreview.net/pdf?id=ZOdCsExYgi", k: "pdf" },
     { label: "Thesis Defense (YouTube)", href: "https://youtu.be/Z3Q9AkriPxg", k: "link" },
     { label: "GitHub — Jerick-1380", href: "https://github.com/Jerick-1380", k: "link" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/jerick-shi-293773216", k: "link" },
