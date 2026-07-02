@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How I Actually Learn Complex Research Papers with AI (And Why You Should Too) — Jerick Shi</title>
+  <meta name="description" content="A practical walkthrough of using AI to understand dense academic papers, from adversarial training to developing genuine mathematical intuition">
+  <link rel="icon" href="/assets/img/brain.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+  <div id="progress"></div>
+  <canvas id="starfield"></canvas>
+  <div class="bg-glow"></div>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="/"><b>jerick</b>@shi:~$<span class="cursor">▊</span></a>
+      <button class="nav-burger" aria-label="Menu">☰</button>
+      <div class="nav-links">
+        <a href="/">About</a>
+        <a href="/publications/">Research</a>
+        <a href="/projects/">Projects</a>
+        <a href="/teaching/">Teaching</a>
+        <a href="/blog/">Blog</a>
+        <a href="/hobbies/">Hobbies</a>
+        <a href="/cv/">CV</a>
+        <button class="cmdk-btn" aria-label="Open command palette">⌘K</button>
+      </div>
+    </div>
+  </nav>
+
+  <article class="article">
+    <header>
+      <div class="eyebrow"><span class="idx">//</span> blog_entry · 2025.09.08</div>
+      <h1>How I Actually Learn Complex Research Papers with AI (And Why You Should Too)</h1>
+      <p class="muted">A practical walkthrough of using AI to understand dense academic papers, from adversarial training to developing genuine mathematical intuition</p>
+      <div><span class="chip">ai</span><span class="chip">learning</span><span class="chip">research</span><span class="chip">education</span><span class="chip">machine-learning</span></div>
+    </header>
+    <div class="article-body">
+<p>I want to walk you through something that happened to me last week—a perfect example of how I've started using AI to understand confusing concepts from lecture.</p>
+<p>I was sitting in my AI class, completely lost. My professor was explaining adversarial training—this technique for making neural networks robust against malicious attacks—but nothing was clicking. The math was flying by, the concepts felt abstract, and by the end I had a notebook full of disconnected fragments that made no sense.</p>
+<p>The lecture was based on a foundational paper: "Towards Deep Learning Models Resistant to Adversarial Attacks" by Madry et al. You know the type—dense mathematics, complex optimization theory, the kind of paper that normally takes me hours to parse and leaves me more confused than when I started.</p>
+<p>But instead of my usual approach (re-read notes, frantically Google terms, hope something eventually clicks), I tried something different. I uploaded the paper to Claude and started asking questions.</p>
+<p>What happened next completely changed how I approach learning difficult material.</p>
+<h2 id="starting-with-the-basics">Starting with the Basics</h2>
+<p>My first prompt was really simple: "Provide an in depth summary of this paper"</p>
+<p>But here's what was different from just reading the abstract or skimming online summaries. Claude didn't just regurgitate the paper's claims—it organized the information to connect dots I'd missed in lecture.</p>
+<p>The response started: "This paper presents a comprehensive study on training deep neural networks to be robust against adversarial attacks. Here's an in-depth summary: Deep neural networks are vulnerable to adversarial examples - inputs that are nearly identical to natural data but cause the network to make incorrect predictions..."</p>
+<p>Suddenly, adversarial examples weren't just some abstract concept from lecture. They were a concrete security vulnerability that I could actually visualize and understand.</p>
+<h2 id="drilling-into-what-confused-me-most">Drilling Into What Confused Me Most</h2>
+<p>The paper kept mentioning "Projected Gradient Descent (PGD)" as their main innovation, but in lecture it was just another acronym that went over my head. So I asked directly:</p>
+<p>"Go more in depth on what pgd is, the formula, how its used, why its a 'universal' first order adversary. make sure to output any formula in math mode"</p>
+<p>This is where AI tutoring really shines. Claude didn't just dump the mathematical formula on me—it explained the intuition behind each component:</p>
+<p>"Projected Gradient Descent is an iterative optimization algorithm designed to solve constrained optimization problems. In the context of adversarial attacks, PGD solves the inner maximization problem: $$\max_{\delta \in S} L(\theta, x + \delta, y)$$"</p>
+<p>Then it walked through the algorithm step by step. The projection operator, the sign function, the iterative updates—suddenly the pieces started fitting together in a way they never had during lecture.</p>
+<h2 id="asking-the-obvious-questions">Asking the "Obvious" Questions</h2>
+<p>Here's where AI learning gets really powerful. In class, there are questions you just can't ask because they feel too basic. But with Claude, I could ask anything:</p>
+<p>"So its literally just, for data point 1, find the adversarial input do normal parameter updating except against this adversarial input except a regular input, then for data point 2, find another adversarial input, and so on?"</p>
+<p>Claude's response: "Exactly! You've understood the core algorithm perfectly."</p>
+<p>That confirmation was crucial. Sometimes the most sophisticated-sounding techniques boil down to surprisingly simple ideas, but you need someone to tell you that your simplified understanding is actually correct.</p>
+<h2 id="following-the-research-thread">Following the Research Thread</h2>
+<p>Once I grasped the core paper, I got curious about improvements and extensions. Instead of hunting through citations, I just asked Claude about follow-up work.</p>
+<p>This led me to "Fast is Better Than Free" by Wong et al., which showed you could get identical robustness with 800x less computation. When I asked how this was possible, Claude explained:</p>
+<p>"The paper's central finding is that FGSM adversarial training with random initialization achieves comparable robustness to PGD training: MNIST: 97.53% vs 97.66% robust accuracy (FGSM vs PGD), CIFAR-10: 46.06% vs 45.80% robust accuracy"</p>
+<p>But I was still confused about the mechanism:</p>
+<p>"Im confused, so how is it using the original dataset"</p>
+<p>This led to another key insight—adversarial training modifies inputs but keeps original labels. A detail that's easy to miss but fundamental to understanding how the whole approach works.</p>
+<h2 id="the-breakthrough-moment">The Breakthrough Moment</h2>
+<p>The real breakthrough came when I asked what seemed like an obvious question:</p>
+<p>"So it seems like we dont need the optimal adversary. What does this mean in general"</p>
+<p>Claude's response opened up a completely new perspective:</p>
+<p>"This finding has profound implications that extend far beyond adversarial training... The core insight is that approximate solutions to inner optimization problems can be sufficient for the outer objective. This challenges a fundamental assumption in robust optimization that you need to solve the inner maximization precisely."</p>
+<p>Suddenly I wasn't just understanding this one paper—I was seeing connections to broader principles in machine learning and optimization theory. The kind of insight that would have taken me weeks to develop on my own, if ever.</p>
+<h2 id="what-traditional-learning-missed">What Traditional Learning Missed</h2>
+<p>Looking back at my lecture notes, I realized what had gone wrong. The professor presented material in the logical order of the paper: problem → theory → algorithm → experiments → results.</p>
+<p>But that's not how understanding actually builds. I needed to start with concrete examples, grasp the basic mechanism, then work backwards to theory. I needed to ask stupid questions and get patient answers. I needed connections made explicit instead of hoping I'd infer them.</p>
+<p>Traditional lectures can't adapt to individual confusion points. Miss a concept early and everything builds on shaky foundations. But AI learning is responsive—when confused, you can stop, clarify, and rebuild understanding from solid ground.</p>
+<h2 id="the-specific-techniques-that-worked">The Specific Techniques That Worked</h2>
+<p>After analyzing my conversation with Claude, several patterns emerge that made this approach effective:</p>
+<p><strong>Start broad, then drill down progressively.</strong> Get the big picture first, then dive into technical details only after understanding the overall framework.</p>
+<p><strong>Ask for clarification of confusing passages.</strong> When papers use jargon like "formulated as a robust optimization problem with a minimax objective," ask what each part actually means instead of just accepting the complexity.</p>
+<p><strong>Request concrete examples and implementations.</strong> Don't just understand theory—ask for code snippets and step-by-step breakdowns that show how concepts work in practice.</p>
+<p><strong>Test understanding with restatements.</strong> Frequently ask "so it's literally just..." to check whether your simplified mental model is correct.</p>
+<p><strong>Follow conceptual threads.</strong> When you learn about one technique, ask about related work and improvements to build a map of the research landscape.</p>
+<p><strong>Ask "stupid" questions without embarrassment.</strong> Questions that feel too basic for office hours are perfect for AI tutoring.</p>
+<h2 id="the-broader-implications">The Broader Implications</h2>
+<p>This experience made me realize we're in a unique historical moment for learning. AI is sophisticated enough to serve as an expert tutor but not so advanced that it eliminates the need for human curiosity and critical thinking.</p>
+<p>The traditional academic model—expert broadcasts content, students struggle to absorb it—assumes a one-to-many relationship where individual confusion can't be addressed in real time. AI fundamentally changes this constraint.</p>
+<p>Instead of passively receiving information and hoping it sticks, I could have an active conversation with the material. Ask follow-ups, request clarification, explore tangents, build understanding at my own pace.</p>
+<p>This isn't about using AI to avoid learning. It's about using AI to learn more efficiently and deeply than traditional methods allow.</p>
+<h2 id="the-window-were-in">The Window We're In</h2>
+<p>We're in a transition period where AI is powerful enough to be genuinely helpful but not so powerful that it makes human understanding obsolete.</p>
+<p>This creates an opportunity: use AI to become better learners, to understand complex material more thoroughly than ever before. But we're still doing the learning—asking questions, making connections, building mental models.</p>
+<p>The next time you sit through a lecture feeling lost, or encounter a research paper that seems impenetrable, don't struggle alone. Upload the material to Claude and start asking questions. Be specific about confusion points. Ask for examples. Request different explanations until something clicks.</p>
+<p>You might be surprised how much you can learn when you have the right learning partner—one that never gets tired of your questions and can explain things as many ways as you need to hear them.</p>
+<p>The future of learning might not be about accessing information. It might be about having better conversations with that information. And that future is already here.</p>
+    </div>
+    
+    <hr class="divider-glow">
+    <p><a href="/blog/">← All posts</a></p>
+  </article>
+
+  <footer>
+    <div class="wrap foot-grid">
+      <div class="foot-links">
+        <a href="mailto:junkais@andrew.cmu.edu">Email</a>
+        <a href="https://github.com/Jerick-1380" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/jerick-shi-293773216" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=6wj2mTQAAAAJ" target="_blank" rel="noopener">Scholar</a>
+        <a href="https://www.youtube.com/@DummyR18" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://flickr.com/photos/203834484@N07/" target="_blank" rel="noopener">Flickr</a>
+        <a href="/books/">Bookshelf</a>
+      </div>
+      <div class="foot-note">© 2026 JERICK SHI · PRESS ⌘K TO NAVIGATE</div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

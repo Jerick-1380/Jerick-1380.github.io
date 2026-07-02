@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research — Jerick Shi</title>
+  <meta name="description" content="Publications by Jerick Shi on multi-agent LLM systems, deception, and AI safety.">
+  <link rel="icon" href="/assets/img/brain.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+  <div id="progress"></div>
+  <canvas id="starfield"></canvas>
+  <div class="bg-glow"></div>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="/"><b>jerick</b>@shi:~$<span class="cursor">▊</span></a>
+      <button class="nav-burger" aria-label="Menu">☰</button>
+      <div class="nav-links">
+        <a href="/">About</a>
+        <a href="/publications/">Research</a>
+        <a href="/projects/">Projects</a>
+        <a href="/teaching/">Teaching</a>
+        <a href="/blog/">Blog</a>
+        <a href="/hobbies/">Hobbies</a>
+        <a href="/cv/">CV</a>
+        <button class="cmdk-btn" aria-label="Open command palette">⌘K</button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-head wrap">
+    <div class="eyebrow"><span class="idx">//</span> research_index</div>
+    <h1>Publications</h1>
+    <p class="lead">Deception, communication, and trust in multi-agent LLM systems. Also on <a href="https://scholar.google.com/citations?user=6wj2mTQAAAAJ" target="_blank" rel="noopener">Google Scholar</a>.</p>
+  </header>
+
+  <main class="wrap" style="padding-bottom:3rem;">
+
+    <!-- Thesis banner -->
+    <div class="card tilt reveal" style="margin-bottom:2.5rem; border-image: linear-gradient(120deg,#46e0ff,#9d6bff) 1;">
+      <span class="chip">Master's Thesis · CMU-CS-26-105</span>
+      <h3 style="margin-top:0.8rem;">The Structure of Deception: How LLM Agents Lie, Break Promises, and Exploit Trust in Multi-Agent Settings</h3>
+      <p class="muted" style="font-size:0.95rem;">A unified framework for measuring LLM deception across three interaction structures — one-shot games, repeated games, and open-ended resource simulations. Committee: Vincent Conitzer (chair), Aditi Raghunathan. Advisors: Vincent Conitzer, Zhijing Jin.</p>
+      <div class="pub-actions">
+        <a class="btn btn-sm btn-primary" href="/assets/pdf/masters_thesis.pdf" target="_blank">Thesis PDF</a>
+        <a class="btn btn-sm btn-ghost" href="https://youtu.be/Z3Q9AkriPxg" target="_blank" rel="noopener">Defense video</a>
+        <a class="btn btn-sm btn-ghost" href="/projects/masters-thesis/">Project page</a>
+      </div>
+    </div>
+
+    <h2 class="reveal" style="margin-top:3rem;">2026</h2>
+    <hr class="divider-glow" style="margin:1rem 0 2rem;">
+
+    <!-- Cheap Talk -->
+    <div class="card reveal pub" style="margin-bottom:1.6rem;">
+      <img src="/assets/img/publication_preview/cheap_talk.png" alt="Cheap Talk paper preview">
+      <div>
+        <h3>Cheap Talk, Empty Promise: Frontier LLMs easily break public promises for self-interest</h3>
+        <p class="authors"><b>Jerick Shi</b>, Terry Jingcheng Zhang, Zhijing Jin, Vincent Conitzer</p>
+        <p class="venue">ICLR 2026 · AI FOR MECHANISM DESIGN &amp; STRATEGIC DECISION MAKING WORKSHOP · ARXIV:2604.04782</p>
+        <div class="pub-actions">
+          <a class="btn btn-sm btn-primary" href="https://arxiv.org/abs/2604.04782" target="_blank" rel="noopener">arXiv</a>
+          <button class="btn btn-sm btn-ghost" data-toggle="abs-cheap">Abstract</button>
+          <button class="btn btn-sm btn-ghost" data-copy="bib-cheap">Copy BibTeX</button>
+        </div>
+        <div class="abstract" id="abs-cheap">Large language models are increasingly deployed as autonomous agents in multi-agent settings where they communicate intentions and take consequential actions with limited human oversight. A critical safety question is whether agents that publicly commit to actions break those commitments when they can privately deviate, and what the consequences are for both themselves and the collective. We study deception as a deviation from a publicly announced action in one-shot normal-form games, classifying each deviation by its effect on individual payoff and collective welfare into four categories: strategic, selfish, altruistic, and sabotaging. By exhaustively enumerating announcement profiles across six canonical games and nine frontier models, we identify all opportunities for each deviation type and measure how often agents exploit them. Across all settings, agents deviate from commitments in approximately 56.6% of scenarios, but the character of deception varies substantially across models even at similar overall rates. Most critically, for the majority of the models, commitment-breaking occurs without metacognitive awareness as measured by LLM-judged reasoning traces, with agents optimizing payoffs without recognizing that they are breaking commitments.</div>
+        <pre id="bib-cheap" hidden>@article{deception26,
+  title={Cheap Talk, Empty Promise: Frontier LLMs easily break public promises for self-interest},
+  author={Jerick Shi and Terry Jingcheng Zhang and Zhijing Jin and Vincent Conitzer},
+  journal={arXiv preprint arXiv:2604.04782},
+  year={2026},
+  url={https://arxiv.org/abs/2604.04782}
+}</pre>
+      </div>
+    </div>
+
+    <!-- Taxonomy -->
+    <div class="card reveal pub" style="margin-bottom:1.6rem;">
+      <img src="/assets/img/publication_preview/taxonomy.png" alt="Deception taxonomy paper preview">
+      <div>
+        <h3>From Hallucination to Scheming: A Unified Taxonomy and Benchmark Analysis for LLM Deception</h3>
+        <p class="authors"><b>Jerick Shi</b>, Terry Jingcheng Zhang, Zhijing Jin, Vincent Conitzer</p>
+        <p class="venue">ICLR 2026 · AGENTS IN THE WILD: SAFETY, SECURITY &amp; BEYOND WORKSHOP · ARXIV:2604.04788</p>
+        <div class="pub-actions">
+          <a class="btn btn-sm btn-primary" href="https://arxiv.org/abs/2604.04788" target="_blank" rel="noopener">arXiv</a>
+          <button class="btn btn-sm btn-ghost" data-toggle="abs-tax">Abstract</button>
+          <button class="btn btn-sm btn-ghost" data-copy="bib-tax">Copy BibTeX</button>
+        </div>
+        <div class="abstract" id="abs-tax">Large language models produce outputs that systematically mislead users, from hallucinated facts and fabricated citations to sycophantic agreement and strategic deception of evaluators. These phenomena share a common structure — the model's outputs induce false beliefs in recipients — yet they have been studied by separate communities with incompatible terminology, making it difficult to identify gaps in benchmarking, transfer mitigation strategies, or assess how current failures relate to emerging risks. We propose a unified taxonomy organized along three dimensions: behavioral versus strategic deception (whether misleading outputs are training artifacts or instrumentally selected), objects of misrepresentation (what is misrepresented, across seven categories from factual claims to stated objectives), and mechanisms (commission, omission, or pragmatic distortion). Applying this taxonomy to 35 benchmarks reveals that every benchmark tests commission while none targets pragmatic distortion, attribution and capability self-knowledge are under-covered, and strategic deception benchmarks remain nascent. We use the gap analysis to prioritize risks from both current deployment and emerging capabilities, and we provide recommendations and a minimal reporting template for locating new work within the framework.</div>
+        <pre id="bib-tax" hidden>@article{survey26,
+  title={From Hallucination to Scheming: A Unified Taxonomy and Benchmark Analysis for LLM Deception},
+  author={Jerick Shi and Terry Jingcheng Zhang and Zhijing Jin and Vincent Conitzer},
+  journal={arXiv preprint arXiv:2604.04788},
+  year={2026},
+  url={https://arxiv.org/abs/2604.04788}
+}</pre>
+      </div>
+    </div>
+
+    <h2 class="reveal" style="margin-top:3rem;">2025</h2>
+    <hr class="divider-glow" style="margin:1rem 0 2rem;">
+
+    <!-- Market -->
+    <div class="card reveal pub" style="margin-bottom:1.6rem;">
+      <img src="/assets/img/publication_preview/market.png" alt="Market communication paper preview">
+      <div>
+        <h3>Market-Dependent Communication in Multi-Agent Alpha Generation</h3>
+        <p class="authors"><b>Jerick Shi</b>, Burton Hollifield</p>
+        <p class="venue">NEURIPS 2025 · GENAI IN FINANCE WORKSHOP · ARXIV:2511.13614</p>
+        <div class="pub-actions">
+          <a class="btn btn-sm btn-primary" href="https://doi.org/10.48550/arXiv.2511.13614" target="_blank" rel="noopener">arXiv</a>
+          <button class="btn btn-sm btn-ghost" data-copy="bib-market">Copy BibTeX</button>
+        </div>
+        <pre id="bib-market" hidden>@article{shi2025market,
+  title={Market-Dependent Communication in Multi-Agent Alpha Generation},
+  author={Jerick Shi and Burton Hollifield},
+  journal={CoRR},
+  volume={abs/2511.13614},
+  year={2025},
+  url={https://doi.org/10.48550/arXiv.2511.13614}
+}</pre>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="wrap foot-grid">
+      <div class="foot-links">
+        <a href="mailto:junkais@andrew.cmu.edu">Email</a>
+        <a href="https://github.com/Jerick-1380" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/jerick-shi-293773216" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=6wj2mTQAAAAJ" target="_blank" rel="noopener">Scholar</a>
+        <a href="https://www.youtube.com/@DummyR18" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://flickr.com/photos/203834484@N07/" target="_blank" rel="noopener">Flickr</a>
+        <a href="/books/">Bookshelf</a>
+      </div>
+      <div class="foot-note">© 2026 JERICK SHI · PRESS ⌘K TO NAVIGATE</div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

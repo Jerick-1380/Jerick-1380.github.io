@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Why AI Can't Actually Do Your Math Homework (And What That Tells Us About Intelligence) — Jerick Shi</title>
+  <meta name="description" content="Exploring how AI's current failures in mathematics reveal the nature of intelligence, and why this window of distinguishability is rapidly closing">
+  <link rel="icon" href="/assets/img/brain.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+  <div id="progress"></div>
+  <canvas id="starfield"></canvas>
+  <div class="bg-glow"></div>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="/"><b>jerick</b>@shi:~$<span class="cursor">▊</span></a>
+      <button class="nav-burger" aria-label="Menu">☰</button>
+      <div class="nav-links">
+        <a href="/">About</a>
+        <a href="/publications/">Research</a>
+        <a href="/projects/">Projects</a>
+        <a href="/teaching/">Teaching</a>
+        <a href="/blog/">Blog</a>
+        <a href="/hobbies/">Hobbies</a>
+        <a href="/cv/">CV</a>
+        <button class="cmdk-btn" aria-label="Open command palette">⌘K</button>
+      </div>
+    </div>
+  </nav>
+
+  <article class="article">
+    <header>
+      <div class="eyebrow"><span class="idx">//</span> blog_entry · 2025.09.01</div>
+      <h1>Why AI Can't Actually Do Your Math Homework (And What That Tells Us About Intelligence)</h1>
+      <p class="muted">Exploring how AI's current failures in mathematics reveal the nature of intelligence, and why this window of distinguishability is rapidly closing</p>
+      <div><span class="chip">ai</span><span class="chip">mathematics</span><span class="chip">education</span><span class="chip">intelligence</span><span class="chip">teaching</span></div>
+    </header>
+    <div class="article-body">
+<p>I've been a teaching assistant for six semesters now—everything from differential equations to machine learning, plus a few math camps thrown in. And I need to tell you something important: we're living in a bizarre historical moment. A window that's rapidly closing.</p>
+<p>Right now, when students submit AI-generated homework, I can still tell. Not because I'm running it through some detection software or playing digital detective. I can tell because the AI is still stupid in very specific, very revealing ways.</p>
+<p>But here's what keeps me up at night: OpenAI's o1 model just won gold at this year's International Mathematical Olympiad. The same technology that can solve problems that stump 99.9% of humans still fails your calculus homework in ways that would make any TA laugh.</p>
+<p>This paradox isn't just funny—it's a countdown clock. And understanding why it's ticking tells us something profound about intelligence itself.</p>
+<h2 id="part-i-the-two-ways-ai-fails-while-we-can-still-notice">Part I: The Two Ways AI Fails (While We Can Still Notice)</h2>
+<p>After grading hundreds of problem sets, I've noticed AI-generated work falls into two distinct failure modes. These aren't random errors—they're systematic blind spots that reveal how these systems actually "think."</p>
+<h3 id="the-over-complication-tell">The Over-Complication Tell</h3>
+<p>Give an AI a first-year calculus problem without telling it the course level, and watch what happens. It'll pull out Lebesgue integration for a problem meant to test basic derivatives. It'll invoke abstract algebra where simple arithmetic would suffice.</p>
+<p>Why? Because AI doesn't understand what "easy" means. It has no concept of pedagogical progression. When it searches its vast training data for relevant methods, it can't distinguish between an approach that would impress a PhD committee and one appropriate for someone who just learned what a limit is last week.</p>
+<p>I once received a homework submission that used measure theory to solve a basic optimization problem. The math was technically correct. It was also like using a particle accelerator to crack a walnut. No undergraduate would think to do this—they don't even know measure theory exists. But the AI doesn't understand that the elegant solution, the one we're actually testing for, involves nothing more than setting a derivative equal to zero.</p>
+<p>This reveals something crucial: AI has no mathematical intuition. It can't feel the difference between elegant and overwrought. It's like someone who memorized every word in the dictionary but has never had a conversation.</p>
+<h3 id="the-brute-force-confession">The Brute Force Confession</h3>
+<p>The second tell is even more obvious. In competitive mathematics, we often ask students to find the smallest number satisfying certain constraints, or prove that something is true for all cases. A human student will look for patterns, symmetries, insights—the "aha!" moment that makes the problem tractable.</p>
+<p>AI? It often just... calculates everything.</p>
+<p>OpenAI recently published fascinating research on why their models do this. Here's the example that stopped me cold: imagine you're trying to predict someone's birthday. You have a 1-in-365 chance of guessing correctly. But if you say "I don't know," you're guaranteed to be wrong according to the accuracy metrics these models are trained on. So they guess. Always.</p>
+<p>When applied to math homework, this creates almost comical results. I've seen AI-generated solutions that literally test every integer from 1 to 1000, conclude no solution exists, and call it a day. No human would ever do this. It's not just inefficient—it's intellectually offensive to anyone who understands mathematics.</p>
+<p>But here's the thing: for an AI, checking 1000 numbers is trivial. The computational cost is nothing. So why wouldn't it brute force? It doesn't experience the tedium we'd feel. It doesn't appreciate the satisfaction of finding a clever trick.</p>
+<p>Every time an AI uses brute force where we'd use insight, it highlights that human intelligence isn't just about getting the right answer. It's about understanding why something is true, feeling the shape of a problem, knowing instinctively which path will be fruitful.</p>
+<h2 id="part-ii-the-clock-is-ticking">Part II: The Clock Is Ticking</h2>
+<p>Now here's where things get interesting—and a little scary.</p>
+<p>The same company whose AI fails at basic homework in these laughable ways also built a system that scored in the top tier of the International Mathematical Olympiad. Think about that. We're watching AI systems that can simultaneously:</p>
+<ul>
+<li>Solve problems that would challenge the best mathematical minds on Earth</li>
+<li>Fail undergraduate homework in ways that reveal fundamental incomprehension</li>
+</ul>
+<p>This isn't stable. It's a transition state.</p>
+<p>The research on AI hallucination that OpenAI published points to the solution: future models will be trained on confidence, not just accuracy. They'll learn when to say "I don't know" instead of generating plausible nonsense. They'll be fine-tuned on educational materials to understand which methods are appropriate for which levels.</p>
+<p>More importantly, they'll get better at mimicking the human problem-solving aesthetic. They'll learn that mathematicians value elegance, that there's beauty in simplicity, that the "right" answer isn't just the one that's technically correct but the one that demonstrates understanding.</p>
+<p>When that happens—and it will happen—we won't be able to tell anymore.</p>
+<p><em>[Article continues with full content from blogs.md]</em></p>
+<p>So what happens when AI can perfectly mimic a bright undergraduate's homework? When it can not just solve the problem but solve it the "right" way, with the appropriate method, showing all the work a human would show?</p>
+<p>This isn't just about academic dishonesty, though that's certainly a crisis brewing. It's about something deeper: what happens to human mathematical thinking when machines can perfectly simulate it?</p>
+<h2 id="part-iii-what-do-we-do-with-the-time-we-have-left">Part III: What Do We Do with the Time We Have Left?</h2>
+<p>If we're in a countdown—and I believe we are—then what should we do?</p>
+<h3 id="for-students">For Students</h3>
+<p>This might be the last generation that actually needs to learn math the hard way. That might sound like missing out on a convenience, but it's actually a gift. The struggle to understand, the frustration of being stuck, the joy of breakthrough—these aren't bugs in the learning process. They're features. They're what builds not just mathematical knowledge but mathematical character.</p>
+<p>When you're tempted to use AI for your homework, remember: you're not just cheating the system. You're cheating yourself out of possibly the last chance to develop genuinely human mathematical intuition before machines make it obsolete.</p>
+<h3 id="for-educators">For Educators</h3>
+<p>We need to radically rethink what we're testing for. If AI can mimic procedural problem-solving, maybe we need to focus more on conceptual understanding, creative problem-posing, and mathematical communication. We need to ask questions that require not just answers but insight.</p>
+<p>More fundamentally, we need to decide: if AI can do all the calculations, what mathematics do humans still need to know? What's the irreducible core that remains uniquely valuable?</p>
+<h3 id="for-everyone">For Everyone</h3>
+<p>We're witnessing something unprecedented—the potential automation of intellectual work that we've always considered fundamentally human. Mathematics has been called the language of the universe, and we're watching machines become fluent in it.</p>
+<p>AI's current failures are teaching us what makes human mathematical intelligence special. But once AI learns to hide these tells—once it learns to solve problems the way we do, with our aesthetics and our intuitions—we might forget they were ever there at all.</p>
+<h2 id="the-bottom-line">The Bottom Line</h2>
+<p>Right now, I can still catch AI-generated homework because AI is bad at pretending to be human. It doesn't know what we find easy or hard. It doesn't understand elegance. It can't fake the particular way a student who's been struggling with a concept finally breaks through.</p>
+<p>But that's changing. Fast.</p>
+<p>OpenAI's research shows they know exactly what's wrong with their models. They're working on fixes. Each new version gets better at mimicking not just our answers but our problem-solving aesthetics.</p>
+<p>We're in this unique moment where AI is smart enough to attempt your homework but dumb enough to get caught. This window—where we can still see the difference between human and artificial mathematical thinking—is closing.</p>
+<p>The question isn't whether AI will eventually be able to do all our math homework perfectly. It will. The question is: what does that mean for human intelligence? What does it mean for education? What does it mean for the value of human mathematical thinking?</p>
+<p>I don't have all the answers. But I do know this: every time I spot an AI's brute force solution, every time I see it over-complicate a simple problem, I'm seeing something that won't last much longer. I'm seeing the last days where human mathematical intuition is demonstrably, visibly different from machine calculation.</p>
+<p>We should pay attention to these differences while we still can. Because once AI learns to hide them—once it learns to solve problems the way we do, with our aesthetics and our intuitions—we might forget they were ever there at all.</p>
+<p>And in forgetting what makes human mathematical thinking special, we might lose something we can't get back: the understanding of what intelligence really means, before machines made the question moot.</p>
+    </div>
+    
+    <hr class="divider-glow">
+    <p><a href="/blog/">← All posts</a></p>
+  </article>
+
+  <footer>
+    <div class="wrap foot-grid">
+      <div class="foot-links">
+        <a href="mailto:junkais@andrew.cmu.edu">Email</a>
+        <a href="https://github.com/Jerick-1380" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/jerick-shi-293773216" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=6wj2mTQAAAAJ" target="_blank" rel="noopener">Scholar</a>
+        <a href="https://www.youtube.com/@DummyR18" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://flickr.com/photos/203834484@N07/" target="_blank" rel="noopener">Flickr</a>
+        <a href="/books/">Bookshelf</a>
+      </div>
+      <div class="foot-note">© 2026 JERICK SHI · PRESS ⌘K TO NAVIGATE</div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

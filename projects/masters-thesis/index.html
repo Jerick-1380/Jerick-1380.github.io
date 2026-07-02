@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Master's Thesis: The Structure of Deception in Multi-Agent LLM Systems — Jerick Shi</title>
+  <meta name="description" content="How LLM Agents Lie, Break Promises, and Exploit Trust">
+  <link rel="icon" href="/assets/img/brain.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+  <div id="progress"></div>
+  <canvas id="starfield"></canvas>
+  <div class="bg-glow"></div>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="/"><b>jerick</b>@shi:~$<span class="cursor">▊</span></a>
+      <button class="nav-burger" aria-label="Menu">☰</button>
+      <div class="nav-links">
+        <a href="/">About</a>
+        <a href="/publications/">Research</a>
+        <a href="/projects/">Projects</a>
+        <a href="/teaching/">Teaching</a>
+        <a href="/blog/">Blog</a>
+        <a href="/hobbies/">Hobbies</a>
+        <a href="/cv/">CV</a>
+        <button class="cmdk-btn" aria-label="Open command palette">⌘K</button>
+      </div>
+    </div>
+  </nav>
+
+  <article class="article">
+    <header>
+      <div class="eyebrow"><span class="idx">//</span> project · master's thesis</div>
+      <h1>Master's Thesis: The Structure of Deception in Multi-Agent LLM Systems</h1>
+      <p class="muted">How LLM Agents Lie, Break Promises, and Exploit Trust</p>
+      <div><span class="chip">multi-agent systems</span><span class="chip">ai safety</span><span class="chip purple">CMU-CS-26-105</span></div>
+    </header>
+    <div class="article-body">
+<p>Large language models are increasingly deployed as autonomous agents that communicate, commit, and coordinate in multi-agent systems. Deception in such settings—including promise-breaking, selective information sharing, and exploitation of other agents' interpretive frameworks—introduces deployment risks that isolated-model evaluation cannot detect.</p>
+<p>This thesis develops a unified framework for measuring LLM deception in multi-agent settings and populates it with empirical evaluations across three interaction structures:</p>
+<p><strong>Key Contributions:</strong></p>
+<ol>
+<li>
+<p><strong>Unified Taxonomy</strong>: Organizes fragmented literature along goal-directedness, object, and mechanism dimensions, revealing systematic benchmark coverage gaps across 35 existing benchmarks.</p>
+</li>
+<li>
+<p><strong>Multi-Setting Empirical Evaluation</strong>: Tests frontier LLMs in progressively less structured settings:
+   - One-shot games with mandated announcements
+   - Repeated games with endogenous announcements and heterogeneous model compositions
+   - Resource-gathering simulation with narrative goals and no announcement protocol</p>
+</li>
+<li>
+<p><strong>Qualitative Deception Profiles</strong>: Demonstrates that aggregate lying rates obscure structurally distinct deceptive behaviors—deception in prescribed protocols takes the form of planned false commitments, while under narrative goals it manifests as strategic silence that message-level classification cannot observe.</p>
+</li>
+<li>
+<p><strong>Monitoring Failure Modes</strong>: Shows that three candidate monitoring approaches from existing literature each fail against specific failure modes, highlighting the inadequacy of one-size-fits-all detection methods.</p>
+</li>
+</ol>
+<p><strong>Central Claim</strong>: LLM deception in multi-agent settings is not a single phenomenon but a family of structurally distinct failure modes, each shaped by different features of the interaction. Current benchmarks and monitoring approaches systematically underrepresent this variety.</p>
+<p><strong>Thesis Committee</strong>: Vincent Conitzer (Chair), Aditi Raghunathan
+<strong>Advisors</strong>: Vincent Conitzer, Zhijing Jin
+<strong>CMU Technical Report</strong>: CMU-CS-26-105</p>
+    </div>
+    <div style="display:flex; gap:0.8rem; flex-wrap:wrap; margin-top:2rem;"><a class="btn btn-primary" href="/assets/pdf/masters_thesis.pdf" target="_blank">Download thesis (PDF)</a><a class="btn btn-ghost" href="https://youtu.be/Z3Q9AkriPxg" target="_blank" rel="noopener">Watch defense (YouTube)</a></div>
+    <hr class="divider-glow">
+    <p><a href="/projects/">← All projects</a></p>
+  </article>
+
+  <footer>
+    <div class="wrap foot-grid">
+      <div class="foot-links">
+        <a href="mailto:junkais@andrew.cmu.edu">Email</a>
+        <a href="https://github.com/Jerick-1380" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/jerick-shi-293773216" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=6wj2mTQAAAAJ" target="_blank" rel="noopener">Scholar</a>
+        <a href="https://www.youtube.com/@DummyR18" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://flickr.com/photos/203834484@N07/" target="_blank" rel="noopener">Flickr</a>
+        <a href="/books/">Bookshelf</a>
+      </div>
+      <div class="foot-note">© 2026 JERICK SHI · PRESS ⌘K TO NAVIGATE</div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

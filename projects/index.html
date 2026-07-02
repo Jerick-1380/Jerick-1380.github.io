@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects — Jerick Shi</title>
+  <meta name="description" content="Research theses, competition results, and course projects by Jerick Shi.">
+  <link rel="icon" href="/assets/img/brain.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+  <div id="progress"></div>
+  <canvas id="starfield"></canvas>
+  <div class="bg-glow"></div>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="/"><b>jerick</b>@shi:~$<span class="cursor">▊</span></a>
+      <button class="nav-burger" aria-label="Menu">☰</button>
+      <div class="nav-links">
+        <a href="/">About</a>
+        <a href="/publications/">Research</a>
+        <a href="/projects/">Projects</a>
+        <a href="/teaching/">Teaching</a>
+        <a href="/blog/">Blog</a>
+        <a href="/hobbies/">Hobbies</a>
+        <a href="/cv/">CV</a>
+        <button class="cmdk-btn" aria-label="Open command palette">⌘K</button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-head wrap">
+    <div class="eyebrow"><span class="idx">//</span> project_archive</div>
+    <h1>Projects</h1>
+    <p class="lead">Theses, competition entries, and course projects — from LLM deception frameworks to lamprey population models.</p>
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="research">Research</button>
+      <button class="filter-btn" data-filter="ml">Machine Learning</button>
+      <button class="filter-btn" data-filter="finance">Finance</button>
+      <button class="filter-btn" data-filter="modeling">Modeling</button>
+    </div>
+  </header>
+
+  <main class="wrap" style="padding-bottom:3rem;">
+    <div class="grid-3" style="grid-template-columns:repeat(auto-fill,minmax(300px,1fr));">
+
+      <a class="card tilt proj-card reveal" href="/projects/masters-thesis/" data-tags="research" style="color:inherit;">
+        <div class="thumb"><img src="/assets/img/projects/thesis_thumbnail.png" alt="Master's thesis"></div>
+        <div class="body">
+          <span class="award">★ MASTER'S THESIS · CMU-CS-26-105</span>
+          <h3>The Structure of Deception in Multi-Agent LLM Systems</h3>
+          <p>How LLM agents lie, break promises, and exploit trust — a unified framework spanning taxonomy, empirical evaluation, and monitoring failure modes.</p>
+        </div>
+      </a>
+
+      <a class="card tilt proj-card reveal" href="/projects/senior-thesis/" data-tags="research" style="color:inherit;">
+        <div class="thumb"><img src="/assets/img/projects/thesis.png" alt="Senior thesis"></div>
+        <div class="body">
+          <span class="award">★ SENIOR THESIS</span>
+          <h3>Why Multi-Agent Conversations Cannot Fix LLM Forecasting</h3>
+          <p>Evidence from convergence analysis: conversational and mathematical calibration are functionally equivalent, converging to identical Brier scores.</p>
+        </div>
+      </a>
+
+      <a class="card tilt proj-card reveal" href="/projects/meeting-minds/" data-tags="research finance ml" style="color:inherit;">
+        <div class="thumb"><img src="/assets/img/projects/meeting_minds.png" alt="Meeting of the Minds"></div>
+        <div class="body">
+          <span class="award">★ FIRST PLACE · MEETING OF THE MINDS</span>
+          <h3>Predictive Power of LLMs in Financial Markets</h3>
+          <p>Does GPT beat BERT at extracting signal from the Fed's Beige Book? First place in the Meeting of the Minds Math Division.</p>
+        </div>
+      </a>
+
+      <a class="card tilt proj-card reveal" href="/projects/mcm/" data-tags="modeling" style="color:inherit;">
+        <div class="thumb"><img src="/assets/img/projects/modeling.png" alt="MCM"></div>
+        <div class="body">
+          <span class="award">★ HONORABLE MENTION · MCM 2024</span>
+          <h3>Lamprey Population Dynamics with Adaptive Sex-Determination</h3>
+          <p>A probabilistic differential-equation model of populations that adapt their sex ratio to food availability, predators, and habitat conditions.</p>
+        </div>
+      </a>
+
+      <a class="card tilt proj-card reveal" href="/projects/operations-research/" data-tags="modeling" style="color:inherit;">
+        <div class="thumb"><img src="/assets/img/projects/or.png" alt="Operations research"></div>
+        <div class="body">
+          <span class="award">OPERATIONS RESEARCH II</span>
+          <h3>Optimizing Movie Scheduling Solutions</h3>
+          <p>Reframing theater film scheduling as a linear program that maximizes profitability — and explains why theaters rent movies instead of buying them.</p>
+        </div>
+      </a>
+
+      <a class="card tilt proj-card reveal" href="/projects/deep-learning/" data-tags="ml finance" style="color:inherit;">
+        <div class="thumb"><img src="/assets/img/projects/deep_learning.png" alt="Deep learning project"></div>
+        <div class="body">
+          <span class="award">INTERMEDIATE DEEP LEARNING</span>
+          <h3>Predicting Closing Prices — Optiver Kaggle Competition</h3>
+          <p>Benchmarking deep learning against classical ML and linear regression for closing-price prediction across 200 stocks.</p>
+        </div>
+      </a>
+
+      <a class="card tilt proj-card reveal" href="/projects/intro-ml/" data-tags="ml finance" style="color:inherit;">
+        <div class="thumb"><img src="/assets/img/projects/ml.png" alt="Intro ML project"></div>
+        <div class="body">
+          <span class="award">INTRO TO MACHINE LEARNING</span>
+          <h3>Sentiment Analysis and Stock Prices</h3>
+          <p>SVM-based sentiment classification of market news at 77% accuracy — and why sentiment alone can't predict price moves.</p>
+        </div>
+      </a>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap foot-grid">
+      <div class="foot-links">
+        <a href="mailto:junkais@andrew.cmu.edu">Email</a>
+        <a href="https://github.com/Jerick-1380" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/jerick-shi-293773216" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=6wj2mTQAAAAJ" target="_blank" rel="noopener">Scholar</a>
+        <a href="https://www.youtube.com/@DummyR18" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://flickr.com/photos/203834484@N07/" target="_blank" rel="noopener">Flickr</a>
+        <a href="/books/">Bookshelf</a>
+      </div>
+      <div class="foot-note">© 2026 JERICK SHI · PRESS ⌘K TO NAVIGATE</div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

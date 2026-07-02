@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bookshelf — Jerick Shi</title>
+  <meta name="description" content="Books Jerick Shi is reading, has read, or will read.">
+  <link rel="icon" href="/assets/img/brain.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+  <div id="progress"></div>
+  <canvas id="starfield"></canvas>
+  <div class="bg-glow"></div>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="/"><b>jerick</b>@shi:~$<span class="cursor">▊</span></a>
+      <button class="nav-burger" aria-label="Menu">☰</button>
+      <div class="nav-links">
+        <a href="/">About</a>
+        <a href="/publications/">Research</a>
+        <a href="/projects/">Projects</a>
+        <a href="/teaching/">Teaching</a>
+        <a href="/blog/">Blog</a>
+        <a href="/hobbies/">Hobbies</a>
+        <a href="/cv/">CV</a>
+        <button class="cmdk-btn" aria-label="Open command palette">⌘K</button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-head wrap">
+    <div class="eyebrow"><span class="idx">//</span> data_archive</div>
+    <h1>Bookshelf</h1>
+  </header>
+
+  <main class="wrap" style="padding-bottom:3rem; max-width:860px;">
+    <blockquote class="reveal" style="margin:0 0 3rem; padding:1.4rem 1.8rem; border-left:3px solid var(--acc-purple); background:rgba(157,107,255,0.06); border-radius:0 12px 12px 0; color:var(--muted); font-style:italic;">
+      What an astonishing thing a book is. It's a flat object made from a tree with flexible parts on which are imprinted lots of funny dark squiggles. But one glance at it and you're inside the mind of another person, maybe somebody dead for thousands of years. Across the millennia, an author is speaking clearly and silently inside your head, directly to you. Writing is perhaps the greatest of human inventions, binding together people who never knew each other, citizens of distant epochs. Books break the shackles of time. A book is proof that humans are capable of working magic.
+      <br><br><span class="mono" style="font-style:normal; font-size:0.78rem; color:var(--acc-cyan);">— CARL SAGAN, COSMOS (1980)</span>
+    </blockquote>
+
+    <h2 class="reveal">Books I am reading, have read, or will read</h2>
+
+    <div class="card tilt reveal" style="display:grid; grid-template-columns:120px 1fr; gap:1.5rem; align-items:start; margin-top:1.8rem;">
+      <img src="/assets/img/book_covers/the_godfather.jpg" alt="The Godfather cover" style="width:100%; border-radius:8px; border:1px solid var(--line);">
+      <div>
+        <span class="chip">★★★★★</span><span class="chip purple">FINISHED · 2024.09</span>
+        <h3 style="margin-top:0.7rem;">The Godfather</h3>
+        <p class="muted" style="font-size:0.92rem;">Mario Puzo · 1969 · classics, crime, historical fiction, thriller</p>
+        <a class="btn btn-sm btn-ghost" href="https://www.amazon.com/Godfather-Deluxe-Mario-Puzo/dp/0593542592" target="_blank" rel="noopener">Find the book</a>
+      </div>
+    </div>
+
+    <p class="muted mono reveal" style="margin-top:2.5rem; font-size:0.8rem;">// more entries loading…</p>
+  </main>
+
+  <footer>
+    <div class="wrap foot-grid">
+      <div class="foot-links">
+        <a href="mailto:junkais@andrew.cmu.edu">Email</a>
+        <a href="https://github.com/Jerick-1380" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/jerick-shi-293773216" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=6wj2mTQAAAAJ" target="_blank" rel="noopener">Scholar</a>
+        <a href="https://www.youtube.com/@DummyR18" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://flickr.com/photos/203834484@N07/" target="_blank" rel="noopener">Flickr</a>
+        <a href="/books/">Bookshelf</a>
+      </div>
+      <div class="foot-note">© 2026 JERICK SHI · PRESS ⌘K TO NAVIGATE</div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jerick Shi — Multi-Agent LLM Systems &amp; AI Safety</title>
+  <meta name="description" content="Jerick Shi — CMU MSCS. Research on deception in multi-agent LLM systems. Incoming SWE at The Voleon Group.">
+  <link rel="icon" href="/assets/img/brain.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+  <div id="progress"></div>
+  <canvas id="starfield"></canvas>
+  <div class="bg-glow"></div>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="/"><b>jerick</b>@shi:~$<span class="cursor">▊</span></a>
+      <button class="nav-burger" aria-label="Menu">☰</button>
+      <div class="nav-links">
+        <a href="/">About</a>
+        <a href="/publications/">Research</a>
+        <a href="/projects/">Projects</a>
+        <a href="/teaching/">Teaching</a>
+        <a href="/blog/">Blog</a>
+        <a href="/hobbies/">Hobbies</a>
+        <a href="/cv/">CV</a>
+        <button class="cmdk-btn" aria-label="Open command palette">⌘K</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="intro-line">// CMU CS · MULTI-AGENT LLM SYSTEMS · AI SAFETY</div>
+        <h1>Jerick <span class="grad-text">Shi</span></h1>
+        <p class="tagline" data-type='["studying how LLM agents lie, break promises, and exploit trust.","MSCS @ Carnegie Mellon University.","incoming Software Engineer @ The Voleon Group.","TA for 7 courses — from differential equations to graduate AI.","building Quant Engine, a learning platform for aspiring quants."]'>&gt; <span class="typed"></span><span class="caret"></span></p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="/publications/">Explore research</a>
+          <a class="btn btn-ghost" href="/assets/pdf/Shi_Jerick_CV.pdf" target="_blank">Download CV</a>
+        </div>
+      </div>
+      <div class="hero-portrait">
+        <div class="ring"><img src="/assets/img/prof_pic.jpg" alt="Portrait of Jerick Shi"></div>
+      </div>
+    </div>
+    <div class="scroll-hint">scroll ▾</div>
+  </header>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="block" id="about">
+    <div class="wrap">
+      <div class="eyebrow reveal"><span class="idx">01</span> about</div>
+      <div class="grid-2">
+        <div class="reveal">
+          <h2>Hi, I'm Jerick.</h2>
+          <p>I'm a 5th year master's student in Computer Science at <b>Carnegie Mellon University</b>, where my research focuses on <b>Multi-Agent LLM Systems</b> and <b>AI Safety</b>.</p>
+          <p>I recently defended my master's thesis on deceptive behaviors in multi-agent LLM systems, co-advised by <a href="https://www.cs.cmu.edu/~conitzer/" target="_blank" rel="noopener">Vincent Conitzer</a> (CMU) and <a href="https://zhijing-jin.com/fantasy/" target="_blank" rel="noopener">Zhijing Jin</a> (University of Toronto). I also work remotely as an external collaborator for the <a href="https://zhijing-jin.com/home/" target="_blank" rel="noopener">Jinesis Lab</a>.</p>
+          <p>During my undergrad at CMU, I completed majors in both Computer Science and Mathematics with a minor in Computational Finance, graduating with University and College Honors.</p>
+        </div>
+        <div class="reveal d1">
+          <h3 class="mono" style="color:var(--acc-cyan); font-size:0.85rem; letter-spacing:0.15em;">STATUS_LOG</h3>
+          <p>→ Joining <a href="https://voleon.com/" target="_blank" rel="noopener"><b>The Voleon Group</b></a> as a Software Engineer in July 2026.</p>
+          <p>→ Open to summer lecturer positions in CS, ML, AI, or quantitative finance.</p>
+          <p>→ Passionate about teaching: TA for 7 different CMU courses, from differential equations to graduate AI. See my <a href="/teaching/">teaching philosophy</a>.</p>
+          <p>→ Off-hours: tricking, breakdancing, freediving, photography, and K-Pop dance — proof on the <a href="/hobbies/">hobbies page</a>.</p>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat reveal"><div class="num" data-count="3">0</div><div class="lbl">research papers</div></div>
+        <div class="stat reveal d1"><div class="num" data-count="7">0</div><div class="lbl">courses TA'd</div></div>
+        <div class="stat reveal d2"><div class="num" data-count="400" data-suffix="+">0</div><div class="lbl">student questions answered</div></div>
+        <div class="stat reveal d3"><div class="num" data-count="5">0</div><div class="lbl">years at CMU</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NEWS / MISSION LOG ============ -->
+  <section class="block" id="log">
+    <div class="wrap">
+      <div class="eyebrow reveal"><span class="idx">02</span> mission log</div>
+      <h2 class="reveal">Recent transmissions</h2>
+      <div style="margin-top:2rem;">
+        <div class="log-line reveal">
+          <span class="d">2026.04.20</span>
+          <p><b>Thesis defended.</b> Successfully defended my master's thesis, <i>"The Structure of Deception: How LLM Agents Lie, Break Promises, and Exploit Trust in Multi-Agent Settings."</i> Watch the <a href="https://youtu.be/Z3Q9AkriPxg" target="_blank" rel="noopener">defense presentation</a>.</p>
+        </div>
+        <div class="log-line reveal">
+          <span class="d">2026.03.01</span>
+          <p><b>Paper accepted.</b> "Cheap Talk, Empty Promise: Frontier LLMs easily break public promises for self-interest" accepted to the <a href="https://alimama-tech.github.io/aims-2026/" target="_blank" rel="noopener">ICLR AI for Mechanism Design and Strategic Decision Making workshop</a>.</p>
+        </div>
+        <div class="log-line reveal">
+          <span class="d">2026.03.01</span>
+          <p><b>Paper accepted.</b> "Behavioral and Strategic Deception in Large Language Models: A Taxonomy and Benchmark Analysis" accepted to the <a href="https://agentwild-workshop.github.io/" target="_blank" rel="noopener">ICLR Agents in the Wild: Safety, Security, and Beyond workshop</a>.</p>
+        </div>
+        <div class="log-line reveal">
+          <span class="d">2025.12.06</span>
+          <p><b>Paper accepted.</b> "Market-Dependent Communication in Multi-Agent Alpha Generation" accepted to the <a href="https://sites.google.com/view/neurips-25-gen-ai-in-financ" target="_blank" rel="noopener">NeurIPS GenAI in Finance workshop</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RESEARCH PREVIEW ============ -->
+  <section class="block" id="research">
+    <div class="wrap">
+      <div class="eyebrow reveal"><span class="idx">03</span> research</div>
+      <h2 class="reveal">Deception, communication &amp; trust between AI agents</h2>
+      <p class="muted reveal" style="max-width:640px;">How do LLM agents behave when they can communicate, commit, and privately deviate? My work builds taxonomies, benchmarks, and empirical evaluations of deceptive behavior in multi-agent systems.</p>
+      <div class="grid-3" style="margin-top:2.2rem;">
+        <div class="card tilt reveal">
+          <span class="chip purple">ICLR '26 WS</span>
+          <h3 style="margin-top:0.7rem;"><a href="/publications/">Cheap Talk, Empty Promise</a></h3>
+          <p class="muted" style="font-size:0.9rem;">Frontier LLMs break public commitments in ~57% of scenarios — often without recognizing they're doing it.</p>
+        </div>
+        <div class="card tilt reveal d1">
+          <span class="chip purple">ICLR '26 WS</span>
+          <h3 style="margin-top:0.7rem;"><a href="/publications/">From Hallucination to Scheming</a></h3>
+          <p class="muted" style="font-size:0.9rem;">A unified taxonomy of LLM deception, applied to 35 benchmarks to expose systematic coverage gaps.</p>
+        </div>
+        <div class="card tilt reveal d2">
+          <span class="chip purple">NeurIPS '25 WS</span>
+          <h3 style="margin-top:0.7rem;"><a href="/publications/">Market-Dependent Communication</a></h3>
+          <p class="muted" style="font-size:0.9rem;">How communication between LLM agents shifts with market conditions in multi-agent alpha generation.</p>
+        </div>
+      </div>
+      <div style="margin-top:2rem;" class="reveal">
+        <a class="btn btn-ghost" href="/publications/">All publications →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LATEST POSTS ============ -->
+  <section class="block" id="writing">
+    <div class="wrap">
+      <div class="eyebrow reveal"><span class="idx">04</span> writing</div>
+      <h2 class="reveal">Latest from the blog</h2>
+      <div style="margin-top:2rem;">
+        <a class="post-row reveal" href="/blog/2025/rethinking-education-ai-enhanced-classroom/">
+          <span class="date">2025.09.28 · featured</span>
+          <h3>Rethinking Education: My Vision for an AI-Enhanced Classroom</h3>
+          <p>Imagining a future classroom where AI tools enhance learning through collaborative homework, conversational exams, and authentic project-based assessment.</p>
+        </a>
+        <a class="post-row reveal" href="/blog/2025/learning-research-papers-with-ai/">
+          <span class="date">2025.09.08</span>
+          <h3>How I Actually Learn Complex Research Papers with AI</h3>
+          <p>A practical walkthrough of using AI to understand dense academic papers, from adversarial training to developing genuine mathematical intuition.</p>
+        </a>
+        <a class="post-row reveal" href="/blog/2025/why-ai-cant-do-math-homework/">
+          <span class="date">2025.09.01 · featured</span>
+          <h3>Why AI Can't Actually Do Your Math Homework</h3>
+          <p>Exploring how AI's current failures in mathematics reveal the nature of intelligence, and why this window of distinguishability is rapidly closing.</p>
+        </a>
+      </div>
+      <div style="margin-top:2rem;" class="reveal">
+        <a class="btn btn-ghost" href="/blog/">All posts →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ QUANT ENGINE ============ -->
+  <section class="block" id="quant-engine">
+    <div class="wrap">
+      <div class="card tilt reveal" style="padding:2.5rem; text-align:center;">
+        <div class="eyebrow" style="justify-content:center;"><span class="idx">05</span> side quest</div>
+        <h2>Quant <span class="grad-text">Engine</span></h2>
+        <p class="muted" style="max-width:620px; margin:0 auto 1.4rem;">A structured learning platform for aspiring quant professionals — a skill tree from calculus to frontier research, with AI tutoring at every level. Designed to help you land your first quant role without the six-figure MFE commitment.</p>
+        <a class="btn btn-primary" href="https://tinyurl.com/quant-engine-signup" target="_blank" rel="noopener">Join the waitlist</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap foot-grid">
+      <div class="foot-links">
+        <a href="mailto:junkais@andrew.cmu.edu">Email</a>
+        <a href="https://github.com/Jerick-1380" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/jerick-shi-293773216" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=6wj2mTQAAAAJ" target="_blank" rel="noopener">Scholar</a>
+        <a href="https://www.youtube.com/@DummyR18" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://flickr.com/photos/203834484@N07/" target="_blank" rel="noopener">Flickr</a>
+        <a href="/books/">Bookshelf</a>
+      </div>
+      <div class="foot-note">© 2026 JERICK SHI · PRESS ⌘K TO NAVIGATE</div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
