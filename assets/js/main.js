@@ -375,7 +375,7 @@
     { label: "Google Scholar", href: "https://scholar.google.com/citations?user=6wj2mTQAAAAJ", k: "link" },
     { label: "Flickr Portfolio", href: "https://flickr.com/photos/203834484@N07/", k: "link" },
     { label: "Email — junkais@andrew.cmu.edu", href: "mailto:junkais@andrew.cmu.edu", k: "link" },
-    { label: "Quant Engine — join waitlist", href: "https://tinyurl.com/quant-engine-signup", k: "link" }
+    { label: "Quant Engine — join waitlist", href: "https://quant-engine.com/", k: "link" }
   ];
 
   function initCmdk() {
