@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Poster Hall Finds: 11 Papers That Stopped Me at ICML 2026 — Jerick Shi</title>
+  <meta name="description" content="Notes from wandering the ICML 2026 poster halls in Seoul: papers on LLM agents, education, and finance that anyone can actually read, plus why each one caught my attention.">
+  <link rel="icon" href="/assets/img/brain.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+  <div id="progress"></div>
+  <canvas id="starfield"></canvas>
+  <div class="bg-glow"></div>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="/"><b>jerick</b>@shi:~$<span class="cursor">▊</span></a>
+      <button class="nav-burger" aria-label="Menu">☰</button>
+      <div class="nav-links">
+        <a href="/">About</a>
+        <a href="/publications/">Research</a>
+        <a href="/projects/">Projects</a>
+        <a href="/teaching/">Teaching</a>
+        <a href="/blog/">Blog</a>
+        <a href="/hobbies/">Hobbies</a>
+        <a href="/cv/">CV</a>
+        <button class="cmdk-btn" aria-label="Open command palette">⌘K</button>
+      </div>
+    </div>
+  </nav>
+
+  <article class="article">
+    <header>
+      <div class="eyebrow"><span class="idx">//</span> blog_entry · 2026.07.21</div>
+      <h1>Poster Hall Finds: 11 Papers That Stopped Me at ICML 2026</h1>
+      <p class="muted">Notes from wandering the ICML 2026 poster halls in Seoul: papers on LLM agents, education, and finance that anyone can actually read, plus why each one caught my attention.</p>
+      <div><span class="chip">icml</span><span class="chip">research</span><span class="chip">llm-agents</span><span class="chip">ai</span><span class="chip">conferences</span></div>
+    </header>
+    <div class="article-body">
+<p>Earlier this month I was in Seoul for ICML 2026, presenting our paper <em>When Agents Lie</em> at the NExT-Game workshop. Between sessions, I did what I always do at conferences: wander the poster halls until my feet gave out.</p>
+<p>With thousands of papers at ICML, you need a filter. Mine is pretty simple:</p>
+<ul>
+<li><strong>Readable by a broad audience.</strong> Anyone should be able to pick up the paper and understand it with minimal background.</li>
+<li><strong>AI applications in education and finance</strong>, since those are the two worlds I keep one foot in each.</li>
+<li><strong>A clean one-sentence result.</strong> If you can't summarize the takeaway in a sentence, I keep walking.</li>
+</ul>
+<p>Here's what made the cut, in no particular order. For each paper: a quick overview, and why I stopped at the poster.</p>
+<h2 id="discovering-ordinary-differential-equations-with-llm-based-qualitative-and-quantitative-evaluation"><a href="https://arxiv.org/abs/2605.07323">Discovering Ordinary Differential Equations with LLM-Based Qualitative and Quantitative Evaluation</a></h2>
+<ul>
+<li><strong>The gist:</strong> Traditional methods for recovering ODEs from data often produce solutions with low error but very wrong equations. By using LLMs to provide context on the data and refine previous guesses through discussion, accuracy increases significantly.</li>
+<li><strong>Why I stopped:</strong> I've TA'ed differential equations for four semesters and written multiple study guides for it, and LLM applications are my thing. This poster was basically built for me.</li>
+</ul>
+<h2 id="strategic-exploitation-in-llm-agent-markets-a-simulation-framework-for-e-commerce-trust"><a href="https://arxiv.org/abs/2605.10059">Strategic Exploitation in LLM Agent Markets: A Simulation Framework for E-Commerce Trust</a></h2>
+<ul>
+<li><strong>The gist:</strong> Put a bunch of LLM agents in a buyer/seller environment and they can detect weaknesses in the market and adjust their strategies, including through strategic deception.</li>
+<li><strong>Why I stopped:</strong> Deceptive behaviors in multi-agent systems are my research area, and I've been looking more into emergent deception specifically.</li>
+</ul>
+<h2 id="solipsistic-superintelligence-is-unlikely-to-be-cooperative"><a href="https://arxiv.org/abs/2606.03237">Solipsistic Superintelligence is Unlikely to be Cooperative</a></h2>
+<ul>
+<li><strong>The gist:</strong> LLMs aren't cooperative because they've been trained in static environments. To become more cooperative, they need to be trained and tested in systems that actually react to them.</li>
+<li><strong>Why I stopped:</strong> AI safety plus multi-agent systems. Straight down the middle of my interests.</li>
+</ul>
+<h2 id="cooperate-to-compete-strategic-coordination-in-multi-agent-conquest"><a href="https://arxiv.org/abs/2604.25088">Cooperate to Compete: Strategic Coordination in Multi-Agent Conquest</a></h2>
+<ul>
+<li><strong>The gist:</strong> A testbed for comparing how humans negotiate and strategize against LLM agents. It turns out there are real behavioral differences, like humans playing more aggressively.</li>
+<li><strong>Why I stopped:</strong> I'm working on a paper where AI agents play games with each other and we watch how they form alliances and break promises across different settings, so this is a natural comparison point.</li>
+</ul>
+<h2 id="computational-arbitrage-in-ai-model-markets"><a href="https://arxiv.org/abs/2603.22404">Computational Arbitrage in AI Model Markets</a></h2>
+<ul>
+<li><strong>The gist:</strong> You can make riskless profit by routing queries across different AI models, achieving a high success rate at a lower cost across benchmarks.</li>
+<li><strong>Why I stopped:</strong> I have a background in quant finance. Arbitrage showing up in AI model markets is exactly the kind of crossover I hunt for.</li>
+</ul>
+<h2 id="systematic-failures-in-collective-reasoning-under-distributed-information-in-multi-agent-llms"><a href="https://arxiv.org/abs/2505.11556">Systematic Failures in Collective Reasoning under Distributed Information in Multi-Agent LLMs</a></h2>
+<ul>
+<li><strong>The gist:</strong> When LLMs each hold different pieces of information and are asked to discuss and collaborate, they often fail. The culprit: they don't reason about what others might know, so conversations terminate too early.</li>
+<li><strong>Why I stopped:</strong> I ran a small version of this experiment myself and saw similar results, so I'm glad someone formalized it properly.</li>
+</ul>
+<h2 id="brokenmath-a-benchmark-for-sycophancy-in-theorem-proving-with-llms"><a href="https://arxiv.org/abs/2510.04721">BrokenMath: A Benchmark for Sycophancy in Theorem Proving with LLMs</a></h2>
+<ul>
+<li><strong>The gist:</strong> Take olympiad problems and swap the final question for a statement that's actually false. LLMs will happily "prove" the false statement anyway.</li>
+<li><strong>Why I stopped:</strong> Years of being a math TA means I've graded plenty of confident proofs of false things by humans. Watching LLMs do the same is both funny and concerning.</li>
+</ul>
+<h2 id="paperbanana-automating-academic-illustration-for-ai-scientists"><a href="https://arxiv.org/abs/2601.23265">PaperBanana: Automating Academic Illustration for AI Scientists</a></h2>
+<ul>
+<li><strong>The gist:</strong> A tool that automates publication-quality illustrations for research papers.</li>
+<li><strong>Why I stopped:</strong> I've been using this tool for my own papers, so it was cool to finally see the paper and poster behind it at ICML.</li>
+</ul>
+<h2 id="justice-or-prejudice-quantifying-biases-in-llm-as-a-judge"><a href="https://arxiv.org/abs/2410.02736">Justice or Prejudice? Quantifying Biases in LLM-as-a-Judge</a></h2>
+<ul>
+<li><strong>The gist:</strong> Even the strongest LLMs carry biases when used as judges, picking up on emotion, sentiment, and response length. Models also tend to give higher scores to their own outputs.</li>
+<li><strong>Why I stopped:</strong> I use LLM-as-a-judge constantly in my research. This matters to me and to basically everyone else who does empirical LLM work.</li>
+</ul>
+<h2 id="kantian-equilibrium-in-the-age-of-multi-agent-systems"><a href="https://openreview.net/pdf?id=hizxbjrwxO">Kantian Equilibrium in the Age of Multi-Agent Systems</a></h2>
+<ul>
+<li><strong>The gist:</strong> Instead of assuming everyone in a multi-player game works against each other, what happens when subgroups decide to collaborate?</li>
+<li><strong>Why I stopped:</strong> I toyed with this exact idea as an extension of one of my papers (finding the optimal deviation given you're inside a subgroup), so it was fun to see it actually played out.</li>
+</ul>
+<h2 id="benchmarking-at-the-edge-of-comprehension"><a href="https://arxiv.org/abs/2602.14307">Benchmarking at the Edge of Comprehension</a></h2>
+<ul>
+<li><strong>The gist:</strong> What happens when LLMs get smarter than the benchmarks we write for them? The paper proposes a structure where LLMs propose questions, other LLMs try to answer them, and the system decides which questions are good enough to keep.</li>
+<li><strong>Why I stopped:</strong> I'm firmly on the side that there are currently too many benchmark papers, so a benchmark that generates itself is at least an interesting way out.</li>
+</ul>
+<hr />
+<p>That's the list. If you were at ICML and caught a poster I missed that fits the "readable, applicable, one clean sentence" bar, send it my way at <a href="mailto:junkais@andrew.cmu.edu">junkais@andrew.cmu.edu</a>.</p>
+    </div>
+    
+    <hr class="divider-glow">
+    <p><a href="/blog/">← All posts</a></p>
+  </article>
+
+  <footer>
+    <div class="wrap foot-grid">
+      <div class="foot-links">
+        <a href="mailto:junkais@andrew.cmu.edu">Email</a>
+        <a href="https://github.com/Jerick-1380" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/jerick-shi-293773216" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=6wj2mTQAAAAJ" target="_blank" rel="noopener">Scholar</a>
+        <a href="https://www.youtube.com/@DummyR18" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://flickr.com/photos/203834484@N07/" target="_blank" rel="noopener">Flickr</a>
+        <a href="/books/">Bookshelf</a>
+      </div>
+      <div class="foot-note">© 2026 JERICK SHI · PRESS ⌘K TO NAVIGATE</div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
