@@ -73,4 +73,4 @@ Here's what made the cut, in no particular order. For each paper: a quick overvi
 
 ---
 
-That's the list. If you were at ICML and caught a poster I missed that fits the "readable, applicable, one clean sentence" bar, send it my way at [junkais@andrew.cmu.edu](mailto:junkais@andrew.cmu.edu).
+That's the list. If you were at ICML and caught a poster I missed that fits the "readable, applicable, one clean sentence" bar, send it my way at [JerickS.1380@gmail.com](mailto:JerickS.1380@gmail.com).
