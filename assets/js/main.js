@@ -374,7 +374,7 @@
     { label: "LinkedIn", href: "https://www.linkedin.com/in/jerick-shi-293773216", k: "link" },
     { label: "Google Scholar", href: "https://scholar.google.com/citations?user=6wj2mTQAAAAJ", k: "link" },
     { label: "Flickr Portfolio", href: "https://flickr.com/photos/203834484@N07/", k: "link" },
-    { label: "Email — junkais@andrew.cmu.edu", href: "mailto:junkais@andrew.cmu.edu", k: "link" },
+    { label: "Email — JerickS.1380@gmail.com", href: "mailto:JerickS.1380@gmail.com", k: "link" },
     { label: "Quant Engine — join waitlist", href: "https://quant-engine.com/", k: "link" }
   ];
 
