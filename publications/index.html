@@ -35,14 +35,21 @@
 
   <header class="page-head wrap">
     <div class="eyebrow"><span class="idx">//</span> research_index</div>
-    <h1>Publications</h1>
+    <h1 data-scramble>Publications</h1>
     <p class="lead">Deception, communication, and trust in multi-agent LLM systems. Also on <a href="https://scholar.google.com/citations?user=6wj2mTQAAAAJ" target="_blank" rel="noopener">Google Scholar</a>.</p>
   </header>
 
   <main class="wrap" style="padding-bottom:3rem;">
 
+    <!-- Research map -->
+    <section id="map" class="reveal" style="margin-bottom:3.5rem;">
+      <div class="eyebrow"><span class="idx">//</span> research_graph</div>
+      <p class="muted" style="max-width:640px; margin-bottom:1.2rem; font-size:0.95rem;">Every paper, the ideas it touches, and the people behind it, as a live force-directed graph. Drag nodes, hover to trace connections, click a paper to open it. Hovering a paper below lights it up here too.</p>
+      <div data-research-map aria-label="Interactive map of research papers, concepts, and collaborators"></div>
+    </section>
+
     <!-- Thesis banner -->
-    <div class="card tilt reveal" style="margin-bottom:2.5rem; border-image: linear-gradient(120deg,#46e0ff,#9d6bff) 1;">
+    <div class="card tilt reveal" data-node="thesis" style="margin-bottom:2.5rem; border-image: linear-gradient(120deg,#46e0ff,#9d6bff) 1;">
       <span class="chip">Master's Thesis · CMU-CS-26-105</span>
       <h3 style="margin-top:0.8rem;">The Structure of Deception: How LLM Agents Lie, Break Promises, and Exploit Trust in Multi-Agent Settings</h3>
       <p class="muted" style="font-size:0.95rem;">A unified framework for measuring LLM deception across three interaction structures — one-shot games, repeated games, and open-ended resource simulations. Committee: Vincent Conitzer (chair), Aditi Raghunathan. Advisors: Vincent Conitzer, Zhijing Jin.</p>
@@ -57,11 +64,11 @@
     <hr class="divider-glow" style="margin:1rem 0 2rem;">
 
     <!-- When Agents Lie -->
-    <div class="card reveal" style="margin-bottom:1.6rem; border-image: linear-gradient(120deg,#ffd479,#9d6bff) 1;">
+    <div class="card reveal" data-node="lie" style="margin-bottom:1.6rem; border-image: linear-gradient(120deg,#ffd479,#9d6bff) 1;">
       <span class="chip" style="color:#ffd479; border-color:rgba(255,212,121,0.35); background:rgba(255,212,121,0.07);">★ BEST PAPER AWARD</span>
       <h3 style="margin-top:0.8rem;">When Agents Lie: Premeditation, Persistence, and Exploitation in Repeated Games</h3>
       <p class="authors"><b>Jerick Shi</b>, Terry Jingchen Zhang, Bernhard Schölkopf, Vincent Conitzer, Zhijing Jin</p>
-      <p class="venue">ICML 2026 · NEW FRONTIERS IN GAME-THEORETIC LEARNING (NEXT-GAME) WORKSHOP · PRESENTING JULY 11, SEOUL</p>
+      <p class="venue">ICML 2026 · NEW FRONTIERS IN GAME-THEORETIC LEARNING (NEXT-GAME) WORKSHOP · PRESENTED JULY 11, SEOUL</p>
       <div class="pub-actions">
         <a class="btn btn-sm btn-primary" href="https://openreview.net/pdf?id=v8nYIkYjY0" target="_blank" rel="noopener">Paper (PDF)</a>
         <a class="btn btn-sm btn-ghost" href="https://openreview.net/forum?id=v8nYIkYjY0" target="_blank" rel="noopener">OpenReview</a>
@@ -78,7 +85,7 @@
     </div>
 
     <!-- Strategic Silence -->
-    <div class="card reveal" style="margin-bottom:1.6rem;">
+    <div class="card reveal" data-node="silence" style="margin-bottom:1.6rem;">
       <h3>What Game-Theoretic Benchmarks Miss: Strategic Silence in Multi-Agent LLMs</h3>
       <p class="authors"><b>Jerick Shi</b>, Terry Jingchen Zhang, Vincent Conitzer, Zhijing Jin</p>
       <p class="venue">ICML 2026 · WORKSHOP ON FAILURE MODES OF AGENTIC AI</p>
@@ -97,7 +104,7 @@
     </div>
 
     <!-- Cheap Talk -->
-    <div class="card reveal pub" style="margin-bottom:1.6rem;">
+    <div class="card reveal pub" data-node="cheap" style="margin-bottom:1.6rem;">
       <img src="/assets/img/publication_preview/cheap_talk.png" alt="Cheap Talk paper preview">
       <div>
         <h3>Cheap Talk, Empty Promise: Frontier LLMs easily break public promises for self-interest</h3>
@@ -120,7 +127,7 @@
     </div>
 
     <!-- Taxonomy -->
-    <div class="card reveal pub" style="margin-bottom:1.6rem;">
+    <div class="card reveal pub" data-node="tax" style="margin-bottom:1.6rem;">
       <img src="/assets/img/publication_preview/taxonomy.png" alt="Deception taxonomy paper preview">
       <div>
         <h3>From Hallucination to Scheming: A Unified Taxonomy and Benchmark Analysis for LLM Deception</h3>
@@ -146,7 +153,7 @@
     <hr class="divider-glow" style="margin:1rem 0 2rem;">
 
     <!-- Market -->
-    <div class="card reveal pub" style="margin-bottom:1.6rem;">
+    <div class="card reveal pub" data-node="market" style="margin-bottom:1.6rem;">
       <img src="/assets/img/publication_preview/market.png" alt="Market communication paper preview">
       <div>
         <h3>Market-Dependent Communication in Multi-Agent Alpha Generation</h3>

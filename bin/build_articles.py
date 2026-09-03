@@ -53,7 +53,7 @@ TEMPLATE = """<!doctype html>
   <article class="article">
     <header>
       <div class="eyebrow"><span class="idx">//</span> {eyebrow}</div>
-      <h1>{title}</h1>
+      <h1 data-scramble>{title}</h1>
       <p class="muted">{subtitle}</p>
       {chips}
     </header>
