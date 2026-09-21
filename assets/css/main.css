@@ -1475,6 +1475,145 @@ body.warp .hero h1, body.warp .big-404 { animation: warp-shake 0.08s infinite; }
 
 @media (min-width: 900px) { .article-body blockquote.pull { margin-left: -40px; margin-right: -40px; } }
 
+/* ---- bookshelf: cover wall, controls, detail panel ----------------------------------------- */
+.stats.cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+.shelf-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 2.6rem;
+}
+
+.shelf-controls .filter-bar { margin: 0; flex: 1 1 420px; }
+
+.shelf-search {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text);
+  background: var(--glass);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.55rem 1.1rem;
+  min-width: 210px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.shelf-search::placeholder { color: var(--faint); }
+.shelf-search:focus { border-color: var(--acc-blue); }
+
+.shelf-count { font-size: 0.72rem; color: var(--faint); margin-top: 1.1rem; letter-spacing: 0.08em; }
+.shelf-empty { display: none; color: var(--muted); font-size: 0.82rem; margin-top: 2rem; }
+
+.shelf-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.3rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 900px) { .shelf-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 560px) { .shelf-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 860px) { .stats.cols-4 { grid-template-columns: repeat(2, 1fr); } }
+
+.book {
+  position: relative;
+  aspect-ratio: 2 / 3;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--bg-1);
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* contain, not cover: these covers run from 1:1.36 to 1:1.75, and cropping to
+   the 2:3 tile cuts author names off the tall ones. The tile background is
+   near-black, so the resulting bars read as part of the page. */
+.book img { width: 100%; height: 100%; object-fit: contain; display: block; }
+
+.book:hover, .book:focus-visible {
+  border-color: var(--line-strong);
+  box-shadow: 0 14px 44px rgba(4, 6, 13, 0.85), 0 0 34px rgba(91, 140, 255, 0.14);
+  outline: none;
+}
+
+.book-ov {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0.85rem 0.8rem;
+  background: linear-gradient(180deg, rgba(4, 6, 13, 0) 28%, rgba(4, 6, 13, 0.93) 76%);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.book:hover .book-ov, .book:focus-visible .book-ov { opacity: 1; }
+.book-ov .t { font-family: var(--font-display); font-weight: 600; font-size: 0.84rem; line-height: 1.22; color: var(--text); }
+.book-ov .a { font-size: 0.72rem; color: var(--muted); margin-top: 0.22rem; }
+.book-ov .r, .book-rating { font-size: 0.8rem; color: var(--faint); letter-spacing: 0.1em; margin-top: 0.4rem; }
+.book-ov .r .on, .book-rating .on { color: #ffd479; }
+
+.book-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 950;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(4, 6, 13, 0.84);
+  backdrop-filter: blur(9px);
+}
+
+.book-modal.open { display: flex; animation: fade-in 0.22s ease both; }
+
+.book-modal-panel {
+  position: relative;
+  width: 100%;
+  max-width: 620px;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 1.7rem;
+  padding: 1.8rem;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: linear-gradient(160deg, var(--glass-strong), var(--bg-1));
+  box-shadow: 0 30px 90px rgba(4, 6, 13, 0.9);
+}
+
+.book-modal-panel img { width: 100%; border-radius: 9px; border: 1px solid var(--line); }
+.book-modal-panel h3 { margin: 0.7rem 0 0.35rem; font-size: 1.3rem; line-height: 1.2; }
+.book-modal-panel .book-meta { display: flex; flex-direction: column; align-items: flex-start; }
+.book-modal-panel .book-rating .n { font-family: var(--font-mono); font-size: 0.72rem; color: var(--faint); margin-left: 0.6rem; letter-spacing: 0; }
+.book-modal-panel .btn { margin-top: 1.3rem; }
+
+.book-close {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.9rem;
+  background: none;
+  border: 0;
+  color: var(--faint);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.3rem;
+  transition: color 0.2s ease;
+}
+
+.book-close:hover { color: var(--text); }
+
+@media (max-width: 560px) {
+  .book-modal-panel { grid-template-columns: 1fr; gap: 1.1rem; }
+  .book-modal-panel img { max-width: 150px; }
+}
+
 /* ---- blog listing: featured post + row meta ------------------------------------------------ */
 .post-row.featured { padding: 2.2rem 2rem; border-color: var(--line-strong); background: linear-gradient(160deg, var(--glass-strong), var(--glass)); }
 .post-row.featured h3 { font-size: 1.55rem; line-height: 1.25; }

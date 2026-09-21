@@ -490,12 +490,14 @@
     function animate(el) {
       var end = parseFloat(el.getAttribute("data-count"));
       var suffix = el.getAttribute("data-suffix") || "";
-      if (reducedMotion) { el.textContent = end + suffix; return; }
+      var dec = parseInt(el.getAttribute("data-decimals") || "0", 10);
+      function fmt(v) { return (dec ? v.toFixed(dec) : String(Math.round(v))) + suffix; }
+      if (reducedMotion) { el.textContent = fmt(end); return; }
       var dur = 1400, start = null;
       function step(ts) {
         if (!start) start = ts;
         var p = Math.min((ts - start) / dur, 1);
-        el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))) + suffix;
+        el.textContent = fmt(end * (1 - Math.pow(1 - p, 3)));
         if (p < 1) requestAnimationFrame(step);
       }
       requestAnimationFrame(step);
@@ -519,7 +521,7 @@
 
   function initTilt() {
     if (reducedMotion || !finePointer) return;
-    document.querySelectorAll(".card.tilt").forEach(function (card) {
+    document.querySelectorAll(".card.tilt, [data-tilt]").forEach(function (card) {
       card.addEventListener("pointermove", function (e) {
         var r = card.getBoundingClientRect();
         var px = (e.clientX - r.left) / r.width - 0.5, py = (e.clientY - r.top) / r.height - 0.5;
@@ -1131,6 +1133,200 @@
     { label: "Engage hyperdrive", href: "#warp", k: "fun" }
   ];
 
+  /* ======================================================================
+     BOOKSHELF — cover wall with genre filter, search, and FLIP reordering.
+     Ratings and genres are Jerick's own; covers and years come from Open
+     Library. Add a book here and the page, stats and filters all follow.
+     ====================================================================== */
+  var BOOK_GENRES = {
+    productivity: "Productivity",
+    finance: "Finance",
+    psychology: "Psychology",
+    cs: "Computer Science",
+    freediving: "Freediving"
+  };
+
+  var BOOKS = [
+    { t: "Atomic Habits", a: "James Clear", y: 2018, g: "productivity", r: 5, c: "atomic-habits" },
+    { t: "Deep Work", a: "Cal Newport", y: 2016, g: "productivity", r: 5, c: "deep-work" },
+    { t: "The Defining Decade", a: "Meg Jay", y: 2012, g: "productivity", r: 5, c: "the-defining-decade" },
+    { t: "Make Time", a: "Jake Knapp & John Zeratsky", y: 2018, g: "productivity", r: 4, c: "make-time" },
+    { t: "How to Be a Gentleman", a: "John Bridges", y: 2001, g: "productivity", r: 4, c: "how-to-be-a-gentleman" },
+    { t: "The 12 Week Year", a: "Brian P. Moran", y: 2013, g: "productivity", r: 3, c: "the-12-week-year" },
+    { t: "Feel-Good Productivity", a: "Ali Abdaal", y: 2023, g: "productivity", r: 3, c: "feel-good-productivity" },
+    { t: "Indistractable", a: "Nir Eyal", y: 2019, g: "productivity", r: 3, c: "indistractable" },
+    { t: "No More Mr. Nice Guy", a: "Robert Glover", y: 2001, g: "psychology", r: 5, c: "no-more-mr-nice-guy" },
+    { t: "Surrounded by Idiots", a: "Thomas Erikson", y: 2014, g: "psychology", r: 4, c: "surrounded-by-idiots" },
+    { t: "How to Win Friends and Influence People", a: "Dale Carnegie", y: 1936, g: "psychology", r: 4, c: "how-to-win-friends-and-influence-people" },
+    { t: "Million Dollar Weekend", a: "Noah Kagan", y: 2024, g: "finance", r: 4, c: "million-dollar-weekend" },
+    { t: "The Millionaire Fastlane", a: "MJ DeMarco", y: 2011, g: "finance", r: 4, c: "the-millionaire-fastlane" },
+    { t: "The Complete TurtleTrader", a: "Michael W. Covel", y: 2007, g: "finance", r: 4, c: "the-complete-turtletrader" },
+    { t: "The 4-Hour Workweek", a: "Timothy Ferriss", y: 2007, g: "finance", r: 3, c: "the-4-hour-workweek" },
+    { t: "The Psychology of Money", a: "Morgan Housel", y: 2020, g: "finance", r: 3, c: "the-psychology-of-money" },
+    { t: "Life 3.0", a: "Max Tegmark", y: 2017, g: "cs", r: 4, c: "life-3-0" },
+    { t: "The Precipice", a: "Toby Ord", y: 2020, g: "cs", r: 3, c: "the-precipice" },
+    { t: "Deep", a: "James Nestor", y: 2014, g: "freediving", r: 4, c: "deep" },
+    { t: "One Breath", a: "Adam Skolnick", y: 2016, g: "freediving", r: 3, c: "one-breath" }
+  ];
+
+  function bookStars(n) {
+    var s = "";
+    for (var i = 1; i <= 5; i++) s += i <= n ? "★" : "☆";
+    return s;
+  }
+
+  function esc(s) {
+    return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+
+  /* FLIP: measure, mutate, then animate each survivor from its old box */
+  function flipReorder(items, mutate) {
+    if (reducedMotion || !items.length || !items[0].el.animate) { mutate(); return; }
+    var before = [];
+    items.forEach(function (it) {
+      before.push(it.el.style.display === "none" ? null : it.el.getBoundingClientRect());
+    });
+    mutate();
+    items.forEach(function (it, i) {
+      if (it.el.style.display === "none") return;
+      var a = before[i];
+      if (!a) {
+        it.el.animate([{ opacity: 0, transform: "scale(0.94)" }, { opacity: 1, transform: "none" }],
+          { duration: 300, easing: "ease-out" });
+        return;
+      }
+      var b = it.el.getBoundingClientRect();
+      var dx = a.left - b.left, dy = a.top - b.top;
+      if (!dx && !dy) return;
+      it.el.animate([{ transform: "translate(" + dx + "px," + dy + "px)" }, { transform: "none" }],
+        { duration: 420, easing: "cubic-bezier(0.22, 1, 0.36, 1)" });
+    });
+  }
+
+  function initBookshelf() {
+    var host = document.querySelector("[data-bookshelf]");
+    if (!host) return;
+
+    var total = BOOKS.length;
+    var genreKeys = Object.keys(BOOK_GENRES);
+    var sum = 0, top = 0;
+    BOOKS.forEach(function (b) { sum += b.r; if (b.r === 5) top++; });
+    var avg = (sum / total).toFixed(1);
+
+    host.innerHTML =
+      '<div class="stats cols-4 reveal">' +
+        '<div class="stat"><div class="num" data-count="' + total + '">0</div><div class="lbl">books</div></div>' +
+        '<div class="stat"><div class="num" data-count="' + genreKeys.length + '">0</div><div class="lbl">genres</div></div>' +
+        '<div class="stat"><div class="num" data-count="' + avg + '" data-decimals="1">0</div><div class="lbl">average rating</div></div>' +
+        '<div class="stat"><div class="num" data-count="' + top + '">0</div><div class="lbl">five-star reads</div></div>' +
+      '</div>' +
+      '<div class="shelf-controls">' +
+        '<div class="filter-bar shelf-filters">' +
+          '<button class="filter-btn active" data-genre="all">All</button>' +
+          genreKeys.map(function (k) {
+            return '<button class="filter-btn" data-genre="' + k + '">' + BOOK_GENRES[k] + '</button>';
+          }).join("") +
+        '</div>' +
+        '<input class="shelf-search" type="search" placeholder="Search title or author…" aria-label="Search books">' +
+      '</div>' +
+      '<div class="shelf-count mono"></div>' +
+      '<div class="shelf-grid"></div>' +
+      '<p class="shelf-empty mono">// no books match that</p>';
+
+    var grid = host.querySelector(".shelf-grid");
+    var countEl = host.querySelector(".shelf-count");
+    var emptyEl = host.querySelector(".shelf-empty");
+    var search = host.querySelector(".shelf-search");
+
+    var items = BOOKS.map(function (b) {
+      var el = document.createElement("div");
+      el.className = "book";
+      el.setAttribute("data-tilt", "");
+      el.setAttribute("tabindex", "0");
+      el.setAttribute("role", "button");
+      el.setAttribute("aria-label", b.t + " by " + b.a + ", rated " + b.r + " of 5");
+      el.innerHTML =
+        '<img src="/assets/img/book_covers/' + b.c + '.jpg" alt="' + esc(b.t) + ' cover" loading="lazy">' +
+        '<div class="book-ov">' +
+          '<div class="t">' + esc(b.t) + '</div>' +
+          '<div class="a">' + esc(b.a) + '</div>' +
+          '<div class="r"><span class="on">' + bookStars(b.r).slice(0, b.r) + '</span>' +
+            bookStars(b.r).slice(b.r) + '</div>' +
+        '</div>';
+      grid.appendChild(el);
+      return { el: el, b: b, q: (b.t + " " + b.a + " " + BOOK_GENRES[b.g]).toLowerCase() };
+    });
+
+    /* detail panel — appended to <body>, never inside <main>, which is
+       transformed by page-slide and would capture position:fixed */
+    var modal = document.createElement("div");
+    modal.className = "book-modal";
+    modal.innerHTML = '<div class="book-modal-panel" role="dialog" aria-modal="true"></div>';
+    document.body.appendChild(modal);
+    var panel = modal.querySelector(".book-modal-panel");
+
+    function openBook(b) {
+      panel.innerHTML =
+        '<button class="book-close" aria-label="Close">✕</button>' +
+        '<img src="/assets/img/book_covers/' + b.c + '.jpg" alt="' + esc(b.t) + ' cover">' +
+        '<div class="book-meta">' +
+          '<span class="chip purple">' + BOOK_GENRES[b.g] + '</span>' +
+          '<h3>' + esc(b.t) + '</h3>' +
+          '<p class="muted">' + esc(b.a) + ' · ' + b.y + '</p>' +
+          '<div class="book-rating"><span class="on">' + bookStars(b.r).slice(0, b.r) + '</span>' +
+            bookStars(b.r).slice(b.r) + '<span class="n">' + b.r + '/5</span></div>' +
+          '<a class="btn btn-sm btn-ghost" target="_blank" rel="noopener" href="https://openlibrary.org/search?q=' +
+            encodeURIComponent(b.t + " " + b.a) + '">Find the book</a>' +
+        '</div>';
+      modal.classList.add("open");
+    }
+    function closeBook() { modal.classList.remove("open"); }
+
+    modal.addEventListener("click", function (e) {
+      if (e.target === modal || e.target.closest(".book-close")) closeBook();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closeBook();
+    });
+    items.forEach(function (it) {
+      it.el.addEventListener("click", function () { openBook(it.b); });
+      it.el.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openBook(it.b); }
+      });
+    });
+
+    var genre = "all", query = "";
+    function apply() {
+      var shown = 0;
+      flipReorder(items, function () {
+        items.forEach(function (it) {
+          var ok = (genre === "all" || it.b.g === genre) && (!query || it.q.indexOf(query) !== -1);
+          it.el.style.display = ok ? "" : "none";
+          if (ok) shown++;
+        });
+      });
+      countEl.textContent = shown === total
+        ? "// showing all " + total + " books"
+        : "// showing " + shown + " of " + total;
+      emptyEl.style.display = shown ? "none" : "block";
+    }
+
+    host.querySelector(".shelf-filters").addEventListener("click", function (e) {
+      var btn = e.target.closest(".filter-btn");
+      if (!btn) return;
+      host.querySelectorAll(".shelf-filters .filter-btn").forEach(function (b) { b.classList.remove("active"); });
+      btn.classList.add("active");
+      genre = btn.getAttribute("data-genre");
+      apply();
+    });
+    search.addEventListener("input", function () {
+      query = search.value.toLowerCase().trim();
+      apply();
+    });
+
+    apply();
+  }
+
   function initCmdk() {
     var overlay = document.createElement("div");
     overlay.id = "cmdk";
@@ -1200,6 +1396,7 @@
     initCursor();
     initNav();
     initProgress();
+    initBookshelf();   // renders before the reveal/counter/tilt observers attach
     initReveal();
     initScramble();
     initTyping();
