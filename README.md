@@ -36,6 +36,8 @@ bin/build_articles.py   Regenerates post/project pages from src/
 
 Pushing to `main` triggers `.github/workflows/deploy.yml`, which publishes the repo to the `gh-pages` branch (served by GitHub Pages). `.nojekyll` disables Jekyll processing.
 
+**After editing `main.css` or `main.js`, bump the `?v=YYYYMMDD` on every `<link>`/`<script>` tag** (including the one in `bin/build_articles.py`, then regenerate). GitHub Pages serves assets with `max-age=600` and there's no build step to fingerprint them, so without a bump your change won't show up in a browser that already has the old file.
+
 ## Local preview
 
 ```bash
