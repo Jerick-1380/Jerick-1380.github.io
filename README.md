@@ -21,7 +21,7 @@ bin/build_articles.py   Regenerates post/project pages from src/
 ## Editing
 
 - **Main pages:** edit the HTML directly. Nav and footer are duplicated per page — keep them in sync.
-- **New blog post:** add `src/posts/YYYY-MM-DD-slug.md` (front matter: `title`, `description`, `tags`), run `python3 bin/build_articles.py` (needs `pip install markdown pyyaml`), then add a row to `blog/index.html` (and optionally the homepage "Latest from the blog" section).
+- **New blog post:** add `src/posts/YYYY-MM-DD-slug.md` (front matter: `title`, `description`, `tags`, and optionally `image:` for a custom 1200x627 social preview; defaults to `assets/img/social/og-default.png`), run `python3 bin/build_articles.py` (needs `pip install markdown pyyaml`), then add a row to `blog/index.html` (and optionally the homepage "Latest from the blog" section).
 - **New project:** add markdown to `src/projects/`, register it in the `PROJECTS` list in `bin/build_articles.py`, run the script, then add a card to `projects/index.html`.
 - **News item:** add a `.log-line` entry to the mission log section in `index.html`.
 

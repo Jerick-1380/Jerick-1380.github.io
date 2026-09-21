@@ -15,6 +15,10 @@ import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
 
+# Absolute origin: og:image and og:url must be absolute or scrapers ignore them.
+SITE = "https://jerick-1380.github.io"
+DEFAULT_OG = "/assets/img/social/og-default.png"
+
 TEMPLATE = """<!doctype html>
 <html lang="en">
 <head>
@@ -22,6 +26,15 @@ TEMPLATE = """<!doctype html>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{title} — Jerick Shi</title>
   <meta name="description" content="{description}">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Jerick Shi">
+  <meta property="og:url" content="{url}">
+  <meta property="og:title" content="{og_title}">
+  <meta property="og:description" content="{description}">
+  <meta property="og:image" content="{image}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="627">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="/assets/img/brain.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -152,6 +165,9 @@ def build_posts():
             chips=f"<div>{tags}</div>" if tags else "",
             body=body,
             toc=build_toc(MD),
+            url=f"{SITE}/blog/{year}/{slug}/",
+            og_title=escape_attr(meta.get("title", slug)),
+            image=SITE + str(meta.get("image", DEFAULT_OG)),
             back_href="/blog/",
             back_label="All posts",
         )
@@ -259,6 +275,9 @@ def build_projects():
             chips=proj["chips"],
             body=body,
             toc=build_toc(MD),
+            url=f"{SITE}/projects/{proj['slug']}/",
+            og_title=escape_attr(meta.get("title", proj["slug"])),
+            image=SITE + str(meta.get("image", DEFAULT_OG)),
             actions=proj["actions"],
             back_href="/projects/",
             back_label="All projects",

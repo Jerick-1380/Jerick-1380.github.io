@@ -4,6 +4,7 @@ date: 2026-09-20 10:00:00
 description: "3Blue1Brown's video on the IMO problem no model could solve, a framework for what understanding actually means, and why intuition is the only level educators still need to fight for."
 tags: education ai mathematics intuition teaching
 categories: education
+image: /assets/img/social/og-levels.png
 ---
 
 3Blue1Brown put out a video a while back about Problem 6 from the 2025 IMO, the one none of the AI systems could solve. Before anything else: go watch it. The rest of this will still be here when you get back.
