@@ -1395,13 +1395,17 @@ body.warp .hero h1, body.warp .big-404 { animation: warp-shake 0.08s infinite; }
    trap documented on <body> at the top of this layer. */
 .article-toc { display: none; }
 
-@media (min-width: 1280px) {
+/* Geometry note: the rail is fixed, so it must clear the widest thing the article
+   can render. Article half-width is 380px and in-article grids break out 40px past
+   that (to 50%-420), so the rail's right edge sits at 50%-450 for a 30px gutter.
+   The breakpoint is 1340px because 50%-640px needs a half-viewport of 640px+. */
+@media (min-width: 1340px) {
   .article-toc {
     display: block;
     position: fixed;
     top: calc(var(--nav-h) + 5.5rem);
-    left: calc(50% - 596px);
-    width: 200px;
+    left: calc(50% - 640px);
+    width: 190px;
     max-height: calc(100vh - var(--nav-h) - 9rem);
     overflow-y: auto;
     border-left: 1px solid var(--line);
@@ -1438,18 +1442,26 @@ body.warp .hero h1, body.warp .big-404 { animation: warp-shake 0.08s infinite; }
 /* ---- article lede + in-article blocks ------------------------------------------------------ */
 .article-body > p:first-of-type { font-size: 1.1rem; line-height: 1.75; color: var(--text); }
 
-/* grids and stat rows break out slightly past the text column for visual rhythm */
-@media (min-width: 900px) {
+/* grids and stat rows break out past the text column for visual rhythm. Capped at
+   40px so they always clear the fixed TOC rail — see the geometry note above. */
+@media (min-width: 1024px) {
   .article-body .grid-3,
-  .article-body .stats { margin-left: -60px; margin-right: -60px; }
+  .article-body .stats { margin-left: -40px; margin-right: -40px; }
 }
 
 .article-body .stats.cols-3 { grid-template-columns: repeat(3, 1fr); }
 @media (max-width: 860px) { .article-body .stats.cols-3 { grid-template-columns: 1fr; } }
-.article-body .stats { margin-top: 2rem; margin-bottom: 2rem; }
-.article-body .grid-3 { margin-top: 2rem; margin-bottom: 2rem; }
-.article-body .card h3 { margin: 0.7rem 0 0.5rem; font-size: 1rem; }
-.article-body .card p { font-size: 0.9rem; margin: 0; color: var(--muted); }
+.article-body .stats,
+.article-body .grid-3 { margin-top: 2.8rem; margin-bottom: 2.8rem; gap: 1rem; }
+
+/* cards sit in a narrower column than on the wide pages, so they get tighter
+   padding and type to keep a readable line length inside each one */
+.article-body .card { padding: 1.25rem 1.15rem; }
+.article-body .card h3 { margin: 0.6rem 0 0.45rem; font-size: 0.98rem; }
+.article-body .card p { font-size: 0.88rem; line-height: 1.55; margin: 0; color: var(--muted); }
+.article-body .stat { padding: 1.2rem 0.6rem; }
+.article-body .stat .num { font-size: 1.9rem; }
+.article-body .stat .lbl { font-size: 0.63rem; letter-spacing: 0.1em; }
 
 /* pull quote: the existing blockquote, sized up and used as a break in the prose */
 .article-body blockquote.pull {
