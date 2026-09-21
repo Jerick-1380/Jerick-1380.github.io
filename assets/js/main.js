@@ -641,6 +641,32 @@
     eyebrow.appendChild(span);
   }
 
+  /* highlights the current section in the article TOC rail. Uses viewport-relative
+     rects rather than offsetTop: .article is transformed by the page-slide animation,
+     which moves the offsetParent out from under the headings. */
+  function initArticleToc() {
+    var toc = document.querySelector(".article-toc");
+    if (!toc) return;
+    var links = [].slice.call(toc.querySelectorAll("a"));
+    var heads = links.map(function (a) {
+      var id = a.getAttribute("href").slice(1);
+      try { return document.getElementById(decodeURIComponent(id)); } catch (e) { return document.getElementById(id); }
+    });
+    if (!links.length || heads.indexOf(null) !== -1) { toc.style.display = "none"; return; }
+
+    var ticking = false;
+    function update() {
+      ticking = false;
+      var idx = 0;
+      heads.forEach(function (h, i) { if (h.getBoundingClientRect().top <= 140) idx = i; });
+      links.forEach(function (a, i) { a.classList.toggle("active", i === idx); });
+    }
+    update();
+    window.addEventListener("scroll", function () {
+      if (!ticking) { ticking = true; requestAnimationFrame(update); }
+    }, { passive: true });
+  }
+
   function initClock() {
     var note = document.querySelector(".foot-note");
     if (!note) return;
@@ -1190,6 +1216,7 @@
     initLightbox();
     initCarousels();
     initReadTime();
+    initArticleToc();
     initClock();
     initResearchMaps();
     initCmdk();

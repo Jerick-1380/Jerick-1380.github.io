@@ -50,7 +50,7 @@ TEMPLATE = """<!doctype html>
     </div>
   </nav>
 
-  <article class="article">
+{toc}  <article class="article">
     <header>
       <div class="eyebrow"><span class="idx">//</span> {eyebrow}</div>
       <h1 data-scramble>{title}</h1>
@@ -99,9 +99,32 @@ def escape_attr(value):
     return value.replace("&", "&amp;").replace('"', "&quot;").replace("<", "&lt;")
 
 
+def build_toc(md):
+    """Sidebar rail from the article's h2s. Rendered as a sibling of <article>,
+    never inside it: .article is transformed by the page-slide animation, which
+    would capture the rail's position:fixed. Skipped for short articles."""
+    items = [t for t in getattr(md, "toc_tokens", []) if t["level"] == 2]
+    if len(items) < 3:
+        return ""
+    links = "".join(
+        f'      <a href="#{t["id"]}">{escape_text(t["name"])}</a>\n' for t in items
+    )
+    return (
+        '  <nav class="article-toc" aria-label="Sections in this article">\n'
+        '    <div class="toc-label">contents</div>\n'
+        f"{links}"
+        "  </nav>\n\n"
+    )
+
+
+def escape_text(value):
+    return value.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+
 def render(out_path, **kwargs):
     kwargs.setdefault("chips", "")
     kwargs.setdefault("actions", "")
+    kwargs.setdefault("toc", "")
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(TEMPLATE.format(**kwargs), encoding="utf-8")
     print(f"built {out_path.relative_to(ROOT)}")
@@ -128,6 +151,7 @@ def build_posts():
             subtitle=meta.get("description", ""),
             chips=f"<div>{tags}</div>" if tags else "",
             body=body,
+            toc=build_toc(MD),
             back_href="/blog/",
             back_label="All posts",
         )
@@ -234,6 +258,7 @@ def build_projects():
             subtitle=proj["subtitle"],
             chips=proj["chips"],
             body=body,
+            toc=build_toc(MD),
             actions=proj["actions"],
             back_href="/projects/",
             back_label="All projects",
