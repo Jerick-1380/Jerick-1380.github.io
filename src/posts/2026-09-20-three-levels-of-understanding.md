@@ -106,7 +106,7 @@ The other place I've been trying this is [my YouTube channel](https://www.youtub
 
 The question is easy to state: for a symmetric random walk, how long do you expect to wait before hitting a boundary at distance *n*?
 
-I could have made this a two-minute video. The Level 1 answer is a clean quadratic—here's the formula, plug in your numbers, done. The Level 2 answer is the algebraic derivation, which is in there near the end, along with simulations showing the empirical points landing on the parabola where they should.
+I could have made this a one-minute video. The Level 1 answer is a clean quadratic—here's the formula, plug in your numbers, done. The Level 2 answer is the algebraic derivation, which is in there near the end, along with simulations showing the empirical points landing on the parabola where they should.
 
 Most of the runtime goes somewhere else though. Before any formula appears I'm running random walk simulations and asking you to look at them. Does linear growth seem plausible here? Watch what the spread does as you let it run longer. Notice the shape the endpoints settle into, and think about what that implies about variance. None of that proves anything. It's a pile of small nudges, each one making a linear answer feel slightly more wrong and a quadratic one feel slightly more right.
 
