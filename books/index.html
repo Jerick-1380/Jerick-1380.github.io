@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/main.css?v=20260921">
+  <link rel="stylesheet" href="/assets/css/main.css?v=202609211653">
 </head>
 <body>
   <div id="progress"></div>
@@ -54,18 +54,9 @@
     </blockquote>
 
     <h2 class="reveal">Books I am reading, have read, or will read</h2>
+    <p class="muted reveal" style="max-width:640px;">Filter by genre or search by title and author. Click any cover for the details. Ratings are mine; covers come from Open Library.</p>
 
-    <div class="card tilt reveal" style="display:grid; grid-template-columns:120px 1fr; gap:1.5rem; align-items:start; margin-top:1.8rem;">
-      <img src="/assets/img/book_covers/the_godfather.jpg" alt="The Godfather cover" style="width:100%; border-radius:8px; border:1px solid var(--line);">
-      <div>
-        <span class="chip">★★★★★</span><span class="chip purple">FINISHED · 2024.09</span>
-        <h3 style="margin-top:0.7rem;">The Godfather</h3>
-        <p class="muted" style="font-size:0.92rem;">Mario Puzo · 1969 · classics, crime, historical fiction, thriller</p>
-        <a class="btn btn-sm btn-ghost" href="https://www.amazon.com/Godfather-Deluxe-Mario-Puzo/dp/0593542592" target="_blank" rel="noopener">Find the book</a>
-      </div>
-    </div>
-
-    <p class="muted mono reveal" style="margin-top:2.5rem; font-size:0.8rem;">// more entries loading…</p>
+    <div data-bookshelf aria-label="Bookshelf"></div>
   </main>
 
   <footer>
@@ -83,6 +74,6 @@
     </div>
   </footer>
 
-  <script src="/assets/js/main.js?v=20260921"></script>
+  <script src="/assets/js/main.js?v=202609211653"></script>
 </body>
 </html>
