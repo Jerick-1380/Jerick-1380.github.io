@@ -6,15 +6,17 @@ tags: education ai mathematics intuition teaching
 categories: education
 ---
 
-3Blue1Brown put out a video a while back about the IMO problem that none of the AI systems could solve. Before anything else: go watch it. The rest of this will still be here when you get back.
+3Blue1Brown put out a video a while back about Problem 6 from the 2025 IMO, the one none of the AI systems could solve. Before anything else: go watch it. The rest of this will still be here when you get back.
 
 <div class="video-16x9">
   <iframe src="https://www.youtube.com/embed/Nbwv5wHQoj0" title="3Blue1Brown — the IMO problem AI couldn't solve" allowfullscreen loading="lazy"></iframe>
 </div>
 
-The solution is elegant and the video is worth it for that alone. But the part I haven't stopped thinking about is the question Grant asks near the end. Every major model failed this problem and human competitors didn't, so what was the actual difference? What did those people have?
+The solution is elegant and the video is worth it for that alone. But the part I haven't stopped thinking about is the question Grant asks near the end. Every major model failed Problem 6, and so did almost every human: only 6 of the 630 contestants solved it completely for the full 7 points. What did those six have?
 
 The phrase he lands on is a *motivated* explanation. An argument where you can see why someone would reach for each step, so that by the end the solution feels like the only thing you could have done. I've been calling that same thing intuition for years, and I think it's the last piece we've got.
+
+Six out of 630 is worth sitting with, though, because it means the thing I'm about to spend a whole post defending isn't exactly widespread among us either. On a problem that hard, six people in the world had it that day.
 
 ## Three levels of understanding
 
