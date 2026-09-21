@@ -33,6 +33,17 @@
     </div>
   </nav>
 
+  <nav class="article-toc" aria-label="Sections in this article">
+    <div class="toc-label">contents</div>
+      <a href="#three-levels-of-understanding">Three levels of understanding</a>
+      <a href="#the-two-ways-you-actually-get-it">The two ways you actually get it</a>
+      <a href="#ai-took-level-1-two-weeks-ago-it-took-level-2">AI took Level 1. Two weeks ago it took Level 2.</a>
+      <a href="#so-what-do-we-actually-do-about-it">So what do we actually do about it</a>
+      <a href="#what-this-looks-like-in-a-recitation-room">What this looks like in a recitation room</a>
+      <a href="#what-this-looks-like-on-video">What this looks like on video</a>
+      <a href="#what-were-actually-protecting">What we're actually protecting</a>
+  </nav>
+
   <article class="article">
     <header>
       <div class="eyebrow"><span class="idx">//</span> blog_entry · 2026.09.20</div>
@@ -47,16 +58,28 @@
 </div>
 
 <p>The solution is elegant and the video is worth it for that alone. But the part I haven't stopped thinking about is the question Grant asks near the end. Every major model failed Problem 6, and so did almost every human: only 6 of the 630 contestants solved it completely for the full 7 points. What did those six have?</p>
+<div class="stats cols-3">
+  <div class="stat"><div class="num" data-count="630">0</div><div class="lbl">IMO 2025 contestants</div></div>
+  <div class="stat"><div class="num" data-count="6">0</div><div class="lbl">full marks on problem 6</div></div>
+  <div class="stat"><div class="num" data-count="0">0</div><div class="lbl">AI systems that solved it</div></div>
+</div>
+
 <p>The phrase he lands on is a <em>motivated</em> explanation. An argument where you can see why someone would reach for each step, so that by the end the solution feels like the only thing you could have done. I've been calling that same thing intuition for years, and I think it's the last piece we've got.</p>
 <p>Six out of 630 is worth sitting with, though, because it means the thing I'm about to spend a whole post defending isn't exactly widespread among us either. On a problem that hard, six people in the world had it that day.</p>
 <h2 id="three-levels-of-understanding">Three levels of understanding</h2>
 <p>I've been carrying a rough framework around for a while, mostly to work out what I'm actually supposed to be doing when I teach. For any concept, any theorem, any technique, there are three different things that "understanding it" can mean.</p>
-<p>The first is application. You have the concept and you can use it. Someone hands you a problem, you recognize what it wants, you turn the crank. Can you take the derivative, can you expand the Taylor series, can you compute the determinant and say what it means when it comes out zero.</p>
-<p>I claim that essentially all of formal education stops right here. The SAT, the GRE, AP Calculus, and very nearly every exam I have graded or proctored or written all live at this level. We give students a theorem, check that they can apply it in four or five slightly different settings—and then write down that they know it.</p>
-<p>The second is verification, which is the question of how you know the thing is true at all. The experimental sciences answer it by running experiments and inferring backwards. Math and CS get something stricter, since we can actually prove things: contradiction, induction, loop invariants, and increasingly Lean, which over the last few years has turned into a general substrate for checking that an argument holds together.</p>
-<p>Level 2 is real understanding, and undergraduate programs at least gesture at it. But it isn't where the weight goes, even in a good math department. Most of the differential equations homework I've graded is Level 1 with a proof stapled to the end.</p>
-<p>The third one is the reason I'm writing any of this, and it's the hardest to pin down. Call it intuition—why the thing works, and why anyone would ever have thought of it in the first place.</p>
-<p>This is the layer sitting underneath the other two, and nobody grades you on it. You can follow a proof line by line, agree with every step, get to the end, and still have no idea how a human being produced that. It's the difference between watching someone solve a Rubik's cube in nine seconds and understanding cubing. For the genuinely hard concepts, I'd say it's also the only thing that makes the first two levels stick past the final exam.</p>
+<div class="grid-3">
+  <div class="card tilt"><span class="chip blue">LEVEL 01</span><h3>Application</h3><p>You have the concept and you can use it. Someone hands you a problem, you recognize what it wants, you turn the crank.</p></div>
+  <div class="card tilt"><span class="chip blue">LEVEL 02</span><h3>Verification</h3><p>How you know the thing is true at all. Contradiction, induction, loop invariants, and increasingly Lean.</p></div>
+  <div class="card tilt"><span class="chip blue">LEVEL 03</span><h3>Intuition</h3><p>Why the thing works, and why anyone would ever have thought of it in the first place.</p></div>
+</div>
+
+<p>Level 1 is what everything gets built around. Can you take the derivative, can you expand the Taylor series, can you compute the determinant and say what it means when it comes out zero. I claim that essentially all of formal education stops right here. The SAT, the GRE, AP Calculus, and very nearly every exam I have graded or proctored or written all live at this level. We give students a theorem, check that they can apply it in four or five slightly different settings—and then write down that they know it.</p>
+<p>Level 2 is where math and CS get something the experimental sciences don't. They answer "how do you know" by running experiments and inferring backwards; we get to actually prove things, and over the last few years Lean has turned into a general substrate for checking that an argument holds together. It's real understanding, and undergraduate programs at least gesture at it. But it isn't where the weight goes, even in a good math department. Most of the differential equations homework I've graded is Level 1 with a proof stapled to the end.</p>
+<p>Level 3 is the reason I'm writing any of this, and it's the hardest to pin down. It sits underneath the other two, and nobody grades you on it.</p>
+<blockquote class="pull">You can follow a proof line by line, agree with every step, get to the end, and still have no idea how a human being produced that.</blockquote>
+
+<p>It's the difference between watching someone solve a Rubik's cube in nine seconds and understanding cubing. For the genuinely hard concepts, I'd say it's also the only thing that makes the first two levels stick past the final exam.</p>
 <h2 id="the-two-ways-you-actually-get-it">The two ways you actually get it</h2>
 <p>There are two routes to Level 3 as far as I can tell, and they work completely differently.</p>
 <p>The first one is explicit, and right now that mostly means visualization. This is the 3Blue1Brown lane. You take something that lives in symbols and move it somewhere you can see it—a diagram, an animation, sometimes just a better set of coordinates—and the answer ends up sitting right there in front of you. Done well it makes you feel like you could have found the thing yourself.</p>
@@ -66,7 +89,16 @@
 <p>Level 1 went first and it went completely. By 2024 it was clear that frontier models could apply more or less any standard technique to more or less any standard problem, which means every exam I listed above is now solvable by a tool sitting in each of my students' pockets. I wrote about what that does to homework <a href="/blog/2025/why-ai-cant-do-math-homework/">last year</a>, back when you could still spot AI-generated work by its tells. Most of those tells are gone now—which is its own small lesson about making predictions in this area.</p>
 <p>Level 2 was supposed to hold out longer. The bet a lot of people were making—me included—was that models might generate arguments while humans stayed the ones certifying them.</p>
 <p>Then on September 8th OpenAI announced a claimed proof of Navier–Stokes existence and smoothness, one of the seven Millennium Prize problems and open for about ninety years. Reportedly 88 hours of compute across something like ten thousand agents. And, the part I care about here, formalized in Lean.</p>
-<p>I think that detail is getting underweighted. A Lean formalization means the proof doesn't need a human referee to be believed. The machine wrote the argument and produced the certificate that the argument is valid, which is the whole of Level 2 with nobody left in the loop.</p>
+<div class="stats cols-3">
+  <div class="stat"><div class="num" data-count="88">0</div><div class="lbl">hours of compute</div></div>
+  <div class="stat"><div class="num" data-count="10" data-suffix=",000">0</div><div class="lbl">agents</div></div>
+  <div class="stat"><div class="num" data-count="90">0</div><div class="lbl">years the problem stood</div></div>
+</div>
+
+<p>I think that detail is getting underweighted.</p>
+<blockquote class="pull">A Lean formalization means the proof doesn't need a human referee to be believed.</blockquote>
+
+<p>The machine wrote the argument and produced the certificate that the argument is valid, which is the whole of Level 2 with nobody left in the loop.</p>
 <p>Two caveats, since this is about two weeks old and still moving around. It's contested: Tristan Buckmaster has said that unpublished work he and Levent Alpöge did on the Euler equations reached OpenAI shortly before the announcement and may have shaped how the agents were prompted, OpenAI says the methods differ substantially, and the Clay Institute hasn't ruled on any of it. And one result isn't a capability. Still, I don't think the direction is ambiguous, and if your curriculum is built on the assumption that Level 2 stays human, that assumption is worth revisiting. Which leaves Level 3.</p>
 <h2 id="so-what-do-we-actually-do-about-it">So what do we actually do about it</h2>
 <p>If intuition is the remaining gap and it comes from those two routes, the useful question is which route we can push on.</p>
@@ -77,7 +109,8 @@
 <p>I've TA'd differential equations more times than I'd like to say out loud, which means I've taught the same material to different rooms over and over and gotten to watch what lands. (The longer version of this argument lives on my <a href="/teaching/">teaching page</a>.)</p>
 <p>The tension never really goes away. Most diff eq homework is Level 1—identify the form, apply the method. Sure, every so often you need to prove something, but it's rarely hard, and I'm not going to pretend otherwise to students who have an exam in two weeks. So I teach the methods. What I'm always fighting is the point where that turns into a lookup table, this shape gets that substitution and that shape gets this transform, memorized flat with nothing underneath it. Those students tend to do fine on the midterm and remember none of it by April.</p>
 <p>So I've flipped how I sequence things. Before I show a technique, I want to have answered why we need a new tool at all. What breaks if we use what we already have? Where did this transform come from, and what is it doing to the equation? Once that's in place the proof stops feeling arbitrary, because you can finally see what it's for, and the procedure they're actually going to be tested on gets much harder to forget, because it's attached to something.</p>
-<p>Intuition, then verification, then application. That's backwards from how almost every course I've taken or taught is sequenced, and it works better.</p>
+<blockquote class="pull">Intuition, then verification, then application. That's backwards from how almost every course I've taken or taught is sequenced, and it works better.</blockquote>
+
 <h2 id="what-this-looks-like-on-video">What this looks like on video</h2>
 <p>The other place I've been trying this is <a href="https://www.youtube.com/@DummyR18">my YouTube channel</a>. The most recent one is about symmetric random walks:</p>
 <div class="video-16x9">

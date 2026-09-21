@@ -1388,3 +1388,93 @@ body.has-cursor .rmap canvas { cursor: none; }
 /* ---- warp mode (easter egg) ------------------------------------------------------------ */
 body.warp .hero h1, body.warp .big-404 { animation: warp-shake 0.08s infinite; }
 @keyframes warp-shake { 50% { transform: translate(1px, -1px); } }
+
+/* ---- article table of contents rail ------------------------------------------------------ */
+/* NB: the rail is a sibling of .article, never a child. .article carries the page-slide
+   animation, and a transform there would capture any position:fixed descendant — the same
+   trap documented on <body> at the top of this layer. */
+.article-toc { display: none; }
+
+@media (min-width: 1280px) {
+  .article-toc {
+    display: block;
+    position: fixed;
+    top: calc(var(--nav-h) + 5.5rem);
+    left: calc(50% - 596px);
+    width: 200px;
+    max-height: calc(100vh - var(--nav-h) - 9rem);
+    overflow-y: auto;
+    border-left: 1px solid var(--line);
+    z-index: 5;
+  }
+}
+
+.article-toc .toc-label {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--acc-cyan);
+  padding: 0 0 0.9rem 1rem;
+}
+
+.article-toc a {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 0.74rem;
+  line-height: 1.45;
+  color: var(--faint);
+  padding: 0.4rem 0 0.4rem 1rem;
+  border-left: 2px solid transparent;
+  margin-left: -1px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.article-toc a:hover { color: var(--text); }
+.article-toc a.active { color: var(--text); border-left-color: var(--acc-blue); }
+
+/* ---- article lede + in-article blocks ------------------------------------------------------ */
+.article-body > p:first-of-type { font-size: 1.1rem; line-height: 1.75; color: var(--text); }
+
+/* grids and stat rows break out slightly past the text column for visual rhythm */
+@media (min-width: 900px) {
+  .article-body .grid-3,
+  .article-body .stats { margin-left: -60px; margin-right: -60px; }
+}
+
+.article-body .stats.cols-3 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 860px) { .article-body .stats.cols-3 { grid-template-columns: 1fr; } }
+.article-body .stats { margin-top: 2rem; margin-bottom: 2rem; }
+.article-body .grid-3 { margin-top: 2rem; margin-bottom: 2rem; }
+.article-body .card h3 { margin: 0.7rem 0 0.5rem; font-size: 1rem; }
+.article-body .card p { font-size: 0.9rem; margin: 0; color: var(--muted); }
+
+/* pull quote: the existing blockquote, sized up and used as a break in the prose */
+.article-body blockquote.pull {
+  font-family: var(--font-display);
+  font-size: 1.22rem;
+  line-height: 1.5;
+  color: var(--text);
+  border-left-width: 3px;
+  margin: 2.4em 0;
+}
+
+@media (min-width: 900px) { .article-body blockquote.pull { margin-left: -40px; margin-right: -40px; } }
+
+/* ---- blog listing: featured post + row meta ------------------------------------------------ */
+.post-row.featured { padding: 2.2rem 2rem; border-color: var(--line-strong); background: linear-gradient(160deg, var(--glass-strong), var(--glass)); }
+.post-row.featured h3 { font-size: 1.55rem; line-height: 1.25; }
+.post-row.featured p { font-size: 1rem; }
+
+.post-meta { display: flex; gap: 0.4rem; flex-wrap: wrap; align-items: center; margin-top: 0.7rem; }
+.post-meta .chip { margin: 0; }
+.post-meta .mins {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--faint);
+  margin-left: auto;
+}

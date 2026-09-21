@@ -14,6 +14,12 @@ categories: education
 
 The solution is elegant and the video is worth it for that alone. But the part I haven't stopped thinking about is the question Grant asks near the end. Every major model failed Problem 6, and so did almost every human: only 6 of the 630 contestants solved it completely for the full 7 points. What did those six have?
 
+<div class="stats cols-3">
+  <div class="stat"><div class="num" data-count="630">0</div><div class="lbl">IMO 2025 contestants</div></div>
+  <div class="stat"><div class="num" data-count="6">0</div><div class="lbl">full marks on problem 6</div></div>
+  <div class="stat"><div class="num" data-count="0">0</div><div class="lbl">AI systems that solved it</div></div>
+</div>
+
 The phrase he lands on is a *motivated* explanation. An argument where you can see why someone would reach for each step, so that by the end the solution feels like the only thing you could have done. I've been calling that same thing intuition for years, and I think it's the last piece we've got.
 
 Six out of 630 is worth sitting with, though, because it means the thing I'm about to spend a whole post defending isn't exactly widespread among us either. On a problem that hard, six people in the world had it that day.
@@ -22,17 +28,21 @@ Six out of 630 is worth sitting with, though, because it means the thing I'm abo
 
 I've been carrying a rough framework around for a while, mostly to work out what I'm actually supposed to be doing when I teach. For any concept, any theorem, any technique, there are three different things that "understanding it" can mean.
 
-The first is application. You have the concept and you can use it. Someone hands you a problem, you recognize what it wants, you turn the crank. Can you take the derivative, can you expand the Taylor series, can you compute the determinant and say what it means when it comes out zero.
+<div class="grid-3">
+  <div class="card tilt"><span class="chip blue">LEVEL 01</span><h3>Application</h3><p>You have the concept and you can use it. Someone hands you a problem, you recognize what it wants, you turn the crank.</p></div>
+  <div class="card tilt"><span class="chip blue">LEVEL 02</span><h3>Verification</h3><p>How you know the thing is true at all. Contradiction, induction, loop invariants, and increasingly Lean.</p></div>
+  <div class="card tilt"><span class="chip blue">LEVEL 03</span><h3>Intuition</h3><p>Why the thing works, and why anyone would ever have thought of it in the first place.</p></div>
+</div>
 
-I claim that essentially all of formal education stops right here. The SAT, the GRE, AP Calculus, and very nearly every exam I have graded or proctored or written all live at this level. We give students a theorem, check that they can apply it in four or five slightly different settings—and then write down that they know it.
+Level 1 is what everything gets built around. Can you take the derivative, can you expand the Taylor series, can you compute the determinant and say what it means when it comes out zero. I claim that essentially all of formal education stops right here. The SAT, the GRE, AP Calculus, and very nearly every exam I have graded or proctored or written all live at this level. We give students a theorem, check that they can apply it in four or five slightly different settings—and then write down that they know it.
 
-The second is verification, which is the question of how you know the thing is true at all. The experimental sciences answer it by running experiments and inferring backwards. Math and CS get something stricter, since we can actually prove things: contradiction, induction, loop invariants, and increasingly Lean, which over the last few years has turned into a general substrate for checking that an argument holds together.
+Level 2 is where math and CS get something the experimental sciences don't. They answer "how do you know" by running experiments and inferring backwards; we get to actually prove things, and over the last few years Lean has turned into a general substrate for checking that an argument holds together. It's real understanding, and undergraduate programs at least gesture at it. But it isn't where the weight goes, even in a good math department. Most of the differential equations homework I've graded is Level 1 with a proof stapled to the end.
 
-Level 2 is real understanding, and undergraduate programs at least gesture at it. But it isn't where the weight goes, even in a good math department. Most of the differential equations homework I've graded is Level 1 with a proof stapled to the end.
+Level 3 is the reason I'm writing any of this, and it's the hardest to pin down. It sits underneath the other two, and nobody grades you on it.
 
-The third one is the reason I'm writing any of this, and it's the hardest to pin down. Call it intuition—why the thing works, and why anyone would ever have thought of it in the first place.
+<blockquote class="pull">You can follow a proof line by line, agree with every step, get to the end, and still have no idea how a human being produced that.</blockquote>
 
-This is the layer sitting underneath the other two, and nobody grades you on it. You can follow a proof line by line, agree with every step, get to the end, and still have no idea how a human being produced that. It's the difference between watching someone solve a Rubik's cube in nine seconds and understanding cubing. For the genuinely hard concepts, I'd say it's also the only thing that makes the first two levels stick past the final exam.
+It's the difference between watching someone solve a Rubik's cube in nine seconds and understanding cubing. For the genuinely hard concepts, I'd say it's also the only thing that makes the first two levels stick past the final exam.
 
 ## The two ways you actually get it
 
@@ -52,7 +62,17 @@ Level 2 was supposed to hold out longer. The bet a lot of people were making—m
 
 Then on September 8th OpenAI announced a claimed proof of Navier–Stokes existence and smoothness, one of the seven Millennium Prize problems and open for about ninety years. Reportedly 88 hours of compute across something like ten thousand agents. And, the part I care about here, formalized in Lean.
 
-I think that detail is getting underweighted. A Lean formalization means the proof doesn't need a human referee to be believed. The machine wrote the argument and produced the certificate that the argument is valid, which is the whole of Level 2 with nobody left in the loop.
+<div class="stats cols-3">
+  <div class="stat"><div class="num" data-count="88">0</div><div class="lbl">hours of compute</div></div>
+  <div class="stat"><div class="num" data-count="10" data-suffix=",000">0</div><div class="lbl">agents</div></div>
+  <div class="stat"><div class="num" data-count="90">0</div><div class="lbl">years the problem stood</div></div>
+</div>
+
+I think that detail is getting underweighted.
+
+<blockquote class="pull">A Lean formalization means the proof doesn't need a human referee to be believed.</blockquote>
+
+The machine wrote the argument and produced the certificate that the argument is valid, which is the whole of Level 2 with nobody left in the loop.
 
 Two caveats, since this is about two weeks old and still moving around. It's contested: Tristan Buckmaster has said that unpublished work he and Levent Alpöge did on the Euler equations reached OpenAI shortly before the announcement and may have shaped how the agents were prompted, OpenAI says the methods differ substantially, and the Clay Institute hasn't ruled on any of it. And one result isn't a capability. Still, I don't think the direction is ambiguous, and if your curriculum is built on the assumption that Level 2 stays human, that assumption is worth revisiting. Which leaves Level 3.
 
@@ -74,7 +94,7 @@ The tension never really goes away. Most diff eq homework is Level 1—identify 
 
 So I've flipped how I sequence things. Before I show a technique, I want to have answered why we need a new tool at all. What breaks if we use what we already have? Where did this transform come from, and what is it doing to the equation? Once that's in place the proof stops feeling arbitrary, because you can finally see what it's for, and the procedure they're actually going to be tested on gets much harder to forget, because it's attached to something.
 
-Intuition, then verification, then application. That's backwards from how almost every course I've taken or taught is sequenced, and it works better.
+<blockquote class="pull">Intuition, then verification, then application. That's backwards from how almost every course I've taken or taught is sequenced, and it works better.</blockquote>
 
 ## What this looks like on video
 
