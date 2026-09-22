@@ -56,6 +56,7 @@ TEMPLATE = """<!doctype html>
         <a href="/projects/">Projects</a>
         <a href="/teaching/">Teaching</a>
         <a href="/blog/">Blog</a>
+        <a href="/books/">Books</a>
         <a href="/hobbies/">Hobbies</a>
         <a href="/cv/">CV</a>
         <button class="cmdk-btn" aria-label="Open command palette">⌘K</button>
