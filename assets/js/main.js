@@ -1295,6 +1295,14 @@
       });
     });
 
+    /* anything on the page can open a book's panel: data-open-book="<cover-slug>" */
+    document.querySelectorAll("[data-open-book]").forEach(function (el) {
+      var slug = el.getAttribute("data-open-book"), match = null;
+      BOOKS.forEach(function (b) { if (b.c === slug) match = b; });
+      if (!match) return;
+      el.addEventListener("click", function (e) { e.preventDefault(); openBook(match); });
+    });
+
     var genre = "all", query = "";
     function apply() {
       var shown = 0;
