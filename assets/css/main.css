@@ -1490,32 +1490,27 @@ body.warp .hero h1, body.warp .big-404 { animation: warp-shake 0.08s infinite; }
 }
 
 .shelf-epigraph .src {
-  display: flex;
-  gap: 1rem;
-  align-items: baseline;
-  flex-wrap: wrap;
   margin-top: 1.1rem;
   font-family: var(--font-mono);
   font-size: 0.75rem;
   font-style: normal;
   letter-spacing: 0.1em;
-  color: var(--acc-cyan);
 }
 
+/* the attribution itself opens the book — no separate call-to-action label */
 .epigraph-link {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  color: var(--faint);
+  font: inherit;
+  letter-spacing: inherit;
+  color: var(--acc-cyan);
   background: none;
   border: 0;
   padding: 0;
   cursor: pointer;
-  transition: color 0.2s ease;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
 }
 
-.epigraph-link:hover { color: var(--acc-cyan); }
-.epigraph-link .on { color: #ffd479; }
+.epigraph-link:hover { color: var(--text); border-bottom-color: var(--acc-cyan); }
 
 @media (max-width: 560px) { .shelf-epigraph { font-size: 1.12rem; padding: 1.3rem 1.4rem; } }
 
