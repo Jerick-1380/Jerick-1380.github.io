@@ -86,3 +86,9 @@ You can delegate almost everything in your life to AI now, and a lot of it will 
 Creativity is the other half. Models get better with every release, and they've already swamped pretty much every technical skill out there. There are still parts of human imagination they're far from reaching, and those are the places worth spending your time.
 
 So if I had to name what makes someone stand out in recruiting right now, it's knowing how to use these tools, with initiative and creativity on top.
+
+<hr class="divider-glow">
+
+PS: if you want a free quant interview formula sheet, visualized, you can [sign up here](https://quant-engine.com/).
+
+<a href="https://quant-engine.com/" target="_blank" rel="noopener"><img src="/assets/img/quant-engine/formula-teaser.png" alt="Preview of the Quant Interview Formula Sheet: probability patterns, each with a trigger, the formula to reach for, and the classic wrong answer" loading="lazy"></a>
