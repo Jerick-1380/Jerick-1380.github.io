@@ -11,7 +11,7 @@ Recruiting season is here, and a lot of people have been asking me some version 
 
 A quick disclaimer first. I'm not a recruiter, and I'm not a professional at this in any sense. What I have is a handful of interviews, a job I'm happy with, and a lot of conversations with people on both sides of the process. There are plenty of other perspectives on how to stand out, and this is just one of them.
 
-I could give you a list of projects—simulate a black hole, build a game, ship an app. There are already a million posts like that. I'd rather go one level down and ask why projects are on a resume at all, because the answer tells you what kind of project to build.
+I could give you a list of projects—simulate Black–Scholes, build a game, ship an app. There are already a million posts like that. I'd rather go one level down and ask why projects are on a resume at all, because the answer tells you what kind of project to build.
 
 ## What a project is for
 
@@ -28,7 +28,7 @@ The first thing a project shows is that you're willing to experiment and build s
 
 This is why I think a personal website is the lowest-effort, highest-reward project you can put on a resume. It used to be a real undertaking. When I started, making a website meant taking a Coursera course on HTML, CSS, and JavaScript, then learning how GitHub works, then fighting with all of it for a weekend. Now you can copy a Jekyll template off GitHub, ask an AI what information it needs from you, hand over your details, and it builds the thing.
 
-From there you can branch. A clean, standard academic layout is completely fine, and it already puts you ahead, since there's now something people can go look at. But if you want it to stand out more, you can just ask for that. My own site is the example I know best. I asked AI to make it more futuristic, add interactive features, and give me a list of ideas, then told it which ones to build. That's why [this site](/) looks the way it does. All of it was done with AI, and the prompts behind most of it were a line or two each. The [source is public](https://github.com/Jerick-1380/Jerick-1380.github.io) if you want to see how little is going on.
+From there you can branch. A clean, standard academic layout is completely fine, and it already puts you ahead, since there's now something people can go look at. But if you want it to stand out more, you can just ask for that. My own site is the example I know best. I asked AI to make it more futuristic, add interactive features, and give me a list of ideas, then told it which ones to build. That's why [this site](/) looks the way it does. All of it was done with AI, and the prompts behind most of it were a line or two each.
 
 Some people will say they don't know how to push to GitHub or deploy anything. Just learn it. The AI will walk you through every step—including the ones you didn't know to ask about—so I don't think that excuse holds up anymore.
 
@@ -40,7 +40,7 @@ The clearest example I have is research labs. One of the most common questions I
 
 That does two things at once. It covers layer one, because you've shown the professor you're willing to put in real work before anyone asked you to. And it shows creativity—if you surface a parameter, an edge case, or a question the lab hadn't looked at, you've demonstrated that you'd add something they don't already have.
 
-This is how I ended up in the Jinesis Lab. Back in undergrad I applied to work with Zhijing Jin for a master's at the University of Toronto, and while she was still deciding, I spent winter break on one of her projects, [GovSim](https://arxiv.org/abs/2404.16698), a simulation where a society of LLM agents has to share a common resource without depleting it. The idea I wanted to test was emergent leadership. If you let a group of agents talk to each other, does one of them start acting as a leader? If one does, do the others follow it, and does that keep the simulation alive longer? The master's didn't work out, for unrelated reasons. She invited me to join the lab anyway, and I've been working with her since.
+This is how I ended up in the Jinesis Lab. Back in undergrad I applied to work with Zhijing Jin for a master's at the University of Toronto, and while she was still deciding, I spent winter break on one of her projects, [GovSim](https://arxiv.org/abs/2404.16698), a simulation where a society of LLM agents has to share a common resource without depleting it. The idea I wanted to test was emergent leadership. If you let a group of agents talk to each other, does one of them start acting as a leader? If one does, do the others follow it, and does that keep the simulation alive longer? In the end I decided to stay at CMU for another year. She invited me to join the lab anyway, and I've been working with her since.
 
 Companies and research labs hire for the same underlying reason.
 
