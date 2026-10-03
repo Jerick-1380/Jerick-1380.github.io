@@ -21,7 +21,7 @@ Then I applied. Quant firms mostly, and big tech as well.
   <div class="stat"><div class="num">0</div><div class="lbl">offers</div></div>
 </div>
 
-I got rejected from every single one. That was devastating, because everything you read online tells you the junior internship is the most important one of your life. If it goes well you get a return offer and you simply have a job. Even if it doesn't convert, you have something to talk about when you recruit for full time. I had neither. And because I'd aimed at quant, all of my friends had internships to talk about while I was stuck with nothing, which is a bad feeling.
+I got rejected from every single one. That was devastating, because everything you read online tells you the junior internship is the most important one of your life. If it goes well you get a return offer and you simply have a job. Even if it doesn't convert, you have something to talk about when you recruit for full time. I had neither, and it felt worse because I'd aimed at quant: all of my friends had internships to talk about while I was stuck with nothing.
 
 ## The research I only did because I had nothing else
 
@@ -90,7 +90,7 @@ So that was a lot of rejection followed by something I didn't really want. But l
 
 Here is the current status. I was rejected from every internship my junior year and from every PhD program I applied to in undergrad, and I didn't make it through Citadel.
 
-I'm a software engineer at a hedge fund in the Bay Area. The weather is great and I get to do a lot of outdoor activities, which I love. The culture is laid back in the way big tech is, and I spend my days around researchers in a research environment, which is something I really enjoy. I have five papers that are either out or on their way out. I have a [YouTube channel](https://www.youtube.com/@DummyR18) I love working on. And I built [Quant Engine](https://quant-engine.com/), a platform where anyone can learn quant finance concepts for free. I'm pretty happy with where I am.
+I'm a software engineer at a hedge fund in the Bay Area. The weather is great and I get to do a lot of outdoor activities, which I love. The culture is laid back in the way big tech is, and I spend my days around researchers in a research environment, which is something I really enjoy. I have five papers that are either out or on their way out. I have a [YouTube channel](https://www.youtube.com/@DummyR18) I love working on and [Quant Engine](https://quant-engine.com/), the platform I built so anyone can learn quant finance concepts for free, and I'm pretty happy with where I am.
 
 ## What now
 
@@ -98,4 +98,4 @@ The question I get, and the one I keep asking myself, is where I go from here. I
 
 <blockquote class="pull">Even when the rejections pile up, they find a way to help you later, and they build the foundation for a stronger version of you.</blockquote>
 
-There's probably a better way to phrase it, but the idea is the same. Failure is not the end, and every one of those rejections ended up building toward something better.
+Failure is not the end. Each of those rejections sent me somewhere I wouldn't have chosen, and each of those places made me better at something I ended up needing.
