@@ -68,7 +68,7 @@ I want to see mathematicians take one of these results and make a video, or give
 
 Here's one I could follow: result 158 in the collection, which is about coloring the plane. You have to color every point so that no two points exactly 1 apart share a color, and the question is how many colors you need. People have known for decades that the answer is somewhere between 4 and 7, and in 2018 Aubrey de Grey ruled out 4. OpenAI's model claims to rule out 5.
 
-I said in my notes for this post that I might animate one of these, so I did:
+Here is a short animation of the problem:
 
 <video class="article-video" controls muted loop playsinline preload="metadata" poster="/assets/video/plane-coloring-poster.jpg">
   <source src="/assets/video/plane-coloring.mp4" type="video/mp4">
