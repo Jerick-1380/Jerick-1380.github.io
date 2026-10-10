@@ -1726,3 +1726,13 @@ body.warp .hero h1, body.warp .big-404 { animation: warp-shake 0.08s infinite; }
   .spec-stop .dot { margin: 0.15rem 0 0; grid-row: span 2; }
   .spec-stop .note { margin-top: 0.15rem; }
 }
+
+/* ---- in-article video (self-hosted clips, e.g. Manim renders) ------------------------------ */
+.article-body .article-video {
+  display: block;
+  width: 100%;
+  margin: 2.4rem 0;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: var(--bg-0);
+}
