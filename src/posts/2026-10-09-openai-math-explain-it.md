@@ -7,21 +7,21 @@ categories: education
 image: /assets/img/social/og-openai-math.png
 ---
 
-A few days ago OpenAI [released solutions](https://github.com/openai/math/blob/main/CONTENTS.md) to hundreds of open math problems, all written by one of its models—and a lot of the math world is panicking. Many of these were problems that PhD students are working on right now, so the reaction has been some version of: current math PhDs are screwed, someone just finished a whole thesis on this, is there even a role for mathematicians anymore? A lot of mathematicians are angry and saying this is ruining math. Almost everything I've seen about it has been negative.
+A few days ago OpenAI [released solutions](https://github.com/openai/math/blob/main/CONTENTS.md) to hundreds of open math problems, all written by one of its models, and a lot of the math world is panicking. Many of these were problems that PhD students are working on right now, so the reaction has been some version of: current math PhDs are screwed, someone just finished a whole thesis on this, is there even a role for mathematicians anymore? A lot of mathematicians are angry and saying this is ruining math. Almost everything I've seen about it has been negative.
 
-So here's my hot take. The release is not entirely a bad thing.
+**So here's my hot take: the release is not entirely a bad thing.**
 
-Two disclaimers. I'm not taking a side on whether AI doing mathematics is good or bad for the field or for society. Everyone has been talking about the bad parts, and I want to shed some light on what good this might bring. Also, my perspective is a computer scientist's. I have a math major, but it was mostly applied—and I have far less experience than most mathematicians or math PhD students. Take all of this with a grain of salt.
+I have two disclaimers. The first is that I'm not taking a side on whether AI doing mathematics is good or bad for the field or for society, since everyone has been talking about the bad parts and I only want to shed some light on what good this might bring. The second is that my perspective is a computer scientist's. I have a math major, but it was mostly applied, and I have far less experience than most mathematicians or math PhD students, so take all of this with a grain of salt.
 
 ## Math is a pile of puzzles
 
-Start with what math is and what these problems are. To me, math is a collection of puzzles, and the beauty of it is in solving them—finding a solution when you don't even know whether one exists, and coming up with something elegant. The results tend to fall into two categories. Some turn out to be useful in the real world. Others are just beautiful, or describe something that exists naturally.
+Start with what math is and what these problems are. To me, math is a collection of puzzles, and the beauty of it is in solving them, which means finding a solution when you don't even know whether one exists and coming up with something elegant. The results tend to fall into two categories. Some turn out to be useful in the real world. Others are just beautiful, or describe something that exists naturally.
 
-That second category matters. It's a strange thing to hear from someone with an applied math background, but not all math needs an application. In some areas the solution itself—the way someone attacked the problem—is the whole point. I think that feeling comes from competition math. There are IMO problems where you're playing a very simple game and you're asked whether an optimal strategy exists. Nothing depends on the answer. They're just really cool to think about, and part of the beauty is seeing how elegant the solution turns out to be.
+That second category matters because not all math needs an application, which is a strange thing to hear from someone with an applied math background. In some areas the solution itself, or the way someone attacked the problem, is the whole point. I think that feeling comes from competition math. There are IMO problems where you're playing a very simple game and you're asked whether an optimal strategy exists. Nothing depends on the answer, but they're really cool to think about, and part of the beauty is seeing how elegant the solution turns out to be.
 
 ## What AI just handed us
 
-Stay with the puzzle analogy. Think about Legos, or IKEA furniture. What the AI has done is hand us the instruction manual: how the pieces go together, how to solve these exact problems.
+Going back to the puzzle analogy, think about Legos or IKEA furniture. What the AI has done is hand us the instruction manual, which shows how the pieces go together and how to solve these exact problems.
 
 <div class="stats cols-3">
   <div class="stat"><div class="num">719</div><div class="lbl">manuscripts</div></div>
@@ -29,25 +29,25 @@ Stay with the puzzle analogy. Think about Legos, or IKEA furniture. What the AI 
   <div class="stat"><div class="num">242</div><div class="lbl">results with a Lean proof</div></div>
 </div>
 
-That is a huge change for the field, and I don't want to play it down. A big part of mathematics has always been writing those manuals—figuring out whether a problem has a solution at all and then how to reach it. On that front the AI is ahead of us. It may recognize these patterns faster than any of us can.
+Don't get me wrong, this changes the field entirely. A big part of mathematics has always been writing those manuals, which means figuring out whether a problem has a solution at all and then how to reach it. On that front the AI is ahead of us, and it may recognize these patterns faster than any of us can.
 
-It isn't settled either. OpenAI [withdrew three of the manuscripts](https://retractionwatch.com/2026/10/08/openai-withdraws-preprints-722-manuscripts-unsolved-math-problems/) a day after posting them because of a sign error, and mathematicians are still checking the rest.
+The results aren't settled yet either, since OpenAI [withdrew three of the manuscripts](https://retractionwatch.com/2026/10/08/openai-withdraws-preprints-722-manuscripts-unsolved-math-problems/) a day after posting them because of a sign error, and mathematicians are still checking the rest.
 
 ## I can't read most of it
 
-I'm going to be very honest here. As someone who didn't come from a pure math or analysis background, I have no idea what most of these proofs mean. For a lot of them I don't even know what the theorem is saying.
+I'm going to be very honest here: as someone who didn't come from a pure math or analysis background, I have no idea what most of these proofs mean, and for a lot of them I don't even know what the theorem is saying.
 
 One of the results claims a big step on the Riemann hypothesis. I'm not sure I could fully explain the Riemann hypothesis, let alone tell you which part the AI solved. When OpenAI announced a Navier–Stokes solution back in September, I didn't really know what the equation was, or what exactly had been claimed. That proof is now disputed, because the written version and the Lean version reportedly don't match, and I couldn't have caught that either.
 
-<blockquote class="pull">We've been handed the instructions. Most of us still can't read them.</blockquote>
+<blockquote class="pull">We've been handed the instructions, and most of us still can't read them.</blockquote>
 
 I'm sure most mathematicians look at these theorems and think, oh my god, I never would have thought of that. To the outside world, nobody knows what's going on. What are these proofs, and why do they matter? As I said, not everything needs an application. But then someone has to show us where the beauty is. Is it a clever play with numbers? A pattern that never occurred to anyone? An intuition borrowed from a completely different area?
 
 ## The gap that's getting bigger
 
-So here is my claim. Mathematicians are not being replaced. They have a very different role to play, and one of the first steps is interpretability.
+So here is my claim: mathematicians are not being replaced, because they now have a very different role to play, and the first step in it is interpretability.
 
-There are two gaps. The first is between how the AI understands these problems and how mathematicians do. The second is between mathematicians and everyone else.
+There are two gaps here: the first is between how the AI understands these problems and how mathematicians do, and the second is between mathematicians and everyone else.
 
 <div class="spectrum">
   <div class="spec-cap">// two gaps, and who sits between them</div>
@@ -58,15 +58,15 @@ There are two gaps. The first is between how the AI understands these problems a
   </div>
 </div>
 
-I claim the second gap keeps getting larger, because AI is pulling the frontier upward so fast. We need people to bridge it. We need mathematicians, including the ones doing PhDs right now, to read these proofs, fully understand them, and verify that they're correct—with Lean, yes, and also from an intuitive standpoint. How could the AI have come up with this? Did it use a problem-solving technique we haven't seen? How did it piece things together, and what gap did it find that we never thought about?
+I claim the second gap keeps getting larger, because AI is pulling the frontier upward so fast. To bridge it, we need mathematicians, including the ones doing PhDs right now, to read these proofs, fully understand them, and verify that they're correct, both with Lean and from an intuitive standpoint. How could the AI have come up with this? Did it use a problem-solving technique we haven't seen? How did it piece things together, and what gap did it find that we never thought about?
 
 Then comes the part I care about most, which is sharing it. I think beauty is the core of mathematics: the way things fall out cleanly when you put them together, or an approach almost nobody would have thought of. That deserves to reach more people than the ones who can read the paper.
 
 ## What I'd like to see
 
-I want to see mathematicians take one of these results and make a video, or give a lecture, for a wider audience than other mathematicians. What is the problem? Why was it hard? Why is it important, or why is it beautiful?
+I want to see mathematicians take one of these results and make a video, or give a lecture, for a wider audience than other mathematicians. I want them to explain what the problem is, why it was hard, and why it's important or beautiful.
 
-Here's one I could follow. Result 158 in the collection is about coloring the plane. You have to color every point so that no two points exactly 1 apart share a color, and the question is how many colors you need. People have known for decades that the answer is somewhere between 4 and 7, and in 2018 Aubrey de Grey ruled out 4. OpenAI's model claims to rule out 5.
+Here's one I could follow: result 158 in the collection, which is about coloring the plane. You have to color every point so that no two points exactly 1 apart share a color, and the question is how many colors you need. People have known for decades that the answer is somewhere between 4 and 7, and in 2018 Aubrey de Grey ruled out 4. OpenAI's model claims to rule out 5.
 
 I said in my notes for this post that I might animate one of these, so I did:
 
@@ -78,6 +78,6 @@ That's thirty seconds, and it only gets you to the statement. It doesn't explain
 
 ## It isn't black and white
 
-There are obviously bad parts to all of this. But the release also gives mathematicians a new kind of work. We've never had hundreds of new results show up at the same time, and that's a lot of material to interpret, verify, and explain.
+There are obviously bad parts to all of this, but the release also gives mathematicians a new kind of work. We've never had hundreds of new results show up at the same time, and that's a lot of material to interpret, verify, and explain.
 
-I think it's also a real opportunity to show the rest of the world what mathematics is for—the beauty and the essence of it—which I feel has been fading from view for most people. And the release is a good reflection of how the role of a mathematician is changing in this new era.
+I think it's also a real opportunity to show the rest of the world what mathematics is for, meaning the beauty and the essence of it, which I feel has been fading from view for most people. And the release is a good reflection of how the role of a mathematician is changing in this new era.
