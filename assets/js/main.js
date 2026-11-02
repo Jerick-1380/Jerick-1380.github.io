@@ -720,6 +720,8 @@
 
       { id: "lie", type: "paper", label: "When Agents Lie", sub: "ICML '26 NExT-Game workshop · Best Paper Award", star: true,
         href: "https://openreview.net/pdf?id=v8nYIkYjY0", ext: true, tip: "Premeditation, persistence, and exploitation in repeated games" },
+      { id: "ambench", type: "paper", label: "AM-Bench", sub: "NeurIPS '26 Evaluations & Datasets Track",
+        href: "https://arxiv.org/abs/2610.24264", ext: true, tip: "A unified taxonomy and evaluation suite for agentic misalignment" },
       { id: "silence", type: "paper", label: "Strategic Silence", sub: "ICML '26 Failure Modes of Agentic AI workshop",
         href: "https://openreview.net/pdf?id=ZOdCsExYgi", ext: true, tip: "What game-theoretic benchmarks miss in multi-agent LLMs" },
       { id: "cheap", type: "paper", label: "Cheap Talk, Empty Promise", sub: "ICLR '26 AI for Mechanism Design workshop",
@@ -748,6 +750,7 @@
       { id: "c-comm", type: "concept", label: "communication" },
       { id: "c-forecast", type: "concept", label: "forecasting" },
       { id: "c-trust", type: "concept", label: "trust & exploitation" },
+      { id: "c-misalign", type: "concept", label: "misalignment" },
 
       { id: "p-conitzer", type: "person", label: "Vincent Conitzer", sub: "CMU · advisor", href: "https://www.cs.cmu.edu/~conitzer/", ext: true },
       { id: "p-jin", type: "person", label: "Zhijing Jin", sub: "U Toronto · advisor", href: "https://zhijing-jin.com/", ext: true },
@@ -759,12 +762,14 @@
       { id: "v-icml", type: "venue", label: "ICML 2026" },
       { id: "v-iclr", type: "venue", label: "ICLR 2026" },
       { id: "v-neurips", type: "venue", label: "NeurIPS 2025" },
+      { id: "v-neurips26", type: "venue", label: "NeurIPS 2026" },
       { id: "v-cmu", type: "venue", label: "CMU" }
     ],
     links: [
-      ["me", "lie"], ["me", "silence"], ["me", "cheap"], ["me", "tax"], ["me", "market"], ["me", "thesis"], ["me", "senior"], ["me", "mom"],
+      ["me", "lie"], ["me", "ambench"], ["me", "silence"], ["me", "cheap"], ["me", "tax"], ["me", "market"], ["me", "thesis"], ["me", "senior"], ["me", "mom"],
 
       ["lie", "c-decep"], ["lie", "c-repeat"], ["lie", "c-trust"], ["lie", "c-multi"],
+      ["ambench", "c-misalign"], ["ambench", "c-bench"], ["ambench", "c-tax"], ["ambench", "c-safety"],
       ["silence", "c-bench"], ["silence", "c-comm"], ["silence", "c-game"], ["silence", "c-multi"],
       ["cheap", "c-commit"], ["cheap", "c-cheap"], ["cheap", "c-decep"], ["cheap", "c-game"],
       ["tax", "c-tax"], ["tax", "c-bench"], ["tax", "c-decep"], ["tax", "c-safety"],
@@ -774,13 +779,14 @@
       ["mom", "c-fin"], ["mom", "c-forecast"],
 
       ["lie", "p-zhang"], ["lie", "p-schoelkopf"], ["lie", "p-conitzer"], ["lie", "p-jin"],
+      ["ambench", "p-zhang"], ["ambench", "p-schoelkopf"], ["ambench", "p-jin"],
       ["silence", "p-zhang"], ["silence", "p-conitzer"], ["silence", "p-jin"],
       ["cheap", "p-zhang"], ["cheap", "p-jin"], ["cheap", "p-conitzer"],
       ["tax", "p-zhang"], ["tax", "p-jin"], ["tax", "p-conitzer"],
       ["market", "p-hollifield"],
       ["thesis", "p-conitzer"], ["thesis", "p-jin"], ["thesis", "p-raghunathan"],
 
-      ["lie", "v-icml"], ["silence", "v-icml"], ["cheap", "v-iclr"], ["tax", "v-iclr"], ["market", "v-neurips"],
+      ["lie", "v-icml"], ["silence", "v-icml"], ["cheap", "v-iclr"], ["tax", "v-iclr"], ["market", "v-neurips"], ["ambench", "v-neurips26"],
       ["thesis", "v-cmu"], ["senior", "v-cmu"], ["mom", "v-cmu"]
     ]
   };
@@ -1122,6 +1128,7 @@
     { label: "Download CV (PDF)", href: "/assets/pdf/Shi_Jerick_CV.pdf", k: "pdf" },
     { label: "Master's Thesis (PDF)", href: "/assets/pdf/masters_thesis.pdf", k: "pdf" },
     { label: "When Agents Lie — Best Paper, ICML '26 WS (PDF)", href: "https://openreview.net/pdf?id=v8nYIkYjY0", k: "pdf" },
+    { label: "AM-Bench — NeurIPS '26 E&D Track (arXiv)", href: "https://arxiv.org/abs/2610.24264", k: "link" },
     { label: "Strategic Silence in Multi-Agent LLMs (PDF)", href: "https://openreview.net/pdf?id=ZOdCsExYgi", k: "pdf" },
     { label: "Thesis Defense (YouTube)", href: "https://youtu.be/Z3Q9AkriPxg", k: "link" },
     { label: "GitHub — Jerick-1380", href: "https://github.com/Jerick-1380", k: "link" },
